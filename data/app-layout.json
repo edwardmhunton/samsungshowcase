@@ -1,0 +1,220 @@
+[
+  {
+    "id": "282919fd-7617-4165-a33e-ecbe8d86479c",
+    "name": "Home",
+    "type": "general_content",
+    "data": {},
+    "styles": {
+      "family": "FAMILY_1"
+    },
+    "ui_components": [
+      {
+        "component_type": "hero",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 0,
+        "rules": {
+          "item_limit": "3"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "layout": "HERO_3",
+          "header": {
+            "visible": true,
+            "style": "HEADER_3"
+          },
+          "cell_styles": [
+            "HERO_CELL_3"
+          ]
+        }
+      },
+      {
+        "component_type": "list",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 1,
+        "rules": {
+          "item_limit": "6"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "header": {
+            "visible": true,
+            "style": "HEADER_1"
+          },
+          "cell_styles": [
+            "LIST_2"
+          ]
+        }
+      }
+    ],
+    "navigations": []
+  },
+  {
+    "id": "928fc26e-5963-4a77-a7b0-926d37769987",
+    "name": "screen1",
+    "type": "general_content",
+    "data": {},
+    "styles": {
+      "family": "FAMILY_1"
+    },
+    "ui_components": [
+      {
+        "component_type": "list",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 0,
+        "rules": {
+          "item_limit": "5"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "header": {
+            "visible": true,
+            "style": "HEADER_1"
+          },
+          "cell_styles": [
+            "LIST_2"
+          ]
+        }
+      },
+      {
+        "component_type": "list",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 1,
+        "rules": {
+          "item_limit": "6"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "header": {
+            "visible": true,
+            "style": "HEADER_1"
+          },
+          "cell_styles": [
+            "LIST_2"
+          ]
+        }
+      }
+    ],
+    "navigations": []
+  },
+  {
+    "id": "867bb51b-8a6d-4ad0-981f-55144eab9efb",
+    "name": "screen2",
+    "type": "general_content",
+    "data": {},
+    "styles": {
+      "family": "FAMILY_1"
+    },
+    "ui_components": [
+      {
+        "component_type": "list",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 0,
+        "rules": {
+          "item_limit": "20"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "header": {
+            "visible": true,
+            "style": "HEADER_1"
+          },
+          "cell_styles": [
+            "LIST_1"
+          ]
+        }
+      }
+    ],
+    "navigations": []
+  },
+  {
+    "id": "b192dd61-36ec-45b8-bb2a-8d5328177236",
+    "name": "screen3",
+    "type": "general_content",
+    "data": {},
+    "styles": {
+      "family": "FAMILY_4"
+    },
+    "ui_components": [
+      {
+        "component_type": "hero",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 0,
+        "rules": {
+          "item_limit": "5"
+        },
+        "styles": {
+          "family": "FAMILY_4",
+          "layout": "",
+          "header": {
+            "visible": true,
+            "style": "HEADER_1"
+          },
+          "cell_styles": [
+            "HERO_CELL_2"
+          ]
+        }
+      },
+      {
+        "component_type": "grid",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 1,
+        "rules": {
+          "item_limit": "4"
+        },
+        "styles": {
+          "family": "FAMILY_4",
+          "header": {
+            "visible": false,
+            "style": "No Header"
+          },
+          "cell_styles": [
+            "GRID_1"
+          ]
+        }
+      },
+      {
+        "component_type": "list",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 2,
+        "rules": {
+          "item_limit": "6"
+        },
+        "styles": {
+          "family": "FAMILY_4",
+          "header": {
+            "visible": true,
+            "style": "HEADER_1"
+          },
+          "cell_styles": [
+            "LIST_2"
+          ]
+        }
+      }
+    ],
+    "navigations": []
+  }
+]
