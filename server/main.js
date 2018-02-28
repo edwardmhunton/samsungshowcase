@@ -42,7 +42,7 @@ if(process.env.NODE_ENV === 'development') {
 
 
 } else {
-    app.use(express.static(path.resolve(__dirname, '../dist')));
+    app.use('/static', express.static(path.join(__dirname, 'public')))
 }
 
 function * getStructure (){
@@ -55,6 +55,10 @@ function * getStructure (){
     console.log(data);
     return JSON.parse(data);
 }
+
+app.get(['/home'], function * (req,res){
+
+});
 
 app.get(['/'], function * (req,res){
     /**

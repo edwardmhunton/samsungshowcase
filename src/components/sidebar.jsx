@@ -5,7 +5,7 @@ import { push } from 'react-router-redux';
 import history from '../history.js';
 import util from 'util';
 
-class Splash extends React.Component {
+class Sidebar extends React.Component {
 
   constructor(props) {
     super(props);
@@ -20,15 +20,12 @@ class Splash extends React.Component {
   componentDidMount() {
 
     var self = this;
-      this.loadInterval = setTimeout(
-          self.advance(),
-            5000
-        );
+
   }
 
   componentWillUnmount () {
 
-      this.loadInterval = false;
+
   }
 
 
@@ -39,22 +36,12 @@ class Splash extends React.Component {
 
           if(this.state.hold){
 
-            
+
 
             return (
-              <div className="splash">
-              Splash
+              <div className="sidebar">
+              Sidebar
               </div>
-            )
-
-          } else {
-
-            history.push('/login');
-
-            return (
-
-              <Redirect to="/login" push />
-
             )
 
           }
@@ -78,4 +65,4 @@ const mapStateToProps = (state, ownProps) => {
 /**
  * Create and export a connected component
  */
-export default connect(mapStateToProps)(Splash);
+export default connect(mapStateToProps)(Sidebar);

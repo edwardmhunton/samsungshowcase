@@ -4,7 +4,9 @@ import List from './components/list';
 import Screen from './components/screen';
 import LayoutEngine from './LayoutEngine';
 import data from '../data/app-layout.json';
-import {Route, Link } from 'react-router-dom';
+import {Route, BrowserRouter, Link } from 'react-router-dom';
+import util from 'util';
+import history from './history.js';
 
 //  <Route exact path='/home' render={({match})=><QuestionDetail question_id={match.params.id}/>}/>
 /*Specify a route for the main page which renders when the path is empty
@@ -20,36 +22,154 @@ class AppDisplay extends React.Component {
 
 
 
+  formatData() {
+
+    var associatedScreens = {};
+
+    for(var i in data) {
+
+    //console.log("Screen comps"+util.inspect(data[i], false, null));
+
+              associatedScreens[data[i].name] = {};
+
+              associatedScreens[data[i].name].components = LayoutEngine.getScreen(data[i], data[i].name);
+              associatedScreens[data[i].name].id = data[i].id;
+              associatedScreens[data[i].name].styles = data[i].styles;
+    }
+
+    return associatedScreens;
+
+  }
+
+  filterData(screenName) {
+
+
+
+    for(var i in data) {
+
+      console.log("da"+data[i].name);
+
+              if(data[i].name === screenName){
+                  return data[i];
+              }
+    }
+
+
+
+  }
+
+
+
+
+
 
     render(){
 
-      console.log("LO"+LayoutEngine);
-      console.log("data"+data);
-
-      let screenName = 'Home';
 
 
 
-      for(var i in data) {
+    //  let data = this.filterData('Splash');
 
-                if(data[i].name === screenName) {
+    //console.log("DATAs"+util.inspect(data, false, null));
 
-                  var _screen = data[i];
+    let screens = this.formatData();
 
-
-
-                }
-
-
-      }
-
-        const l = LayoutEngine.getScreen(_screen, 'Home');
-
-          return (
+    //console.log("Screen comps"+util.inspect(screen_components, false, null));
 
 
 
-                    <Screen id={_screen.id} ui_components={l} styles={_screen.styles} />
+    //  let screen_components = LayoutEngine.getScreen(data, 'Splash');
+    /*<Link to={`/`}>
+        <h4>Splash</h4>
+    </Link>
+    <Link to={`/Login`}>
+        <h4>Login</h4>
+    </Link>
+    <Link to={`/Home`}>
+        <h4>Home</h4>
+    </Link>
+
+    <Link to={`/screen1`}>
+        <h4>Screen 1</h4>
+    </Link>
+
+    <Link to={`/screen2`}>
+        <h4>Screen 2</h4>
+    </Link>
+
+    <Link to={`/screen3`}>
+        <h4>Screen 3</h4>
+    </Link> */
+
+      return (
+
+        <div>
+
+
+
+      <Route exact path='/' render={() =>
+
+        // /<Screen layout={screen_components} />
+
+        <Screen id={screens.Splash.id} ui_components={screens.Splash.components} styles={screens.Splash.styles} />
+
+
+      } />
+
+      <Route exact path='/login' render={() =>
+
+        // /<Screen layout={screen_components} />
+
+        <Screen id={screens.Login.id} ui_components={screens.Login.components} styles={screens.Login.styles} />
+
+
+      } />
+
+      <Route exact path='/home' render={() =>
+
+        // /<Screen layout={screen_components} />
+
+        <Screen id={screens.Home.id} ui_components={screens.Home.components} styles={screens.Home.styles} />
+
+
+      } />
+
+      <Route exact path='/screen1' render={() =>
+
+        // /<Screen layout={screen_components} />
+
+        <Screen id={screens.Screen1.id} ui_components={screens.Screen1.components} styles={screens.Screen1.styles} />
+
+
+      } />
+
+      <Route exact path='/screen2' render={() =>
+
+        // /<Screen layout={screen_components} />
+
+        <Screen id={screens.Screen2.id} ui_components={screens.Screen2.components} styles={screens.Screen2.styles} />
+
+
+      } />
+
+      <Route exact path='/screen3' render={() =>
+
+        // /<Screen layout={screen_components} />
+
+        <Screen id={screens.Screen3.id} ui_components={screens.Screen3.components} styles={screens.Screen3.styles} />
+
+
+      } />
+
+
+
+      </div>
+
+
+
+
+
+    )
 
 
 
@@ -58,7 +178,9 @@ class AppDisplay extends React.Component {
 
 
 
-          )
+        /*  return (
+            <Screen id={data.id} ui_components={screen_components} styles={data.styles} />
+          )*/
 
     }
 

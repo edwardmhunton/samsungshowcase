@@ -1,7 +1,6 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
-import {Link
-} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 /**
  * Each entry in the QuestionList is represtented by a QuestionListItem, which displays high-level information
@@ -9,11 +8,15 @@ import {Link
  //{ui_components.map(component=><ComponentWrapper key={ui_components.question_id} {...question}/>)}
 
  */
- const Comps = ({ui_components, family}) => (
+
+
+
+
+ const Comps = ({ui_components, family, callback}) => (
    ui_components.map((Component, index) => {
           return (
 
-  <Component key={index} style={family} />
+                <Component key={index} callback={callback} style={family} />
 
           )
      })
@@ -24,14 +27,14 @@ import {Link
  */
 class Screen extends React.Component {
 
-  //constructor (props) {
-  //  super(props);
-//  }
 
 
+  switchScreen(){
 
+    console.log("CVB")
 
-    render(){
+  }
+  render(){
 
       return (
         <div className="screen" id={this.props.id} styles={this.props.styles.family} >
@@ -45,12 +48,13 @@ class Screen extends React.Component {
  * Get the list of questions from the application's state
  * It is populated by a ../sagas/fetch-question(s)-saga.
  */
-//const mapStateToProps = ({ui_components})=>({
-  //  ui_components
-//});
+ const mapStateToProps = (state, ownProps) => {
+   return {
+     ...state
+   }
+ }
 
 /**
  * Create and export a connected component
  */
-//export default connect(mapStateToProps)(Screen);
-export default Screen;
+export default connect(mapStateToProps)(Screen);

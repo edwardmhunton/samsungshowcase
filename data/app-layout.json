@@ -1,6 +1,71 @@
 [
   {
     "id": "282919fd-7617-4165-a33e-ecbe8d86479c",
+    "name": "Splash",
+    "type": "general_content",
+    "data": {},
+    "styles": {
+      "family": "FAMILY_1"
+    },
+    "ui_components": [
+      {
+        "component_type": "splash",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 0,
+        "rules": {
+          "item_limit": "3"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "layout": "HERO_3",
+          "header": {
+            "visible": true,
+            "style": "HEADER_3"
+          },
+          "cell_styles": [
+            "HERO_CELL_3"
+          ]
+        }
+      }
+    ],
+    "navigations": []
+  },
+  {
+    "id": "282919fd-7617-4165-a33e-ecbe8d86479c",
+    "name": "Login",
+    "type": "general_content",
+    "data": {},
+    "styles": {
+      "family": "FAMILY_1"
+    },
+    "ui_components": [
+      {
+        "component_type": "login",
+        "data": {},
+        "position": 0,
+        "rules": {
+          "item_limit": "3"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "layout": "HERO_3",
+          "header": {
+            "visible": true,
+            "style": "HEADER_3"
+          },
+          "cell_styles": [
+            "HERO_CELL_3"
+          ]
+        }
+      }
+    ],
+    "navigations": []
+  },
+  {
+    "id": "282919fd-7617-4165-a33e-ecbe8d86479c",
     "name": "Home",
     "type": "general_content",
     "data": {},
@@ -8,6 +73,28 @@
       "family": "FAMILY_1"
     },
     "ui_components": [
+      {
+        "component_type": "sidebar",
+        "data": {
+          "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
+          "type": "APPLICASTER_ATOM_FEED"
+        },
+        "position": 0,
+        "rules": {
+          "item_limit": "3"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "layout": "HERO_3",
+          "header": {
+            "visible": true,
+            "style": "HEADER_3"
+          },
+          "cell_styles": [
+            "HERO_CELL_3"
+          ]
+        }
+      },
       {
         "component_type": "hero",
         "data": {
@@ -56,7 +143,7 @@
   },
   {
     "id": "928fc26e-5963-4a77-a7b0-926d37769987",
-    "name": "screen1",
+    "name": "Screen1",
     "type": "general_content",
     "data": {},
     "styles": {
@@ -110,7 +197,7 @@
   },
   {
     "id": "867bb51b-8a6d-4ad0-981f-55144eab9efb",
-    "name": "screen2",
+    "name": "Screen2",
     "type": "general_content",
     "data": {},
     "styles": {
@@ -143,7 +230,7 @@
   },
   {
     "id": "b192dd61-36ec-45b8-bb2a-8d5328177236",
-    "name": "screen3",
+    "name": "Screen3",
     "type": "general_content",
     "data": {},
     "styles": {

@@ -7,11 +7,12 @@ import App from './App'
 import ReactDOM from 'react-dom'
 import React from 'react';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux'
+import { ConnectedRouter } from 'react-router-redux';
 import getStore from './getStore';
-import createHistory from 'history/createBrowserHistory';
+import history from './history.js';
+//import createHistory from 'history/createBrowserHistory';
 
-const history = createHistory();
+//const history = createHistory();
 const store = getStore(history);
 
 if (module.hot) {
@@ -37,7 +38,7 @@ store.subscribe(() => {
       console.log("mounting the app");
         render(App);
     } else {
-      console.log("no questions");
+      console.log("no videos");
     }
 });
 
@@ -47,7 +48,7 @@ store.subscribe(() => {
  * @param location
  * The current URL that is loaded
  */
-const fetchDataForLocation = location=>{
+const fetchDataForLocation = location =>{
     /**
      * If the location is the standard route, fetch an undetailed list of all questions
      */
