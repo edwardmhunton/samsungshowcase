@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import util from 'util';
 
 /**
  * Each entry in the QuestionList is represtented by a QuestionListItem, which displays high-level information
@@ -29,12 +30,10 @@ class Screen extends React.Component {
 
 
 
-  switchScreen(){
 
-    console.log("CVB")
-
-  }
   render(){
+
+    console.log(util.inspect(this.props.ui_components, false, null));
 
       return (
         <div className="screen" id={this.props.id} styles={this.props.styles.family} >
@@ -48,11 +47,10 @@ class Screen extends React.Component {
  * Get the list of questions from the application's state
  * It is populated by a ../sagas/fetch-question(s)-saga.
  */
- const mapStateToProps = (state, ownProps) => {
-   return {
-     ...state
-   }
- }
+ //state, ownProps
+ const mapStateToProps = ()=>({
+
+ });
 
 /**
  * Create and export a connected component

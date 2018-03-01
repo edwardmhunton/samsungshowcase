@@ -2,24 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 
-const List = ({listItems})=>(
+const Cell = ()=>(
 
       //  { listItems ?
             //<div>
             //    {listItems.map(item><ListItem key={item.itemn_id} {...item}/>)}
           //  </div>
-            <div className="list">
-              List
+            <div className='component cell' >
+              Cell
             </div>
         //}
 
 );
 
-const mapStateToProps = ({listItems}) =>({
-    listItems
+const mapStateToProps = () =>({
 });
 
 /**
  * Create and export a connected component
  */
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps)(Cell);

@@ -18,7 +18,7 @@ class Login extends React.Component {
 
       event.preventDefault();
 
-console.log('sub')
+      console.log('sub')
 
       this.setState({hold: false});
 
@@ -31,13 +31,13 @@ console.log('sub')
 
 console.log("hold"+this.state.hold);
 
-
+//component login
 
       if(this.state.hold){
 
         return (
 
-        <div>
+        <div className="component login mx-auto">
             Login <br/>
             <form onSubmit={this.handleSubmit.bind(this)}   >
 

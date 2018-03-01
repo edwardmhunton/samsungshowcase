@@ -2,8 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { push } from 'react-router-redux';
-import history from '../history.js';
+import history from '../../history.js';
 import util from 'util';
+
+import Menu from './menu';
 
 class Sidebar extends React.Component {
 
@@ -39,8 +41,9 @@ class Sidebar extends React.Component {
 
 
             return (
-              <div className="sidebar">
+              <div className="component sidebar">
               Sidebar
+              <Menu />
               </div>
             )
 

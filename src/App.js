@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect} from 'react-redux';
-import List from './components/list';
 import Screen from './components/screen';
 import LayoutEngine from './LayoutEngine';
 import data from '../data/app-layout.json';
@@ -100,6 +99,7 @@ class AppDisplay extends React.Component {
     <Link to={`/screen3`}>
         <h4>Screen 3</h4>
     </Link> */
+    //console.log(util.inspect(screens, false, null));
 
       return (
 

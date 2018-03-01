@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { push } from 'react-router-redux';
 import history from '../history.js';
 import util from 'util';
+import { Button } from 'react-bootstrap';
 
 class Splash extends React.Component {
 
@@ -20,10 +21,9 @@ class Splash extends React.Component {
   componentDidMount() {
 
     var self = this;
-      this.loadInterval = setTimeout(
-          self.advance(),
-            5000
-        );
+  this.loadInterval =  setTimeout(function(){
+    self.advance()
+  }, 1000);
   }
 
   componentWillUnmount () {
@@ -39,11 +39,12 @@ class Splash extends React.Component {
 
           if(this.state.hold){
 
-            
+
 
             return (
-              <div className="splash">
-              Splash
+              <div className="component splash">
+              <h4>Splash / Loader</h4>
+
               </div>
             )
 
@@ -66,14 +67,16 @@ class Splash extends React.Component {
 
 
 }
+const mapStateToProps = ()=>({
+
+});
 
 
-
-const mapStateToProps = (state, ownProps) => {
-  return {
-    ...state
-  }
-}
+//const mapStateToProps = (state, ownProps) => {
+//  return {
+  //  ...state
+//  }
+//}
 
 /**
  * Create and export a connected component

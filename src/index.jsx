@@ -10,7 +10,11 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import getStore from './getStore';
 import history from './history.js';
-//import createHistory from 'history/createBrowserHistory';
+
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import './css/styles.css';
+import './css/components.css';
+import createHistory from 'history/createBrowserHistory';
 
 //const history = createHistory();
 const store = getStore(history);
@@ -34,12 +38,13 @@ const render = (_App)=> {
 
 store.subscribe(() => {
     const state = store.getState();
-    if (state.videos.length > 0) {
-      console.log("mounting the app");
-        render(App);
-    } else {
-      console.log("no videos");
-    }
+    //if (state.videos.length > 0) {
+    //  console.log("mounting the app");
+          render(App);
+  //} else {
+    //  render(App);
+      //console.log("no videos");
+  //  }
 });
 
 /**
