@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "npm install -g babel-cli@6.26.0 cross-env@5.0.5 webpack@3.6.0",
-    "start-dev": "cross-env NODE_ENV=development babel-node server/main.js --useLiveData=true --useServerRender=true",
+    "start": "cross-env NODE_ENV=development babel-node server/main.js --useLiveData=true --useServerRender=true",
     "test": "mocha --reporter progress buildScripts/testsSetup.js \"src/**/*.test.js\"",
     "lint": "esw webpack.config.* src"
   },
