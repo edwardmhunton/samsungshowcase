@@ -5,37 +5,31 @@ import { push } from 'react-router-redux';
 import history from '../../history.js';
 import util from 'util';
 
+import { Focusable} from 'react-key-navigation';
+
+
 
 
 class MenuItem extends React.Component {
+  constructor() {
+    super();
 
-  constructor(props) {
-    super(props);
-    this.state = {hold: true};
+    this.state = {
+      active: false
+    }
   }
 
-
-  render(){
-
-
-        return (
-
-        <div class="component menu_item" >Menu Item</div>
-
-        )
-
-
+  render() {
+    return (
+      <Focusable onFocus={() => this.setState({active: true})}
+                 onBlur={() => this.setState({active: false})}>
+        <div class={'item ' + (this.state.active ? 'item-focus' : '')}>Menu Item</div>
+      </Focusable>
+    );
   }
-
-}
-
-const mapStateToProps = (state, ownProps) => {
-  return {
-    ...state
-  }
-}
+};
 
 /**
  * Create and export a connected component
  */
-export default connect(mapStateToProps)(MenuItem);
+export default MenuItem;

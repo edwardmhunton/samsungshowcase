@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const Grid = ({listItems})=>(
     <div>
-        Grid
+        <p>Grid</p>
     </div>
 );
 

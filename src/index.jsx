@@ -4,6 +4,7 @@
  * The server may load the App component when server rendering.
  */
 import App from './App'
+import ReactTV from 'react-tv';
 import ReactDOM from 'react-dom'
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -16,6 +17,15 @@ import './css/styles.css';
 import './css/components.css';
 import createHistory from 'history/createBrowserHistory';
 
+//import ReactTV, { renderOnAppLoaded } from 'react-tv';
+//import { withFocusable, withNavigation } from 'react-tv-navigation';
+
+
+import util from 'util';
+
+
+
+
 //const history = createHistory();
 const store = getStore(history);
 
@@ -26,7 +36,7 @@ if (module.hot) {
     });
 }
 const render = (_App)=> {
-    ReactDOM.render(
+    ReactTV.render(
         <Provider store={store}>
             <ConnectedRouter  history={history}>
                  <_App />

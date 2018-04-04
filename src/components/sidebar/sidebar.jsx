@@ -42,7 +42,7 @@ class Sidebar extends React.Component {
 
             return (
               <div className="component sidebar">
-              Sidebar
+              <p>Sidebar</p>
               <Menu />
               </div>
             )

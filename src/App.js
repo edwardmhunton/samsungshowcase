@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTV from 'react-tv';
 import { connect} from 'react-redux';
 import Screen from './components/screen';
 import LayoutEngine from './LayoutEngine';
@@ -6,6 +7,10 @@ import data from '../data/app-layout.json';
 import {Route, BrowserRouter, Link } from 'react-router-dom';
 import util from 'util';
 import history from './history.js';
+//import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
+
+
 
 //  <Route exact path='/home' render={({match})=><QuestionDetail question_id={match.params.id}/>}/>
 /*Specify a route for the main page which renders when the path is empty
@@ -18,6 +23,14 @@ import history from './history.js';
 //<Route exact path='/' render={()=><Screen />}/>
 
 class AppDisplay extends React.Component {
+
+  changeFocusTo(index) {
+    this.setState({active: index});
+  }
+
+  onBlurLists() {
+    this.setState({active: null});
+  }
 
 
 
@@ -77,31 +90,11 @@ class AppDisplay extends React.Component {
 
 
 
-    //  let screen_components = LayoutEngine.getScreen(data, 'Splash');
-    /*<Link to={`/`}>
-        <h4>Splash</h4>
-    </Link>
-    <Link to={`/Login`}>
-        <h4>Login</h4>
-    </Link>
-    <Link to={`/Home`}>
-        <h4>Home</h4>
-    </Link>
 
-    <Link to={`/screen1`}>
-        <h4>Screen 1</h4>
-    </Link>
-
-    <Link to={`/screen2`}>
-        <h4>Screen 2</h4>
-    </Link>
-
-    <Link to={`/screen3`}>
-        <h4>Screen 3</h4>
-    </Link> */
-    //console.log(util.inspect(screens, false, null));
 
       return (
+
+        <Navigation>
 
         <div>
 
@@ -164,6 +157,8 @@ class AppDisplay extends React.Component {
 
 
       </div>
+
+    </Navigation>
 
 
 
