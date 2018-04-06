@@ -15,6 +15,7 @@ import history from './history.js';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import './css/styles.css';
 import './css/components.css';
+import './css/nav_styles.css';
 import createHistory from 'history/createBrowserHistory';
 
 //import ReactTV, { renderOnAppLoaded } from 'react-tv';

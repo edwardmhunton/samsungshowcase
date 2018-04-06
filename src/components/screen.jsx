@@ -37,8 +37,10 @@ class Screen extends React.Component {
 
       return (
         <div className="screen" id={this.props.id} styles={this.props.styles.family} >
+
           <Comps ui_components = {this.props.ui_components} family={this.props.styles.family} />
-        </div>
+          </div>
+      
       )
     }
 }

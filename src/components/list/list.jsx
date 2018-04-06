@@ -9,7 +9,7 @@ const List = ({listItems})=>(
             //<div>
             //    {listItems.map(item><ListItem key={item.itemn_id} {...item}/>)}
           //  </div>
-            <div nv-scope="list" className='component list' >
+            <div className='component list' >
             <p> List</p>
               <ul>
               <Cell />

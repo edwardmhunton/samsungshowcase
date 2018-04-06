@@ -5,6 +5,13 @@
   color: #f44f0e;
 }
 
+#menu {
+  padding:50px;
+  margin:5px;
+  background-color:#d3d3d3;
+  color: #f44f0e;
+}
+
 
 .splash {
   width:100%;
@@ -39,7 +46,7 @@
 .sidebar {
 
 
-  width:22%;
+  width:70%;
   height:100%;
   margin-left:0;
   padding-left:0;

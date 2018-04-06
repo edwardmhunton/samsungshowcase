@@ -7,12 +7,31 @@ import util from 'util';
 
 import Menu from './menu';
 
+import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
+
+
+//import List from './List';
+
 class Sidebar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {hold: true};
+    this.state = {
+      active: null,
+      hold: true
+    }
+    this.lists = ["Title 1", "Title 2", "Title 3", "Title 4"]
+
   }
+
+  changeFocusTo(index) {
+    this.setState({active: index});
+  }
+
+  onBlurLists() {
+    this.setState({active: null});
+  }
+
 
 
   advance(){
@@ -38,12 +57,20 @@ class Sidebar extends React.Component {
 
           if(this.state.hold){
 
-
+            let i = 1;
 
             return (
               <div className="component sidebar">
               <p>Sidebar</p>
-              <Menu />
+              <Navigation>
+                <VerticalList id="content" onBlur={() => this.onBlurLists()}>
+
+
+                    <Menu title={"My List"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+                      <Menu title={"My List"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+
+                </VerticalList>
+              </Navigation>
               </div>
             )
 
