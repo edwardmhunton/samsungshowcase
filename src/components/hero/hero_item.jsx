@@ -22,7 +22,7 @@ class ToogleItem extends React.Component {
   }
 };
 
-export default class Menu extends React.Component {
+export default class HeroItem extends React.Component {
   constructor() {
     super();
     this._lastFocus = null;
@@ -60,17 +60,9 @@ export default class Menu extends React.Component {
         <h1>{this.props.title}</h1>
         <div class="content" ref={(content) => { this.content = content}}>
           <VerticalList
-                
+                          style={{overflow: 'hidden', display: 'block'}}
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
             <ToogleItem>TI</ToogleItem>
           </VerticalList>
         </div>

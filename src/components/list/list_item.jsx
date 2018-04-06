@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTV from 'react-tv';
 
-import { Focusable, HorizontalList } from 'react-key-navigation';
+import { Focusable, VerticalList } from 'react-key-navigation';
 
 class ToogleItem extends React.Component {
   constructor() {
@@ -16,13 +16,13 @@ class ToogleItem extends React.Component {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}>
-        <div class={'item ' + (this.state.active ? 'item-focus' : '')}></div>
+        <div class={'item ' + (this.state.active ? 'item-focus' : '')}>TI</div>
       </Focusable>
     );
   }
 };
 
-export default class List extends React.Component {
+export default class ListItem extends React.Component {
   constructor() {
     super();
     this._lastFocus = null;
@@ -59,20 +59,23 @@ export default class List extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <h1>{this.props.title}</h1>
         <div class="content" ref={(content) => { this.content = content}}>
-          <HorizontalList class="hz-list"
+          <VerticalList
                           style={{overflow: 'hidden', display: 'block'}}
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-            <ToogleItem></ToogleItem>
-          </HorizontalList>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+            <ToogleItem>TI</ToogleItem>
+          </VerticalList>
         </div>
       </div>
     );

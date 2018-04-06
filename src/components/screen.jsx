@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import util from 'util';
 
+import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
+
+
 /**
  * Each entry in the QuestionList is represtented by a QuestionListItem, which displays high-level information
  * about a question in a format that works well in a list
@@ -36,11 +39,18 @@ class Screen extends React.Component {
     console.log(util.inspect(this.props.ui_components, false, null));
 
       return (
+          <Navigation>
         <div className="screen" id={this.props.id} styles={this.props.styles.family} >
 
-          <Comps ui_components = {this.props.ui_components} family={this.props.styles.family} />
+          <div id="content">
+
+                <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
+
+              </div>
+
           </div>
-      
+            </Navigation>
+
       )
     }
 }

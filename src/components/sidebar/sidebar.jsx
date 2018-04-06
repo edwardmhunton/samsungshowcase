@@ -20,8 +20,6 @@ class Sidebar extends React.Component {
       active: null,
       hold: true
     }
-    this.lists = ["Title 1", "Title 2", "Title 3", "Title 4"]
-
   }
 
   changeFocusTo(index) {
@@ -61,16 +59,15 @@ class Sidebar extends React.Component {
 
             return (
               <div className="component sidebar">
-              <p>Sidebar</p>
-              <Navigation>
-                <VerticalList id="content" onBlur={() => this.onBlurLists()}>
+            
+
+                <VerticalList onBlur={() => this.onBlurLists()}>
 
 
-                    <Menu title={"My List"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
-                      <Menu title={"My List"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+                    <Menu title={"Main Menu"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
                 </VerticalList>
-              </Navigation>
+
               </div>
             )
 

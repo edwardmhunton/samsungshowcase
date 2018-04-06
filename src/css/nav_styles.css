@@ -134,11 +134,11 @@ html, body {
 }
 
 #content .content {
-  white-space: nowrap;
+/*  white-space: nowrap;*/
   font-size: 0;
   overflow: hidden;
   padding: 50px;
-  margin: -50px;
+/*  margin: -50px; */
 }
 
 #content h1 {

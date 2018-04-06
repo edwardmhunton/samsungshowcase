@@ -5,14 +5,14 @@ import { push } from 'react-router-redux';
 import history from '../../history.js';
 import util from 'util';
 
-import ListItem from './list_item';
+import HeroItem from './hero_item';
 
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
 
 
 //import List from './List';
 
-class List extends React.Component {
+class Hero extends React.Component {
 
   constructor(props) {
     super(props);
@@ -60,12 +60,11 @@ class List extends React.Component {
             let i = 1;
 
             return (
-              <div className="component list">
-
+              <div className="component hero">
 
                 <VerticalList onBlur={() => this.onBlurLists()}>
 
-                  <ListItem title={"Blockbusters"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+                  <HeroItem title={"Hero"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
                 </VerticalList>
 
@@ -93,4 +92,4 @@ const mapStateToProps = (state, ownProps) => {
 /**
  * Create and export a connected component
  */
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps)(Hero);
