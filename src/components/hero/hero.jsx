@@ -63,7 +63,7 @@ class Hero extends React.Component {
 
                 <HorizontalList onBlur={() => this.onBlurLists()}>
 
-                  <HeroItem title={"Hero"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+                  <HeroItem title={""} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
                 </HorizontalList>
 

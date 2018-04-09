@@ -61,7 +61,7 @@ class List extends React.Component {
               <div className="component list">
 
 
-                                <HorizontalList onBlur={() => this.onBlurLists()}>
+                <HorizontalList onBlur={() => this.onBlurLists()}>
 
                   <ListItem title={"Blockbusters"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 

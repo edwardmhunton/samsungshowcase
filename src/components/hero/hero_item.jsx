@@ -16,7 +16,7 @@ class ToogleItem extends React.Component {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}>
-        <div class={'item ' + (this.state.active ? 'item-focus' : '')}>TI</div>
+        <div class={'item hero_item ' + (this.state.active ? 'item-focus' : '')}></div>
       </Focusable>
     );
   }
@@ -57,15 +57,13 @@ export default class HeroItem extends React.Component {
   render() {
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
-        <h1>{this.props.title}</h1>
+    
         <div class="content" ref={(content) => { this.content = content}}>
           <HorizontalList
-                          style={{overflow: 'hidden', display: 'block'}}
+
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}>
             <ToogleItem>TI</ToogleItem>
-              <ToogleItem>TI</ToogleItem>
-
           </HorizontalList>
         </div>
       </div>
