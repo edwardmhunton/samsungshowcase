@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import util from 'util';
 
+import Hero from './hero/hero';
+import List from './list/list';
+import Sidebar from './sidebar/sidebar';
+
 import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
 
 
@@ -46,7 +50,19 @@ class Screen extends React.Component {
         <div className="screen" id={this.props.id} styles={this.props.styles.family} >
         <div id="content">
         <HorizontalList>
-                      <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
+
+                    <Sidebar />
+
+                  <div id="main">
+
+                    <VerticalList>
+                      <Hero />
+                      <List />
+                      </VerticalList>
+
+                  </div>
+
+
         </HorizontalList>
         </div>
       </div>
