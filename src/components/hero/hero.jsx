@@ -7,7 +7,7 @@ import util from 'util';
 
 import HeroItem from './hero_item';
 
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
+import Navigation, { VerticalList, HorizontalList, Focusable } from 'react-key-navigation'
 
 
 //import List from './List';
@@ -20,8 +20,6 @@ class Hero extends React.Component {
       active: null,
       hold: true
     }
-    this.lists = ["Title 1", "Title 2", "Title 3", "Title 4"]
-
   }
 
   changeFocusTo(index) {
@@ -60,15 +58,20 @@ class Hero extends React.Component {
             let i = 1;
 
             return (
+
               <div className="component hero">
 
-                <VerticalList onBlur={() => this.onBlurLists()}>
+                <HorizontalList onBlur={() => this.onBlurLists()}>
 
                   <HeroItem title={"Hero"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
-                </VerticalList>
+                </HorizontalList>
+
+
 
               </div>
+
+
             )
 
           }

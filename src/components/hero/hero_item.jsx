@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTV from 'react-tv';
 
-import { Focusable, VerticalList } from 'react-key-navigation';
+import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
 
 class ToogleItem extends React.Component {
   constructor() {
@@ -59,12 +59,14 @@ export default class HeroItem extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <h1>{this.props.title}</h1>
         <div class="content" ref={(content) => { this.content = content}}>
-          <VerticalList
+          <HorizontalList
                           style={{overflow: 'hidden', display: 'block'}}
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}>
             <ToogleItem>TI</ToogleItem>
-          </VerticalList>
+              <ToogleItem>TI</ToogleItem>
+
+          </HorizontalList>
         </div>
       </div>
     );

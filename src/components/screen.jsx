@@ -36,22 +36,44 @@ class Screen extends React.Component {
 
   render(){
 
-    console.log(util.inspect(this.props.ui_components, false, null));
+    console.log("BIG LOGS"+ util.inspect(this.props.ui_components, false, null));
+
+    if(this.props.ui_components[0].params.component_type === 'sidebar'){ /// rubbish code - change!!
 
       return (
-          <Navigation>
+
+      <Navigation>
         <div className="screen" id={this.props.id} styles={this.props.styles.family} >
+        <div id="content">
+        <HorizontalList>
+                      <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
+        </HorizontalList>
+        </div>
+      </div>
+      </Navigation>
 
-          <div id="content">
+    )
 
-                <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
+    } else {
 
-              </div>
+      return (
 
+            <div className="screen" id={this.props.id} styles={this.props.styles.family} >
+            <div id="content">
+
+                          <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
+
+            </div>
           </div>
-            </Navigation>
 
-      )
+
+        )
+
+    }
+
+
+
+
     }
 }
 

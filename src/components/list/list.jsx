@@ -20,8 +20,6 @@ class List extends React.Component {
       active: null,
       hold: true
     }
-    this.lists = ["Title 1", "Title 2", "Title 3", "Title 4"]
-
   }
 
   changeFocusTo(index) {
@@ -63,11 +61,11 @@ class List extends React.Component {
               <div className="component list">
 
 
-                <VerticalList onBlur={() => this.onBlurLists()}>
+                                <HorizontalList onBlur={() => this.onBlurLists()}>
 
                   <ListItem title={"Blockbusters"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
-                </VerticalList>
+                </HorizontalList>
 
               </div>
             )
