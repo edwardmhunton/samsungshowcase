@@ -95,7 +95,71 @@ class AppDisplay extends React.Component {
 
     //console.log("Screen comps"+util.inspect(screen_components, false, null));
 
+    return (
 
+    <div>
+
+
+
+    <Route exact path='/' render={() =>
+
+    // /<Screen layout={screen_components} />
+
+    <Screen id={screens.Splash.id} ui_components={screens.Splash.components} styles={screens.Splash.styles} />
+
+
+    } />
+
+    <Route exact path='/login' render={() =>
+
+    // /<Screen layout={screen_components} />
+
+    <Screen id={screens.Login.id} ui_components={screens.Login.components} styles={screens.Login.styles} />
+
+
+    } />
+
+    <Route exact path='/home' render={() =>
+
+    // /<Screen layout={screen_components} />
+
+    <Screen id={screens.Home.id} ui_components={screens.Home.components} styles={screens.Home.styles} />
+
+
+    } />
+
+    <Route exact path='/screen1' render={() =>
+
+    // /<Screen layout={screen_components} />
+
+    <Screen id={screens.Screen1.id} ui_components={screens.Screen1.components} styles={screens.Screen1.styles} />
+
+
+    } />
+
+    <Route exact path='/screen2' render={() =>
+
+    // /<Screen layout={screen_components} />
+
+    <Screen id={screens.Screen2.id} ui_components={screens.Screen2.components} styles={screens.Screen2.styles} />
+
+
+    } />
+
+    <Route exact path='/screen3' render={() =>
+
+    // /<Screen layout={screen_components} />
+
+    <Screen id={screens.Screen3.id} ui_components={screens.Screen3.components} styles={screens.Screen3.styles} />
+
+
+    } />
+
+
+
+    </div>
+
+  )
 
 
 
@@ -137,9 +201,9 @@ class AppDisplay extends React.Component {
 
 
 
-         return (
+        /* return (
             <Screen id={data.id} ui_components={screen_components} styles={data.styles} />
-          )
+          )*/
 
     }
 
