@@ -54,9 +54,10 @@ export default class Menu extends React.Component {
     if (this.content) {
       console.log('MENU')
       const items = this.content.getElementsByClassName('item');
-      const offsetHeight = items[0].offsetHeight + 20;
-      this.content.scrollTop = offsetHeight * index;
-          console.log('MENU'+this.content.scrollTop);
+      const offsetHeight = items[0].offsetHeight - 440;
+      const target = this.content.getElementsByClassName("vt-list");
+      target[0].style.top = offsetHeight*index+"px";
+          console.log('MENU'+offsetHeight*index);
     }
 
     /*if (this.content) {
@@ -75,8 +76,8 @@ export default class Menu extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
 
         <div class="content" ref={(content) => { this.content = content}}>
-          <VerticalList class="hz-list"
-            style={{overflow: 'scroll', display: 'block', scrollTop: '200'}}
+          <VerticalList class="vt-list"
+            style={{ display: 'block', position:'absolute', top: '0', width: '200px'}}
 
 
                           onFocus={(index) => this.onFocus(index)}
