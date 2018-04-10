@@ -62,12 +62,6 @@ export default class ListItem extends React.Component {
     this._lastFocus = index;
   }
 
-  /*  {this.titles.map((title, i) =>
-      <ToogleItem title={title} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
-    )}
-
-    */
-
   render() {
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>

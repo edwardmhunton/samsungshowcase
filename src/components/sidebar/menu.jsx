@@ -18,7 +18,8 @@ class ToogleItem extends React.Component {
   render() {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
-                 onBlur={() => this.setState({active: false})}>
+                 onBlur={() => this.setState({active: false})}
+                 onEnterDown={(index) => this.props.onEnterDown(index)}>
         <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
@@ -41,6 +42,11 @@ export default class Menu extends React.Component {
     }
   }
 
+  onEnterDown(index) {
+    console.log("Enter captured: "+index);
+
+  }
+
   onFocus(index) {
     console.log(index, this._lastFocus);
     if (this._lastFocus === index) {
@@ -60,14 +66,6 @@ export default class Menu extends React.Component {
           console.log('MENU'+offsetHeight*index);
     }
 
-    /*if (this.content) {
-      console.log("FOC");
-      const items = this.content.getElementsByClassName('item');
-      const offsetWidth = items[0].offsetWidth + this.paddingValue;
-      this.content.scrollLeft = offsetWidth * index;
-        console.log("FOC"+  this.content.scrollLeft);
-    }*/
-
     this._lastFocus = index;
   }
 
@@ -77,13 +75,15 @@ export default class Menu extends React.Component {
 
         <div class="content" ref={(content) => { this.content = content}}>
           <VerticalList class="vt-list"
-            style={{ display: 'block', position:'absolute', top: '0', width: '200px'}}
+            style={{ display: 'block', position:'absolute', top: '0', width: '200px', marginLeft:'45px', marginTop:'50px'}}
 
 
                           onFocus={(index) => this.onFocus(index)}
-                          onBlur={() => { this._lastFocus = null }}>
+                          onBlur={() => { this._lastFocus = null }}
+
+                          >
                           {this.titles.map((title, i) =>
-                              <ToogleItem title={title} />
+                              <ToogleItem onEnterDown={this.onEnterDown} title={title} />
                             )}
           </VerticalList>
         </div>
