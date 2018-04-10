@@ -135,7 +135,7 @@ html, body {
 
 #content .content {
 /*  white-space: nowrap;*/
-  font-size: 0;
+  /*font-size: 0;*/
   overflow: hidden;
   /*padding: 50px;*/
 /*  margin: -50px; */

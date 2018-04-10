@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTV from 'react-tv';
 
-import { Focusable, VerticalList } from 'react-key-navigation';
+import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
 
 class ToogleItem extends React.Component {
   constructor() {
@@ -11,6 +11,7 @@ class ToogleItem extends React.Component {
       active: false
     }
 
+
     this.paddingValue = 30;
   }
 
@@ -18,7 +19,7 @@ class ToogleItem extends React.Component {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}>
-        <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>TI</div>
+        <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
   }
@@ -28,10 +29,13 @@ export default class Menu extends React.Component {
   constructor() {
     super();
     this._lastFocus = null;
+    this.titles = ["Film 1", "Film 2","Film 3","Film 4","Film 5","Film 6","Film 7","Film 8","Film 9","Film 10","Film 11","Film 12","Film 13","Film 14","Film 15"];
+
   }
 
   componentDidMount() {
     const width = (Math.floor(this.content.scrollWidth /  this.content.clientWidth ) * this.content.clientWidth) + this.content.clientWidth + this.paddingValue;
+    this.content.overflow = 'hidden';
     if (this.content.getElementsByClassName('hz-list')[0]) {
       this.content.getElementsByClassName('hz-list')[0].style.width = width + 'px';
     }
@@ -48,10 +52,20 @@ export default class Menu extends React.Component {
     }
 
     if (this.content) {
+      console.log('MENU')
       const items = this.content.getElementsByClassName('item');
-      const offsetWidth = items[0].offsetWidth + 20;
-      this.content.scrollLeft = offsetWidth * index;
+      const offsetHeight = items[0].offsetHeight + 20;
+      this.content.scrollTop = offsetHeight * index;
+          console.log('MENU'+this.content.scrollTop);
     }
+
+    /*if (this.content) {
+      console.log("FOC");
+      const items = this.content.getElementsByClassName('item');
+      const offsetWidth = items[0].offsetWidth + this.paddingValue;
+      this.content.scrollLeft = offsetWidth * index;
+        console.log("FOC"+  this.content.scrollLeft);
+    }*/
 
     this._lastFocus = index;
   }
@@ -61,19 +75,15 @@ export default class Menu extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
 
         <div class="content" ref={(content) => { this.content = content}}>
-          <VerticalList
+          <VerticalList class="hz-list"
+            style={{overflow: 'scroll', display: 'block', scrollTop: '200'}}
+
 
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
-            <ToogleItem>TI</ToogleItem>
+                          {this.titles.map((title, i) =>
+                              <ToogleItem title={title} />
+                            )}
           </VerticalList>
         </div>
       </div>

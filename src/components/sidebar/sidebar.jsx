@@ -61,12 +61,12 @@ class Sidebar extends React.Component {
               <div className="component sidebar">
 
 
-                <VerticalList onBlur={() => this.onBlurLists()}>
+                <HorizontalList onBlur={() => this.onBlurLists()}>
 
 
                     <Menu title={""} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
-                </VerticalList>
+                </HorizontalList>
 
               </div>
             )
