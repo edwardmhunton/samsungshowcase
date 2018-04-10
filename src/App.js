@@ -99,7 +99,7 @@ class AppDisplay extends React.Component {
 
 
 
-      return (
+      /*return (
 
         <Navigation>
 
@@ -128,7 +128,7 @@ class AppDisplay extends React.Component {
 
 
 
-    )
+    )*/
 
 
 
@@ -137,9 +137,9 @@ class AppDisplay extends React.Component {
 
 
 
-        /*  return (
+         return (
             <Screen id={data.id} ui_components={screen_components} styles={data.styles} />
-          )*/
+          )
 
     }
 

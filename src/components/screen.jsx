@@ -40,7 +40,7 @@ class Screen extends React.Component {
 
   render(){
 
-    console.log("BIG LOGS"+ util.inspect(this.props.ui_components, false, null));
+    console.log("BIG LOGS"+ util.inspect(this.props.ui_components[0].params.component_type, false, null));
 
     if(this.props.ui_components[0].params.component_type === 'sidebar'){ /// rubbish code - change!!
 
