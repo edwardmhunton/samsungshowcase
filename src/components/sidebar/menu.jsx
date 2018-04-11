@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactTV from 'react-tv';
+import VideoManager from '../player/player_manager';
+import util from 'util';
+
+
 
 import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
 
@@ -32,6 +36,10 @@ export default class Menu extends React.Component {
     this._lastFocus = null;
     this.titles = ["Film 1", "Film 2","Film 3","Film 4","Film 5","Film 6","Film 7","Film 8","Film 9","Film 10","Film 11","Film 12","Film 13","Film 14","Film 15"];
 
+    this.state = {
+      hold:true
+    }
+
   }
 
   componentDidMount() {
@@ -43,7 +51,11 @@ export default class Menu extends React.Component {
   }
 
   onEnterDown(index) {
-    console.log("Enter captured: "+index);
+    console.log("Enter captured: "+util.inspect(this.props, false, null));
+    () => {this.props.action()};
+
+    this.setState({hold: false});
+
 
   }
 
@@ -83,7 +95,7 @@ export default class Menu extends React.Component {
 
                           >
                           {this.titles.map((title, i) =>
-                              <ToogleItem onEnterDown={this.onEnterDown} title={title} />
+                              <ToogleItem onEnterDown={() => this.props.action(i)}  title={title} />
                             )}
           </VerticalList>
         </div>

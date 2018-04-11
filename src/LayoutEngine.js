@@ -1,11 +1,18 @@
 // The layout engine consumes the Layout json and builds a screen, generally sits in the App component
 import React from 'react';
+
+//ui components
+
 import List from './components/list/list';
 import Hero from './components/hero/hero';
+import PlayerWrapper from './components/player/player_wrapper';
 import Grid from './components/grid';
 import Splash from './components/splash';
+import Player from './components/player';
 import Login from './components/login';
 import Sidebar from './components/sidebar/sidebar';
+//import Player from './components/player/player';
+
 
 //API
 
@@ -17,7 +24,8 @@ LayoutEngine.components = {
      grid: Grid,
      splash: Splash,
      login: Login,
-     sidebar: Sidebar
+     sidebar: Sidebar,
+     player_wrapper: PlayerWrapper
 
  };
 

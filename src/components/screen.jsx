@@ -2,10 +2,13 @@ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import util from 'util';
+import { Redirect } from 'react-router-dom';
+import history from '../history.js';
 
 import Hero from './hero/hero';
 import List from './list/list';
 import Sidebar from './sidebar/sidebar';
+
 
 import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
 
@@ -36,9 +39,49 @@ import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
 class Screen extends React.Component {
 
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hold:true,
+      player:false
+    }
+
+  this.transitionToPlayer = this.transitionToPlayer.bind(this);
+
+}
+
+
+
+  transitionToPlayer(videoMetaData){
+
+
+
+            //console.log('trans to P: '+util.inspect(this, false, null));
+
+            this.setState({player: true});
+            this.setState({video_meta_data: videoMetaData});
+
+
+  }
+
+
+
 
 
   render(){
+
+if(this.state.player === true){
+
+  console.log("try to rd");
+
+  return (
+
+    <Redirect to="/player" push />
+
+  )
+
+}
 
     console.log("BIG LOGS"+ util.inspect(this.props.ui_components[0].params.component_type, false, null));
 
@@ -51,7 +94,7 @@ class Screen extends React.Component {
         <div id="content">
         <HorizontalList>
 
-                    <Sidebar />
+                    <Sidebar action={this.transitionToPlayer} />
 
                   <div id="main">
 

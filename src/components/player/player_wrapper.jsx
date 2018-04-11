@@ -5,14 +5,12 @@ import { push } from 'react-router-redux';
 import history from '../../history.js';
 import util from 'util';
 
-import Menu from './menu';
-
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
+import Navigation, { VerticalList, HorizontalList, Focusable } from 'react-key-navigation'
 
 
 //import List from './List';
 
-class Sidebar extends React.Component {
+class PlayerWrapper extends React.Component {
 
   constructor(props) {
     super(props);
@@ -51,24 +49,23 @@ class Sidebar extends React.Component {
 
   render() {
 
+    console.log("The State:"+util.inspect(this.state, false, null))
+
 
 
           if(this.state.hold){
 
-            let i = 1;
+
 
             return (
-              <div className="component sidebar">
 
+              <div className="component player_wrapper">
 
-                <HorizontalList onBlur={() => this.onBlurLists()}>
-
-
-                    <Menu title={""} action={this.props.action} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
-
-                </HorizontalList>
+  <h4>Player Wrapper</h4>
 
               </div>
+
+
             )
 
           }
@@ -92,4 +89,4 @@ const mapStateToProps = (state, ownProps) => {
 /**
  * Create and export a connected component
  */
-export default connect(mapStateToProps)(Sidebar);
+export default connect(mapStateToProps)(PlayerWrapper);

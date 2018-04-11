@@ -66,6 +66,37 @@
   },
   {
     "id": "282919fd-7617-4165-a33e-ecbe8d86479c",
+    "name": "Player",
+    "type": "general_content",
+    "data": {},
+    "styles": {
+      "family": "FAMILY_1"
+    },
+    "ui_components": [
+      {
+        "component_type": "player_wrapper",
+        "data": {},
+        "position": 0,
+        "rules": {
+          "item_limit": "3"
+        },
+        "styles": {
+          "family": "FAMILY_1",
+          "layout": "HERO_3",
+          "header": {
+            "visible": true,
+            "style": "HEADER_3"
+          },
+          "cell_styles": [
+            "HERO_CELL_3"
+          ]
+        }
+      }
+    ],
+    "navigations": []
+  },
+  {
+    "id": "282919fd-7617-4165-a33e-ecbe8d86479c",
     "name": "Home",
     "type": "general_content",
     "data": {},
@@ -141,6 +172,7 @@
     ],
     "navigations": []
   },
+
   {
     "id": "928fc26e-5963-4a77-a7b0-926d37769987",
     "name": "Screen1",
