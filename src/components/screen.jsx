@@ -117,6 +117,8 @@ class Screen extends React.Component {
 
     } else {
 
+      console.log("Props in non-nav screen"+ util.inspect(this.props, false, null));
+
       return (
 
             <div className="screen" id={this.props.id} styles={this.props.styles.family} >
@@ -143,11 +145,20 @@ class Screen extends React.Component {
  * It is populated by a ../sagas/fetch-question(s)-saga.
  */
  //state, ownProps
- const mapStateToProps = (state, ownProps) =>({
+ function mapStateToProps (state, ownProps) {
+
+   console.log("MSTP called screen"+util.inspect(state, false, null));
+   console.log("MSTP called screen ownProps"+util.inspect(ownProps, false, null));
+
+
+
+   return {
 
    content: state.content
 
- });
+ }
+
+ };
 
  const mapDispatchToProps = (dispatch)=>({
 

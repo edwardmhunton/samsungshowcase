@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as contentActions from '../../actions/contentActions';
 import { Redirect } from 'react-router-dom';
 import { push } from 'react-router-redux';
 import history from '../../history.js';
@@ -14,10 +16,7 @@ class PlayerWrapper extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      active: null,
-      hold: true
-    }
+
   }
 
   changeFocusTo(index) {
@@ -49,11 +48,11 @@ class PlayerWrapper extends React.Component {
 
   render() {
 
-    //console.log("The State:"+util.inspect(this.state, false, null))
+    console.log("The State:"+util.inspect(this.state, false, null))
 
 
 
-          if(this.state.hold){
+        //  if(this.state.hold){
 
 
 
@@ -61,14 +60,14 @@ class PlayerWrapper extends React.Component {
 
               <div className="component player_wrapper">
 
-  <h4>Player Wrapper</h4>
+                      <h4>Player Wrapper {this.props.content}</h4>
 
               </div>
 
 
             )
 
-          }
+        //  }
 
 
 
@@ -80,13 +79,25 @@ class PlayerWrapper extends React.Component {
 
 
 
-const mapStateToProps = (state, ownProps) => {
+function mapStateToProps (state, ownProps){
+
+  console.log("MSTP called wrapper"+util.inspect(state.content.content, false, null));
+
   return {
-    ...state
+      content: state.content.content
   }
-}
+
+
+
+};
+
+const mapDispatchToProps = (dispatch)=>({
+
+    actions: bindActionCreators(contentActions, dispatch)
+
+});
 
 /**
- * Create and export a connected component
- */
-export default connect(mapStateToProps)(PlayerWrapper);
+* Create and export a connected component
+*/
+export default connect(mapStateToProps, mapDispatchToProps)(PlayerWrapper);

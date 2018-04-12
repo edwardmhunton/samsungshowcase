@@ -95,7 +95,7 @@ export default class Menu extends React.Component {
 
                           >
                           {this.titles.map((title, i) =>
-                              <ToogleItem onEnterDown={() => this.props.action(i)}  title={title} />
+                              <ToogleItem onEnterDown={() => this.props.action(title)}  title={title} />
                             )}
           </VerticalList>
         </div>

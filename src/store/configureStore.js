@@ -12,7 +12,7 @@ import content from '../reducers/contentReducer'
 
   //initialState = [];
 
-          //  const middleware = routerMiddleware(history);
+          //const middleware = routerMiddleware(history);
             const sagaMiddleware = createSagaMiddleware();
             const imutableState = reduxImutableStateInvariant();
             const middlewareChain = [imutableState, sagaMiddleware]; //middleware,

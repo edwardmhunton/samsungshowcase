@@ -77,6 +77,12 @@
   height: 90%;
 }
 
+.player_wrapper {
+  float: left;
+  height: 100%;
+  width:100%;
+}
+
 .list {
   float:right;
   width:77%;

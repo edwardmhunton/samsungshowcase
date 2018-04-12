@@ -54,8 +54,6 @@ class Splash extends React.Component {
 
         } else {
 
-          console.log('try rd');
-
           history.push('/login');
 
           return (
