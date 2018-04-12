@@ -1,5 +1,9 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
+
+import { bindActionCreators } from 'redux';
+
+import * as contentActions from '../actions/contentActions';
 import {Link} from 'react-router-dom';
 import util from 'util';
 import { Redirect } from 'react-router-dom';
@@ -60,7 +64,10 @@ class Screen extends React.Component {
             //console.log('trans to P: '+util.inspect(this, false, null));
 
             this.setState({player: true});
-            this.setState({video_meta_data: videoMetaData});
+            this.setState({content: videoMetaData});
+            this.props.actions.setContent(this.state.content);
+
+
 
 
   }
@@ -71,17 +78,12 @@ class Screen extends React.Component {
 
   render(){
 
-if(this.state.player === true){
-
-  console.log("try to rd");
-
-  return (
-
-    <Redirect to="/player" push />
-
-  )
-
-}
+    if(this.state.player === true){
+      this.state.player = false;
+      return (
+            <Redirect to="/player" push />
+      )
+    }
 
     console.log("BIG LOGS"+ util.inspect(this.props.ui_components[0].params.component_type, false, null));
 
@@ -141,11 +143,19 @@ if(this.state.player === true){
  * It is populated by a ../sagas/fetch-question(s)-saga.
  */
  //state, ownProps
- const mapStateToProps = ()=>({
+ const mapStateToProps = (state, ownProps) =>({
+
+   content: state.content
+
+ });
+
+ const mapDispatchToProps = (dispatch)=>({
+
+     actions: bindActionCreators(contentActions, dispatch)
 
  });
 
 /**
  * Create and export a connected component
  */
-export default connect(mapStateToProps)(Screen);
+export default connect(mapStateToProps, mapDispatchToProps)(Screen);

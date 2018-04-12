@@ -35,6 +35,8 @@ class Splash extends React.Component {
 
   render() {
 
+    console.log("State in splash"+util.inspect(this.state, false, null));
+
 
 
           if(this.state.hold){
@@ -48,17 +50,21 @@ class Splash extends React.Component {
               </div>
             )
 
-          } else {
 
-            history.push('/login');
 
-            return (
+        } else {
 
-              <Redirect to="/login" push />
+          console.log('try rd');
 
-            )
+          history.push('/login');
 
-          }
+          return (
+
+            <Redirect to="/login" push />
+
+           )
+
+       }
 
 
 
@@ -72,11 +78,10 @@ const mapStateToProps = ()=>({
 });
 
 
-//const mapStateToProps = (state, ownProps) => {
-//  return {
-  //  ...state
-//  }
-//}
+/*const mapStateToProps = (state, ownProps) => {
+ return {
+    ...state
+ }}*/
 
 /**
  * Create and export a connected component

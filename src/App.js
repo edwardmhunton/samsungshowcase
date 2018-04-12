@@ -4,7 +4,7 @@ import { connect} from 'react-redux';
 import Screen from './components/screen';
 import LayoutEngine from './LayoutEngine';
 import data from '../data/app-layout.json';
-import {Route, BrowserRouter, Link } from 'react-router-dom';
+import {Route, BrowserRouter, Switch } from 'react-router-dom';
 import util from 'util';
 import history from './history.js';
 
@@ -99,7 +99,7 @@ class AppDisplay extends React.Component {
 
     return (
 
-    <div>
+    <Switch>
 
 
 
@@ -158,7 +158,7 @@ class AppDisplay extends React.Component {
 
 
 
-    </div>
+</Switch>
 
   )
 

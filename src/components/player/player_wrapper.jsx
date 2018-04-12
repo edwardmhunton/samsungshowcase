@@ -49,7 +49,7 @@ class PlayerWrapper extends React.Component {
 
   render() {
 
-    console.log("The State:"+util.inspect(this.state, false, null))
+    //console.log("The State:"+util.inspect(this.state, false, null))
 
 
 

@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom'
 import React from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
-import getStore from './getStore';
+import configureStore from './store/configureStore';
 import history from './history.js';
 
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
@@ -28,7 +28,9 @@ import util from 'util';
 
 
 //const history = createHistory();
-const store = getStore(history);
+//const store = configureStore(history);
+const store = configureStore();
+
 
 if (module.hot) {
     module.hot.accept('./App', () => {
