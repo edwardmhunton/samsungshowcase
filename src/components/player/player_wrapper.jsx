@@ -19,6 +19,21 @@ class PlayerWrapper extends React.Component {
 
   }
 
+  onKeyDown(){
+    console.log("down");
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.onKeyDown);
+    window.addEventListener('keyup', this.onKeyUp);
+    //this.focusDefault();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keyup', this.onKeyUp);
+    window.removeEventListener('keydown', this.onKeyDown);
+  }
+
   changeFocusTo(index) {
     this.setState({active: index});
   }
@@ -33,16 +48,6 @@ class PlayerWrapper extends React.Component {
       this.setState({hold: false});
   }
 
-  componentDidMount() {
-
-    var self = this;
-
-  }
-
-  componentWillUnmount () {
-
-
-  }
 
 
 
@@ -57,9 +62,10 @@ class PlayerWrapper extends React.Component {
 
 
             return (
-
+              <Navigation >
               <div className="component player_wrapper">
                   <div id="content">
+
                 <HorizontalList>
                   <Focusable onFocus={() => this.setState({active: true})}
                              onBlur={() => this.setState({active: false})}
@@ -73,6 +79,7 @@ class PlayerWrapper extends React.Component {
               </div>
 
               </div>
+            </Navigation>
 
 
             )

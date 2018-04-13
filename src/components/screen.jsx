@@ -100,7 +100,7 @@ class Screen extends React.Component {
 
                   <Sidebar action={this.transitionToPlayer} />
 
-                  <div id="main">
+                  <div >
 
                     <VerticalList>
                       <Hero />
@@ -127,7 +127,7 @@ class Screen extends React.Component {
       return (
 
             <div className="screen" id={this.props.id} styles={this.props.styles.family} >
-              
+
             <div id="content">
 
                           <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
