@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as contentActions from '../../actions/contentActions';
+import * as contentActions from '../../../actions/contentActions';
 import { Redirect } from 'react-router-dom';
 import { push } from 'react-router-redux';
-import history from '../../history.js';
+import history from '../../../history.js';
 import util from 'util';
 
 import Navigation, { VerticalList, HorizontalList, Focusable } from 'react-key-navigation'

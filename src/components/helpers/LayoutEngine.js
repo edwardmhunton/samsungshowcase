@@ -2,15 +2,20 @@
 import React from 'react';
 
 //ui components
+import List from '../ui_components/list/list';
+import Hero from '../ui_components/hero/hero';
+import PlayerWrapper from '../ui_components/player/player_wrapper';
+import Grid from '../ui_components/grid/grid';
+import Splash from '../ui_components/splash/splash_ui_component';
+//import Player from '../ui_components/player';
+import Login from '../ui_components/login/login';
+import Sidebar from '../ui_components/sidebar/sidebar';
 
-import List from './components/list/list';
-import Hero from './components/hero/hero';
-import PlayerWrapper from './components/player/player_wrapper';
-import Grid from './components/grid';
-import Splash from './components/splash';
-import Player from './components/player';
-import Login from './components/login';
-import Sidebar from './components/sidebar/sidebar';
+//screens
+
+import SplashScreen from '../screens/splash_screen';
+
+
 //import Player from './components/player/player';
 
 

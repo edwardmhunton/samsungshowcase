@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 
 import { bindActionCreators } from 'redux';
 
-import * as contentActions from '../actions/contentActions';
+import * as contentActions from '../../actions/contentActions';
 import {Link} from 'react-router-dom';
 import util from 'util';
 import { Redirect } from 'react-router-dom';
-import history from '../history.js';
+import history from '../../history.js';
 
-import Hero from './hero/hero';
-import List from './list/list';
-import Sidebar from './sidebar/sidebar';
+// Screens
+
+import SplashScreen from '../screens/splash_screen';
 
 
 import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
@@ -22,7 +22,7 @@ import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
  * about a question in a format that works well in a list
  //{ui_components.map(component=><ComponentWrapper key={ui_components.question_id} {...question}/>)}
 
- */
+
 
 
 
@@ -35,23 +35,24 @@ import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
 
           )
      })
- );
+ );*/
 
 /**
  * Display all questions in an array provided to it as a simple list
  */
-class Screen extends React.Component {
+class ScreenWrapper extends React.Component {
 
 
   constructor(props) {
     super(props);
 
     this.state = {
-      hold:true,
-      player:false
+      hold:true
     }
 
   this.transitionToPlayer = this.transitionToPlayer.bind(this);
+  this.transitionToLogin = this.transitionToLogin.bind(this);
+
 
 }
 
@@ -59,18 +60,16 @@ class Screen extends React.Component {
 
   transitionToPlayer(videoMetaData){
 
-
-
-            //console.log('trans to P: '+util.inspect(this, false, null));
-
             this.setState({player: true});
             this.setState({content: videoMetaData});
             this.props.actions.setContent(this.state.content);
+}
 
+transitionToLogin(videoMetaData){
 
-
-
-  }
+          this.setState({login: true});
+          this.props.actions.setContent(this.state.content);
+}
 
 
 
@@ -78,73 +77,22 @@ class Screen extends React.Component {
 
   render(){
 
-    if(this.state.player === true){
-      this.state.player = false;
-      return (
-            <Redirect to="/player" push />
-      )
-    }
-
-    console.log("BIG LOGS"+ util.inspect(this.props.ui_components[0].params.component_type, false, null));
-
-    if(this.props.ui_components[0].params.component_type === 'sidebar'){ /// rubbish code - change!!
+    
 
       return (
 
-
-
-        <div className="screen" id={this.props.id} styles={this.props.styles.family} >
-          <Navigation >
-        <div id="content">
-        <HorizontalList>
-
-                  <Sidebar action={this.transitionToPlayer} />
-
-                  <div >
-
-                    <VerticalList>
-                      <Hero />
-                      <List />
-                    </VerticalList>
-
-                  </div>
-
-
-        </HorizontalList>
-
-        </div>
-        </Navigation>
-      </div>
-
-
-
-    )
-
-    } else {
-
-      console.log("Props in non-nav screen"+ util.inspect(this.props, false, null));
-
-      return (
-
-            <div className="screen" id={this.props.id} styles={this.props.styles.family} >
-
-            <div id="content">
-
-                          <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
-
+            <div className="screen" >
+              <SplashScreen />
             </div>
-          </div>
 
 
 
         )
 
-    }
 
 
 
-
-    }
+   }
 }
 
 /**
@@ -174,6 +122,29 @@ class Screen extends React.Component {
  });
 
 /**
- * Create and export a connected component
+<div className="screen" id={this.props.id} styles={this.props.styles.family} >
+<Navigation >
+<div id="content">
+
+  <HorizontalList>
+
+            <Sidebar action={this.transitionToLogin} />
+
+            <div >
+
+              <VerticalList>
+                <List />
+                <List />
+              </VerticalList>
+
+            </div>
+
+
+  </HorizontalList>
+
+</div>
+  </Navigation>
+</div>
+
  */
-export default connect(mapStateToProps, mapDispatchToProps)(Screen);
+export default connect(mapStateToProps, mapDispatchToProps)(ScreenWrapper);

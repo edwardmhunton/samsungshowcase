@@ -2,17 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { push } from 'react-router-redux';
-import history from '../../history.js';
+import history from '../../../history.js';
 import util from 'util';
 
-import Menu from './menu';
+import ListItem from './list_item';
 
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
+import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
 
 
 //import List from './List';
 
-class Sidebar extends React.Component {
+class List extends React.Component {
 
   constructor(props) {
     super(props);
@@ -58,13 +58,12 @@ class Sidebar extends React.Component {
             let i = 1;
 
             return (
-              <div className="component sidebar">
+              <div className="component list">
 
 
                 <HorizontalList onBlur={() => this.onBlurLists()}>
 
-
-                    <Menu title={""} action={this.props.action} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+                  <ListItem title={"Blockbusters"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
                 </HorizontalList>
 
@@ -92,4 +91,4 @@ const mapStateToProps = (state, ownProps) => {
 /**
  * Create and export a connected component
  */
-export default connect(mapStateToProps)(Sidebar);
+export default connect(mapStateToProps)(List);
