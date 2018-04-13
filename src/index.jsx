@@ -18,6 +18,9 @@ import './css/components.css';
 import './css/nav_styles.css';
 import createHistory from 'history/createBrowserHistory';
 
+import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
+
+
 //import ReactTV, { renderOnAppLoaded } from 'react-tv';
 //import { withFocusable, withNavigation } from 'react-tv-navigation';
 
@@ -42,7 +45,9 @@ const render = (_App)=> {
     ReactTV.render(
         <Provider store={store}>
             <ConnectedRouter  history={history}>
+
                  <_App />
+            
              </ConnectedRouter>
          </Provider>
         ,document.getElementById("app_container"));

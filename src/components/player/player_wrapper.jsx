@@ -59,8 +59,18 @@ class PlayerWrapper extends React.Component {
             return (
 
               <div className="component player_wrapper">
+                  <div id="content">
+                <HorizontalList>
+                  <Focusable onFocus={() => this.setState({active: true})}
+                             onBlur={() => this.setState({active: false})}
+                             onEnterDown={(index) => this.props.onEnterDown(index)}>
 
                       <h4>Player Wrapper {this.props.content}</h4>
+
+                    </Focusable>
+
+                </HorizontalList>
+              </div>
 
               </div>
 

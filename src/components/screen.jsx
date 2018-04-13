@@ -91,27 +91,32 @@ class Screen extends React.Component {
 
       return (
 
-      <Navigation>
+
+
         <div className="screen" id={this.props.id} styles={this.props.styles.family} >
+          <Navigation >
         <div id="content">
         <HorizontalList>
 
-                    <Sidebar action={this.transitionToPlayer} />
+                  <Sidebar action={this.transitionToPlayer} />
 
                   <div id="main">
 
                     <VerticalList>
                       <Hero />
                       <List />
-                      </VerticalList>
+                    </VerticalList>
 
                   </div>
 
 
         </HorizontalList>
+
         </div>
+        </Navigation>
       </div>
-      </Navigation>
+
+
 
     )
 
@@ -122,12 +127,14 @@ class Screen extends React.Component {
       return (
 
             <div className="screen" id={this.props.id} styles={this.props.styles.family} >
+              
             <div id="content">
 
                           <Comps  ui_components = {this.props.ui_components} family={this.props.styles.family} />
 
             </div>
           </div>
+
 
 
         )

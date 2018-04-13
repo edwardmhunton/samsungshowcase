@@ -99,11 +99,15 @@ class AppDisplay extends React.Component {
 
     return (
 
+  
+
     <Switch>
 
 
 
     <Route exact path='/' render={() =>
+
+
 
     <Screen id={screens.Splash.id} ui_components={screens.Splash.components} styles={screens.Splash.styles} />
 
@@ -159,6 +163,8 @@ class AppDisplay extends React.Component {
 
 
 </Switch>
+
+
 
   )
 
