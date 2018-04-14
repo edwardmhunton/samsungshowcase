@@ -21,7 +21,13 @@ class SplashScreen extends React.Component {
   constructor(props) {
 
     super(props);
-        this.state = {hold: true};
+
+        this.state = {
+          hold: true,
+          navigation: {'timeout':'', 'back':'', 'enter':''}
+        };
+
+
 
   }
 
@@ -44,8 +50,6 @@ class SplashScreen extends React.Component {
 
   render(){
 
-    console.log("stete"+this.state);
-
 if(this.state.hold) {
 
     return (
@@ -59,6 +63,8 @@ if(this.state.hold) {
     )
 
   } else {
+
+      history.push('/login');
 
     return (
 

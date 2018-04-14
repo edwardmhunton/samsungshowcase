@@ -10,6 +10,8 @@ import history from './history.js';
 import ScreensFromJson from './components/helpers/screensFromJson';
 
 import SplashScreen from './components/screens/splash_screen';
+import LoginScreen from './components/screens/login_screen';
+
 
 class App extends React.Component {
 
@@ -44,12 +46,15 @@ class App extends React.Component {
 
     return (
 
+      <Switch>
+
+
 
     <Route exact path='/' render={() => <SplashScreen /> } />
-    //<Route exact path='/login' render={() => <ScreenWrapper screen={'LoginScreen'}/> } />
-    //<Route exact path='/home' render={() => <ScreenWrapper screen={'HomeScreen'} /> } />
+    <Route exact path='/login' render={() => <LoginScreen /> } />
+    <Route exact path='/home' render={() => <HomeScreen /> } />
 
-
+  </Switch>
 
 
   )

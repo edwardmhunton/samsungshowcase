@@ -8,8 +8,8 @@ import PlayerWrapper from '../ui_components/player/player_wrapper';
 import Grid from '../ui_components/grid/grid';
 import Splash from '../ui_components/splash/splash_ui_component';
 //import Player from '../ui_components/player';
-import Login from '../ui_components/login/login';
-import Sidebar from '../ui_components/sidebar/sidebar';
+import Login from '../ui_components/login/login_ui_component';
+import Sidebar from '../ui_components/sidebar/sidebar_ui_component';
 
 //screens
 
