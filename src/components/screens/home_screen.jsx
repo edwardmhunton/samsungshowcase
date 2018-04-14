@@ -11,7 +11,14 @@ import {Redirect} from 'react-router-dom';
 import history from '../../history.js';
 
 //ui_components
-import LoginUIComponent from '../ui_components/login/login_ui_component';
+import SidebarUIComponent from '../ui_components/sidebar/sidebar_ui_component';
+import Menu from '../ui_components/sidebar/menu';
+
+import HeroUIComponent from '../ui_components/hero/hero_ui_component';
+import ListUIComponent from '../ui_components/list/list_ui_component';
+
+
+
 
 import util from 'util';
 import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
@@ -51,28 +58,39 @@ if(this.state.hold) {
 
     return (
 
-      <Navigation>
+      <div className="screen" id={this.props.id}  >
+        <Navigation >
+      <div id="content">
+      <HorizontalList>
 
+                <SidebarUIComponent action={this.transitionToPlayer} />
+
+
+                <div >
+
+                  <VerticalList>
+                    <HeroUIComponent />
+                    <ListUIComponent />
+                  </VerticalList>
+
+                </div>
+
+
+      </HorizontalList>
+
+      </div>
       </Navigation>
+    </div>
 
 
 
     )
 
-  } else {
-
-      history.push('/login');
-
-    return (
-
-            <Redirect to='/home' push />
-
-            )
-  }
-
 
 
   }
+
+}
 
 
 }

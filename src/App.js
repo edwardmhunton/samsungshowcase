@@ -11,6 +11,8 @@ import ScreensFromJson from './components/helpers/screensFromJson';
 
 import SplashScreen from './components/screens/splash_screen';
 import LoginScreen from './components/screens/login_screen';
+import HomeScreen from './components/screens/home_screen';
+
 
 
 class App extends React.Component {

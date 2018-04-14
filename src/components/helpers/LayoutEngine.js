@@ -2,8 +2,8 @@
 import React from 'react';
 
 //ui components
-import List from '../ui_components/list/list';
-import Hero from '../ui_components/hero/hero';
+import List from '../ui_components/list/list_ui_component';
+import Hero from '../ui_components/hero/hero_ui_component';
 import PlayerWrapper from '../ui_components/player/player_wrapper';
 import Grid from '../ui_components/grid/grid';
 import Splash from '../ui_components/splash/splash_ui_component';
