@@ -19,7 +19,12 @@ class PlayerScreen extends React.Component {
 
   constructor(props) {
     super(props);
-    //this._lastFocus = null;
+    this._lastFocus = null;
+    this.actions = {};
+
+
+    this.previous = this.previous.bind(this);
+
 
   }
 
@@ -41,6 +46,13 @@ class PlayerScreen extends React.Component {
       this.setState({hold: false});
   }
 
+  previous(){
+    console.log("previous called");
+      //this.setState({hold: false});
+        history.push('/home');
+      //  history.goBack();
+  }
+
 
 
 
@@ -48,6 +60,9 @@ class PlayerScreen extends React.Component {
 
     console.log("The State:"+util.inspect(this.state, false, null));
     console.log("The Props:"+util.inspect(this.props, false, null));
+
+    this.actions.previous = this.previous;
+
 
 
 
@@ -63,7 +78,7 @@ class PlayerScreen extends React.Component {
                 <HorizontalList>
 
 
-                      <PlayerWrapper content={this.props.content.content} />
+                      <PlayerWrapper content={this.props.content.content} actions={this.actions}/>
 
 
 
@@ -88,7 +103,7 @@ class PlayerScreen extends React.Component {
 
 function mapStateToProps (state, ownProps){
 
-  console.log("MSTP called wrapper"+util.inspect(state.content, false, null));
+  console.log("MSTP called wrapperx"+util.inspect(state, false, null));
 
   return {
       content: state.content

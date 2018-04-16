@@ -4,7 +4,9 @@ import { routerReducer as router, ConnectedRouter, routerMiddleware, push } from
 import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 
-import content from '../reducers/contentReducer'
+import content from '../reducers/contentReducer';
+import menu from '../reducers/menuReducer';
+
 
 //export default function configureStore(history, initialState = {}) {
   export default function configureStore(initialState) {
@@ -19,6 +21,7 @@ import content from '../reducers/contentReducer'
 
             return createStore(combineReducers({
               content,
+              menu,
               router
             }),
 

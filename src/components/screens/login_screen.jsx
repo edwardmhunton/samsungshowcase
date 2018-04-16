@@ -1,7 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import * as contentActions from '../../actions/contentActions';
+
+
 import history from '../../history.js';
+
+import util from 'util';
+
 
 import LoginUIComponent from '../ui_components/login/login_ui_component';
 
@@ -72,11 +79,21 @@ console.log("hold"+this.state.hold);
 
   }
 
-const mapStateToProps = ()=>({
+  function mapStateToProps (state, ownProps) {
 
-});
+    console.log("The State in login called in MSTP:"+util.inspect(state, false, null));
 
-/**
- * Create and export a connected component
- */
-export default connect(mapStateToProps)(LoginScreen);
+    return {
+
+          content: state.content
+
+    }
+
+  };
+  const mapDispatchToProps = (dispatch)=>({
+
+      actions: bindActionCreators(contentActions, dispatch)
+
+  });
+
+  export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);

@@ -47,9 +47,36 @@ class Hero extends React.Component {
 
   }
 
+  onFocus(index) {
+    console.log(index, this._lastFocus);
+    console.log("HERO MADE FOCUS");
+
+    if (this._lastFocus === index) {
+      return;
+    }
+
+    if (this.props.onFocus) {
+      this.props.onFocus();
+    }
+
+    if (this.content) {
+      console.log('MENU')
+      const items = this.content.getElementsByClassName('item');
+      const offsetHeight = items[0].offsetHeight - 440;
+      const target = this.content.getElementsByClassName("vt-list");
+      target[0].style.top = offsetHeight*index+"px";
+          console.log('MENU'+offsetHeight*index);
+    }
+
+    this._lastFocus = index;
+  }
+
 
 
   render() {
+
+    //console.log("MSTP called hero"+util.inspect(this.state, false, null));
+  //  console.log("MSTP called hero"+util.inspect(this.props, false, null));
 
 
 
@@ -61,9 +88,9 @@ class Hero extends React.Component {
 
               <div className="component hero">
 
-                <HorizontalList onBlur={() => this.onBlurLists()}>
+                <HorizontalList  navDefault={this.props.navDefault} onBlur={() => this.onBlurLists()} onFoucs={() => this.onFocus()}>
 
-                  <HeroItem title={""} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+                  <HeroItem title={""} active={this.props.navDefault} action={this.props.action} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
 
                 </HorizontalList>
 

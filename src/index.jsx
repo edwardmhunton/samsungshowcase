@@ -10,6 +10,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import configureStore from './store/configureStore';
+import initialState from './reducers/initialState';
 import history from './history.js';
 
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
@@ -32,7 +33,7 @@ import util from 'util';
 
 //const history = createHistory();
 //const store = configureStore(history);
-const store = configureStore();
+const store = configureStore(initialState);
 
 
 if (module.hot) {
@@ -47,7 +48,7 @@ const render = (_App)=> {
             <ConnectedRouter  history={history}>
 
                  <_App />
-            
+
              </ConnectedRouter>
          </Provider>
         ,document.getElementById("app_container"));
@@ -84,7 +85,7 @@ const fetchDataForLocation = location =>{
       //  store.dispatch({type:`REQUEST_FETCH_QUESTION`,question_id:location.pathname.split('/')[2]});
     //}
 
-      store.dispatch({type:`REQUEST_FETCH_QUESTIONS`});
+      store.dispatch({type:`SET_PREVIOUS_MENU_ID`, menu_id:0});
 };
 /**
  * Initialize data fetching procedure

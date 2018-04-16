@@ -8,6 +8,7 @@ import { push } from 'react-router-redux';
 
 //routing
 import {Redirect} from 'react-router-dom';
+
 import history from '../../history.js';
 
 //ui_components
@@ -29,11 +30,11 @@ class HomeScreen extends React.Component {
 
     super(props);
 
-        this.state = {
+        /*this.state = {
           hold: true,
           player:false,
           navigation: {'timeout':'', 'back':'', 'enter':''}
-        };
+        };*/
 
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
 
@@ -57,15 +58,17 @@ class HomeScreen extends React.Component {
       this.loadInterval = false;
   }
 
-  transitionToPlayer(videoMetaData){
+  transitionToPlayer(videoMetaData, menu_id){
 
     console.log("videoMetaData: "+videoMetaData);
 
       //console.log('trans to P: '+util.inspect(this, false, null));
 
-            this.setState({player: true});
+            //this.setState({player: true});
             this.setState({content: videoMetaData});
+            history.push('/player');
             this.props.actions.setContent(videoMetaData);
+            this.props.actions.setPreviousMenuId(menu_id);
 
 
 
@@ -74,7 +77,14 @@ class HomeScreen extends React.Component {
 
   render(){
 
-if(this.state.player === false) {
+    console.log("The State:"+util.inspect(this.state, false, null));
+    console.log("The Props:"+util.inspect(this.props, false, null));
+
+  //  <ListUIComponent {return this.props.menu.menu_id === 2 ? navDefault: ""} action={this.transitionToPlayer} />
+
+//if(this.state.player === false) {
+//<HeroUIComponent navDefault = {this.state.menu_id === 1 ? navDefault: ""} action={this.transitionToPlayer} />
+
 
     return (
 
@@ -83,14 +93,15 @@ if(this.state.player === false) {
       <div id="content">
       <HorizontalList>
 
-                <SidebarUIComponent action={this.transitionToPlayer} />
+                <SidebarUIComponent navDefault={this.props.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
 
 
                 <div >
 
-                  <VerticalList>
-                    <HeroUIComponent />
-                    <ListUIComponent />
+                  <VerticalList >
+                    <HeroUIComponent  navDefault={this.props.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
+
+                    <ListUIComponent  navDefault={this.props.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
                   </VerticalList>
 
                 </div>
@@ -108,35 +119,36 @@ if(this.state.player === false) {
 
 
 
-  } else {
+  //} else {
 
 
 
 
-            if(this.state.player === true){
+        /*    if(this.state.player === true){
               this.state.player = false;
               return (
                     <Redirect to="/player" push />
               )
-            }
+            }*/
 
 
 
-  }
-
-}
-
+//  }
 
 }
 
-function mapStateToProps (state, ownProps) {
 
+}
+
+function mapStateToProps (state, ownProps){
+
+  console.log("MSTP called home"+util.inspect(state, false, null));
 
   return {
-
-        content: state.content
-
+      menu: state.menu
   }
+
+
 
 };
 

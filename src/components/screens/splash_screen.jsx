@@ -86,6 +86,7 @@ if(this.state.hold === true) {
 
 function mapStateToProps (state, ownProps) {
 
+  console.log("The State in splash called in MSTP:"+util.inspect(state, false, null));
 
   return {
 
@@ -100,4 +101,4 @@ const mapDispatchToProps = (dispatch)=>({
 
 });
 
-export default connect(mapStateToProps)(SplashScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(SplashScreen);

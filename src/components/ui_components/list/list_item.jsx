@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactTV from 'react-tv';
 
+import util from 'util';
+
+
 import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
 
 class ToogleItem extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      active: false
+      active: this.props.active
     }
 
   }
@@ -16,7 +19,8 @@ class ToogleItem extends React.Component {
   render() {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
-                 onBlur={() => this.setState({active: false})}>
+                 onBlur={() => this.setState({active: false})}
+                 onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
@@ -24,8 +28,12 @@ class ToogleItem extends React.Component {
 };
 
 export default class ListItem extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: this.props.active,
+
+    }
     this._lastFocus = null;
     this.paddingValue = 10;
     this.titles = ["Film 1", "Film 2","Film 3","Film 4","Film 5","Film 6","Film 7","Film 8","Film 9","Film 10","Film 11","Film 12","Film 13","Film 14","Film 15"];
@@ -63,16 +71,20 @@ export default class ListItem extends React.Component {
   }
 
   render() {
+
+    console.log("List item props: "+util.inspect(this.props, false, null));
+
+
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
-        <div class="content" ref={(content) => { this.content = content}}>
+        <div class="content" ref={(content) => { this.content = content}} >
           <HorizontalList class="hz-list"
                           style={{overflow: 'hidden', display: 'block', whiteSpace: 'nowrap'}}
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}>
 
                           {this.titles.map((title, i) =>
-                              <ToogleItem title={title} />
+                            <ToogleItem  active={i === 0 ? this.props.active : false} onEnterDown={() => this.props.action(title, 2)}  title={title} />
                             )}
 
           </HorizontalList>

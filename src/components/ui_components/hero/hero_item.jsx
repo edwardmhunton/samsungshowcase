@@ -4,18 +4,20 @@ import ReactTV from 'react-tv';
 import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
 
 class ToogleItem extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      active: false
+      active: this.props.active,
+
     }
   }
 
   render() {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
-                 onBlur={() => this.setState({active: false})}>
+                 onBlur={() => this.setState({active: false})}
+                 onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item hero_item ' + (this.state.active ? 'item-focus' : '')}></div>
       </Focusable>
     );
@@ -23,7 +25,7 @@ class ToogleItem extends React.Component {
 };
 
 export default class HeroItem extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this._lastFocus = null;
   }
@@ -57,13 +59,13 @@ export default class HeroItem extends React.Component {
   render() {
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
-    
-        <div class="content" ref={(content) => { this.content = content}}>
+
+        <div class="content" ref={(content) => { this.content = content}} >
           <HorizontalList
 
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}>
-            <ToogleItem>TI</ToogleItem>
+                          <ToogleItem active={this.props.active} onEnterDown={() => this.props.action("Movie", 1)}  title={"Movie"} />
           </HorizontalList>
         </div>
       </div>

@@ -8,11 +8,11 @@ import util from 'util';
 import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
 
 class ToogleItem extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      active: false
+      active: this.props.active
     }
 
 
@@ -23,7 +23,7 @@ class ToogleItem extends React.Component {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
-                 onEnterDown={(index) => this.props.onEnterDown(index)}>
+                 onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
@@ -31,7 +31,7 @@ class ToogleItem extends React.Component {
 };
 
 export default class Menu extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this._lastFocus = null;
     this.titles = ["Film 1", "Film 2","Film 3","Film 4","Film 5","Film 6","Film 7","Film 8","Film 9","Film 10","Film 11","Film 12","Film 13","Film 14","Film 15"];
@@ -59,6 +59,8 @@ export default class Menu extends React.Component {
 
   onFocus(index) {
     console.log(index, this._lastFocus);
+    console.log("MENU MADE FOCUS");
+
     if (this._lastFocus === index) {
       return;
     }
@@ -84,7 +86,7 @@ export default class Menu extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
 
         <div class="content" ref={(content) => { this.content = content}}>
-          <VerticalList class="vt-list"
+          <VerticalList  navDefault={this.props.navDefault} class="vt-list"
             style={{ display: 'block', position:'absolute', top: '0', width: '200px', marginLeft:'45px', marginTop:'50px'}}
 
 
@@ -93,7 +95,7 @@ export default class Menu extends React.Component {
 
                           >
                           {this.titles.map((title, i) =>
-                              <ToogleItem onEnterDown={() => this.props.action(title)}  title={title} />
+                              <ToogleItem active={i === 0 ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 0)}  title={title} />
                             )}
           </VerticalList>
         </div>

@@ -19,7 +19,7 @@ class ToogleItem extends React.Component {
     return (
       <Focusable onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
-                 onEnterDown={(index) => this.props.onEnterDown(index)}>
+                 onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
@@ -27,7 +27,7 @@ class ToogleItem extends React.Component {
 };
 
 export default class PlayerItem extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this._lastFocus = null;
     this.state = {
@@ -36,12 +36,38 @@ export default class PlayerItem extends React.Component {
 
   }
 
+  onKeyDown(event){
+    switch (event.code) {
+      case 'Backspace':
+
+      this.props.actions.previous();
+
+      case 'Enter':
+
+
+        break;
+      default:
+
+    }
+  }
+
+  onKeyUp(){
+    console.log('u: '+event);
+  }
+
   componentDidMount() {
-    const width = (Math.floor(this.content.scrollWidth /  this.content.clientWidth ) * this.content.clientWidth) + this.content.clientWidth + this.paddingValue;
+  /*  const width = (Math.floor(this.content.scrollWidth /  this.content.clientWidth ) * this.content.clientWidth) + this.content.clientWidth + this.paddingValue;
     this.content.overflow = 'hidden';
     if (this.content.getElementsByClassName('hz-list')[0]) {
       this.content.getElementsByClassName('hz-list')[0].style.width = width + 'px';
-    }
+    }*/
+    window.addEventListener('keydown', this.onKeyDown.bind(this));
+    window.addEventListener('keyup', this.onKeyUp.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keyup', this.onKeyUp.bind(this));
+    window.removeEventListener('keydown', this.onKeyDown.bind(this));
   }
 
   onEnterDown(index) {
