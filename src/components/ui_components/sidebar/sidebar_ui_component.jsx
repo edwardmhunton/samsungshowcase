@@ -1,12 +1,12 @@
 import React from 'react';
 import Menu from './menu';
 
-const SidebarUIComponent = () => (
+const SidebarUIComponent = ({action}) => (
 
               <div className="component sidebar">
 
               <h4>Sidebar</h4>
-              <Menu />
+              <Menu action={action} />
 
               </div>
 

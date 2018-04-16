@@ -12,6 +12,8 @@ import ScreensFromJson from './components/helpers/screensFromJson';
 import SplashScreen from './components/screens/splash_screen';
 import LoginScreen from './components/screens/login_screen';
 import HomeScreen from './components/screens/home_screen';
+import PlayerScreen from './components/screens/player_screen';
+
 
 
 
@@ -55,6 +57,8 @@ class App extends React.Component {
     <Route exact path='/' render={() => <SplashScreen /> } />
     <Route exact path='/login' render={() => <LoginScreen /> } />
     <Route exact path='/home' render={() => <HomeScreen /> } />
+      <Route exact path='/player' render={() => <PlayerScreen /> } />
+
 
   </Switch>
 

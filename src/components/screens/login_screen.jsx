@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import history from '../../history.js';
 
+import LoginUIComponent from '../ui_components/login/login_ui_component';
+
+import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+
+
 
 
 
@@ -12,13 +17,17 @@ class LoginScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {hold: true};
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+
   }
 
   handleSubmit(event){
 
-      event.preventDefault();
+      console.log('sub');
 
-      console.log('sub')
+
 
       this.setState({hold: false});
 
@@ -37,18 +46,9 @@ console.log("hold"+this.state.hold);
 
         return (
 
-        <div className="component login mx-auto">
-            Login <br/>
-            <form onSubmit={this.handleSubmit.bind(this)}   >
-
-            <p>Enter your details</p>
-            <input type='text'/>
-            <input type='submit' />
-
-            </form>
-
-
-      </div>
+          <Navigation>
+              <LoginUIComponent onSubmit={() => { this.handleSubmit() }} />
+          </Navigation>
 
     )
 

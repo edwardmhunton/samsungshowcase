@@ -4,7 +4,7 @@ import objectAssign from 'object-assign';
 
 export default function contentReducer(state = [], action) {
 
-  console.log("REDUCER CALLED");
+  console.log("REDUCER CALLED: "+action.type);
 
       switch(action.type) {
 

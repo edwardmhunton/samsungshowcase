@@ -32,6 +32,7 @@ class SplashScreen extends React.Component {
   }
 
   advance(){
+      console.log("advance");
       this.setState({hold: false});
   }
 
@@ -39,6 +40,7 @@ class SplashScreen extends React.Component {
 
       var self = this;
       this.loadInterval =  setTimeout(function(){
+        console.log("interval");
         self.advance()
       }, 1000);
   }
@@ -50,7 +52,9 @@ class SplashScreen extends React.Component {
 
   render(){
 
-if(this.state.hold) {
+    console.log('render'+this.state.hold);
+
+if(this.state.hold === true) {
 
     return (
 
@@ -64,7 +68,7 @@ if(this.state.hold) {
 
   } else {
 
-      history.push('/login');
+      history.push('/Spash');
 
     return (
 
@@ -80,7 +84,19 @@ if(this.state.hold) {
 
 }
 
-const mapStateToProps = ()=>({
+function mapStateToProps (state, ownProps) {
+
+
+  return {
+
+        content: state.content
+
+  }
+
+};
+const mapDispatchToProps = (dispatch)=>({
+
+    actions: bindActionCreators(contentActions, dispatch)
 
 });
 

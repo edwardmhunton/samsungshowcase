@@ -31,8 +31,13 @@ class HomeScreen extends React.Component {
 
         this.state = {
           hold: true,
+          player:false,
           navigation: {'timeout':'', 'back':'', 'enter':''}
         };
+
+        this.transitionToPlayer = this.transitionToPlayer.bind(this);
+
+
 
 
 
@@ -52,9 +57,24 @@ class HomeScreen extends React.Component {
       this.loadInterval = false;
   }
 
+  transitionToPlayer(videoMetaData){
+
+    console.log("videoMetaData: "+videoMetaData);
+
+      //console.log('trans to P: '+util.inspect(this, false, null));
+
+            this.setState({player: true});
+            this.setState({content: videoMetaData});
+            this.props.actions.setContent(videoMetaData);
+
+
+
+
+  }
+
   render(){
 
-if(this.state.hold) {
+if(this.state.player === false) {
 
     return (
 
@@ -88,6 +108,20 @@ if(this.state.hold) {
 
 
 
+  } else {
+
+
+
+
+            if(this.state.player === true){
+              this.state.player = false;
+              return (
+                    <Redirect to="/player" push />
+              )
+            }
+
+
+
   }
 
 }
@@ -95,8 +129,22 @@ if(this.state.hold) {
 
 }
 
-const mapStateToProps = ()=>({
+function mapStateToProps (state, ownProps) {
+
+
+  return {
+
+        content: state.content
+
+  }
+
+};
+
+const mapDispatchToProps = (dispatch)=>({
+
+    actions: bindActionCreators(contentActions, dispatch)
 
 });
 
-export default connect(mapStateToProps)(HomeScreen);
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
