@@ -22,7 +22,9 @@ import ListUIComponent from '../ui_components/list/list_ui_component';
 
 
 import util from 'util';
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+//import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from '../navigation';
+
 
 class HomeScreen extends React.Component {
 

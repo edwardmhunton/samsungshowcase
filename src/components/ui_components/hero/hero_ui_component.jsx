@@ -7,8 +7,7 @@ import util from 'util';
 
 import HeroItem from './hero_item';
 
-import Navigation, { VerticalList, HorizontalList, Focusable } from 'react-key-navigation'
-
+import Navigation, { VerticalList, HorizontalList } from '../../navigation';
 
 //import List from './List';
 

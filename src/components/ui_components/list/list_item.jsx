@@ -4,7 +4,7 @@ import ReactTV from 'react-tv';
 import util from 'util';
 
 
-import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
+import { Focusable, VerticalList, HorizontalList } from '../../navigation';
 
 class ToogleItem extends React.Component {
   constructor(props) {

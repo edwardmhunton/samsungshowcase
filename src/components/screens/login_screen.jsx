@@ -12,7 +12,7 @@ import util from 'util';
 
 import LoginUIComponent from '../ui_components/login/login_ui_component';
 
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
 
 

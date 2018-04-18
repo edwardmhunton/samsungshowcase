@@ -7,7 +7,7 @@ import { push } from 'react-router-redux';
 import history from '../../history.js';
 import util from 'util';
 
-import Navigation, { VerticalList, HorizontalList, Focusable } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
 import PlayerWrapper from '../ui_components/player/player_wrapper';
 

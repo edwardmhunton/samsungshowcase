@@ -5,7 +5,7 @@ import { push } from 'react-router-redux';
 import history from '../../history.js';
 import util from 'util';
 
-import { Focusable} from 'react-key-navigation';
+import { Focusable} from '../../navigation';
 
 
 

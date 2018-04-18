@@ -7,7 +7,7 @@ import util from 'util';
 
 import ListItem from './list_item';
 
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from '../../navigation';
 
 
 //import List from './List';

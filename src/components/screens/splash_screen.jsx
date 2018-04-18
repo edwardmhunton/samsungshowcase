@@ -14,7 +14,7 @@ import history from '../../history.js';
 import SplashUIComponent from '../ui_components/splash/splash_ui_component';
 
 import util from 'util';
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
 class SplashScreen extends React.Component {
 

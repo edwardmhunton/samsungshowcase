@@ -5,7 +5,7 @@ import util from 'util';
 
 
 
-import { Focusable, VerticalList, HorizontalList } from 'react-key-navigation';
+import { Focusable, VerticalList, HorizontalList } from '../../navigation';
 
 class ToogleItem extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class ToogleItem extends React.Component {
 
   render() {
     return (
-      <Focusable onFocus={() => this.setState({active: true})}
+      <Focusable active={this.props.active} onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
@@ -86,7 +86,7 @@ export default class Menu extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
 
         <div class="content" ref={(content) => { this.content = content}}>
-          <VerticalList  navDefault={this.props.navDefault} class="vt-list"
+          <VerticalList  newDefault={2} navDefault={this.props.navDefault} class="vt-list"
             style={{ display: 'block', position:'absolute', top: '0', width: '200px', marginLeft:'45px', marginTop:'50px'}}
 
 
@@ -95,7 +95,7 @@ export default class Menu extends React.Component {
 
                           >
                           {this.titles.map((title, i) =>
-                              <ToogleItem active={i === 0 ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 0)}  title={title} />
+                              <ToogleItem active={i === 2 ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 0)}  title={title} />
                             )}
           </VerticalList>
         </div>
