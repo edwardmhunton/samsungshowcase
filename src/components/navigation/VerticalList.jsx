@@ -6,10 +6,19 @@ class VerticalList extends Focusable {
   defaultChange = false;
   getNextFocus(direction, focusedIndex) {
 
-    if(this.props.itemDefault && !this.defaultChange){
+    /*if(this.props.itemDefault && !this.defaultChange && direction === 'down'){
       focusedIndex = focusedIndex+this.props.itemDefault;
       this.defaultChange = true;
+    } else if(this.props.itemDefault && !this.defaultChange && direction === 'up') {
+      focusedIndex = focusedIndex-this.props.itemDefault;
+      this.defaultChange = true;
+    }*/
+
+    if(this.props.itemDefault && !this.defaultChange){
+      focusedIndex = this.props.itemDefault;
+      this.defaultChange = true;
     }
+
 
     if (direction !== 'up' && direction !== 'down') {
       return super.getNextFocus(direction, this.indexInParent);
