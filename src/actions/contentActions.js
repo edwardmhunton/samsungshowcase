@@ -10,14 +10,3 @@ export function setContent(content) {
         }
 
 }
-
-export function setPreviousMenuId(menu_id) {
-
-  console.log("content: "+content);
-
-        return {
-          type: types.SET_PREVIOUS_MENU_ID,
-          menu_id
-        }
-
-}

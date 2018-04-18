@@ -4,6 +4,8 @@ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as contentActions from '../../actions/contentActions';
+import * as menuActions from '../../actions/menuActions';
+
 import { push } from 'react-router-redux';
 
 //routing
@@ -60,7 +62,7 @@ class HomeScreen extends React.Component {
       this.loadInterval = false;
   }
 
-  transitionToPlayer(videoMetaData, menu_id){
+  transitionToPlayer(videoMetaData, menu_id, menu_item_id ){
 
     console.log("videoMetaData: "+videoMetaData);
 
@@ -71,6 +73,7 @@ class HomeScreen extends React.Component {
             history.push('/player');
             this.props.actions.setContent(videoMetaData);
             this.props.actions.setPreviousMenuId(menu_id);
+            this.props.actions.setPreviousMenuItemId(menu_item_id);
 
 
 
@@ -95,15 +98,15 @@ class HomeScreen extends React.Component {
       <div id="content">
       <HorizontalList>
 
-                <SidebarUIComponent navDefault={this.props.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
+                <SidebarUIComponent itemDefault={this.props.menu.menu_item_id} navDefault={this.props.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
 
 
                 <div >
 
                   <VerticalList >
-                    <HeroUIComponent  navDefault={this.props.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
+                    <HeroUIComponent  itemDefault={this.props.menu.menu_item_id} navDefault={this.props.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent  navDefault={this.props.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent  itemDefault={this.props.menu.menu_item_id} navDefault={this.props.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
                   </VerticalList>
 
                 </div>
@@ -156,7 +159,7 @@ function mapStateToProps (state, ownProps){
 
 const mapDispatchToProps = (dispatch)=>({
 
-    actions: bindActionCreators(contentActions, dispatch)
+     actions: bindActionCreators({...contentActions, ...menuActions}, dispatch)
 
 });
 

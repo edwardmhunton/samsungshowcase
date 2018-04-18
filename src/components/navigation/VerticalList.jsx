@@ -6,8 +6,8 @@ class VerticalList extends Focusable {
   defaultChange = false;
   getNextFocus(direction, focusedIndex) {
 
-    if(this.props.newDefault && !this.defaultChange){
-      focusedIndex = focusedIndex+this.props.newDefault;
+    if(this.props.itemDefault && !this.defaultChange){
+      focusedIndex = focusedIndex+this.props.itemDefault;
       this.defaultChange = true;
     }
 
@@ -35,21 +35,21 @@ class VerticalList extends Focusable {
 
     return nextFocus;
   }
-  getDefaultChild() {
+/*  getDefaultChild() {
     console.log("DEF CHILD vert");
-    if(this.props.newDefault){
-      return this.props.newDefault;
+    if(this.props.itemDefault){
+      return this.props.itemDefault;
     } else {
         return 0;
     }
-  }
-    getDefaultFocus() {
+  }*/
+  /*  getDefaultFocus() {
       console.log("DEF focus vert");
       if (this.isContainer())
-        return this.children[this.props.newDefault].getDefaultFocus();
+        return this.children[this.props.itemDefault].getDefaultFocus();
 
       return this;
-    }
+    }*/
 
 
 }

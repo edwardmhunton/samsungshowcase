@@ -1,12 +1,12 @@
 import React from 'react';
 import Menu from './menu';
 
-const SidebarUIComponent = ({action, navDefault}) => (
+const SidebarUIComponent = ({action, navDefault, itemDefault}) => (
 
               <div className="component sidebar">
 
               <h4>Sidebar</h4>
-              <Menu  navDefault={navDefault} action={action} />
+              <Menu itemDefault={itemDefault} navDefault={navDefault} action={action} />
 
               </div>
 

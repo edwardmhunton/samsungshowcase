@@ -126,7 +126,7 @@ class Focusable extends Component {
       this.indexInParent = this.getParent().addChild(this);
       console.log("this.indexInParent: "+this.indexInParent);
       if(this.props.active){
-        console.log("foc");
+        console.log("focxy");
         this.focus();
       }
       //let test = 5;

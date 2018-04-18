@@ -86,6 +86,7 @@ const fetchDataForLocation = location =>{
     //}
 
       store.dispatch({type:`SET_PREVIOUS_MENU_ID`, menu_id:0});
+      store.dispatch({type:`SET_PREVIOUS_MENU_ITEM_ID`, menu_item_id:0})
 };
 /**
  * Initialize data fetching procedure

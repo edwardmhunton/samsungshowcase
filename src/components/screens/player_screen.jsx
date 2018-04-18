@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as contentActions from '../../actions/contentActions';
+import * as menuActions from '../../actions/menuActions';
+
 import { Redirect } from 'react-router-dom';
 import { push } from 'react-router-redux';
 import history from '../../history.js';
@@ -115,7 +117,7 @@ function mapStateToProps (state, ownProps){
 
 const mapDispatchToProps = (dispatch)=>({
 
-    actions: bindActionCreators(contentActions, dispatch)
+     actions: bindActionCreators({...contentActions, ...menuActions}, dispatch)
 
 });
 

@@ -70,9 +70,9 @@ export default class Menu extends React.Component {
     }
 
     if (this.content) {
-      console.log('MENU')
+      console.log('MENUx')
       const items = this.content.getElementsByClassName('item');
-      const offsetHeight = items[0].offsetHeight - 440;
+      const offsetHeight = items[this.props.itemDefault].offsetHeight - 440;
       const target = this.content.getElementsByClassName("vt-list");
       target[0].style.top = offsetHeight*index+"px";
           console.log('MENU'+offsetHeight*index);
@@ -86,7 +86,7 @@ export default class Menu extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
 
         <div class="content" ref={(content) => { this.content = content}}>
-          <VerticalList  newDefault={2} navDefault={this.props.navDefault} class="vt-list"
+          <VerticalList  itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="vt-list"
             style={{ display: 'block', position:'absolute', top: '0', width: '200px', marginLeft:'45px', marginTop:'50px'}}
 
 
@@ -95,7 +95,7 @@ export default class Menu extends React.Component {
 
                           >
                           {this.titles.map((title, i) =>
-                              <ToogleItem active={i === 2 ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 0)}  title={title} />
+                              <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 0, i)}  title={title} />
                             )}
           </VerticalList>
         </div>
