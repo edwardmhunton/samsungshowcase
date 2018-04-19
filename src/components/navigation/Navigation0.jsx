@@ -91,12 +91,12 @@ class Navigation extends Component {
 
   focusNext(direction, focusedPath) {
     let next = null;
-    console.log("focnav");
-    //if (direction === reverseDirection[this.lastDirection] && this.lastFocusedPath !== null) {
-    if (direction === reverseDirection[this.lastDirection] && this.lastFocusedPath !== null) {
 
-      //next = this.getLastFromPath(this.lastFocusedPath);
-      next = this.getLastFromPath(focusedPath).getNextFocusFrom(direction);
+    if (direction === reverseDirection[this.lastDirection] && this.lastFocusedPath !== null) {
+      //next = this.getLastFromPath(this.lastFocusedPath).getNextFocusFrom(direction);
+      next = this.getLastFromPath(this.lastFocusedPath); // -- original code
+
+      //next = this.getLastFromPath(focusedPath).getNextFocusFrom(direction);
 
     }
     else {

@@ -9,10 +9,6 @@ class Focusable extends Component {
 
   constructor(props, context) {
     super(props, context);
-    /*if(this.props.itemDefault){
-      console.log("swap indexInParent");
-      this.indexInParent = this.props.itemDefault;
-    }*/
   }
 
   isContainer() {
@@ -48,15 +44,8 @@ class Focusable extends Component {
   }
 
   getNextFocusFrom(direction) {
-    if(this.isContainer()){
-      return this.getNextFocus(direction, this.props.itemDefault);
-    }
     return this.getNextFocus(direction, this.indexInParent);
   }
-
-  /*getNextFocusFrom(direction) {
-    return this.getNextFocus(direction, this.props.itemDefault);
-  }*/
 
   getNextFocus(direction, focusedIndex) {
     if (!this.getParent()) {
@@ -67,7 +56,6 @@ class Focusable extends Component {
   }
 
   getDefaultFocus() {
-    console.log("deffoc");
     if (this.isContainer())
       return this.children[this.getDefaultChild()].getDefaultFocus();
 
@@ -86,22 +74,30 @@ class Focusable extends Component {
 
   focus() {
     this.treePath.map(component => {
-      if (component.props.onFocus)
+      if (component.props.onFocus && !this.props.itemDefault){
+        component.props.onFocus(this.indexInParent);
+
+      } else if(component.props.onFocus && this.isContainer() && this.props.itemDefault) {
+        this.indexInParent = this.props.itemDefault
         component.props.onFocus(this.props.itemDefault);
-    });
+
+      }
+    }
+  );
   }
 
-  /*focus() {
-    this.treePath.map(component => {
-      if (component.props.onFocus)
-        component.props.onFocus(this.indexInParent);
-    });
-  }*/
-
   blur() {
-    if (this.props.onBlur) {
-      this.props.onBlur(this.indexInParent);
+    console.log("foc blur");
+    this.treePath.map(component => {
+      if (component.props.onBlur && !this.props.itemDefault){
+        component.props.onBlur(this.indexInParent);
+      } else if(component.props.onBlur && this.isContainer() && this.props.itemDefault) {
+        this.indexInParent = this.props.itemDefault
+        component.props.onBlur(this.props.itemDefault);
+
+      }
     }
+  );
   }
 
   nextChild(focusedIndex) {
@@ -138,15 +134,12 @@ class Focusable extends Component {
     if (this.props.navDefault) {
       this.context.navigationComponent.setDefault(this);
     }
+
     if (this.props.active) {
-      //console.log("set focus");
-      //this.focus();
+      console.log("set focus");
+      this.focus();
       //this.context.navigationComponent.setDefault(this);
     }
-    /*if(this.isContainer() && this.props.itemDefault){
-      console.log("swap indexInParent");
-      this.indexInParent = this.props.itemDefault;
-    }*/
   }
 
   componentWillUnmount() {

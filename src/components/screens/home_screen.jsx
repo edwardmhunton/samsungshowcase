@@ -39,6 +39,7 @@ class HomeScreen extends React.Component {
           player:false,
           navigation: {'timeout':'', 'back':'', 'enter':''}
         };*/
+        this.state = this.props;
 
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
 
@@ -98,15 +99,15 @@ class HomeScreen extends React.Component {
       <div id="content">
       <HorizontalList>
 
-                <SidebarUIComponent itemDefault={this.props.menu.menu_item_id} navDefault={this.props.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
+                <SidebarUIComponent itemDefault={this.state.menu.menu_item_id} navDefault={this.props.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
 
 
                 <div >
 
                   <VerticalList >
-                    <HeroUIComponent  itemDefault={this.props.menu.menu_item_id} navDefault={this.props.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
+                    <HeroUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.props.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent  itemDefault={this.props.menu.menu_item_id} navDefault={this.props.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.props.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
                   </VerticalList>
 
                 </div>
