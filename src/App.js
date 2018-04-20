@@ -51,16 +51,11 @@ class App extends React.Component {
     return (
 
       <Switch>
-
-
-
-    <Route exact path='/' render={() => <SplashScreen /> } />
-    <Route exact path='/login' render={() => <LoginScreen /> } />
-    <Route exact path='/home' render={() => <HomeScreen /> } />
-      <Route exact path='/player' render={() => <PlayerScreen /> } />
-
-
-  </Switch>
+            <Route exact path='/' render={() => <SplashScreen /> } />
+            <Route exact path='/login' render={() => <LoginScreen /> } />
+            <Route exact path='/home' render={() => <HomeScreen /> } />
+            <Route exact path='/player' render={() => <PlayerScreen /> } />
+      </Switch>
 
 
   )

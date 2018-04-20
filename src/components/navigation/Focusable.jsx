@@ -146,6 +146,11 @@ class Focusable extends Component {
       console.log("set focus");
       this.focus();
       this.context.navigationComponent.setDefault(this);
+
+      let p = this.getParent();
+      p.props.onFocus();
+
+
     }
     /*if(this.isContainer() && this.props.itemDefault){
       console.log("swap indexInParent");

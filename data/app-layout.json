@@ -9,7 +9,7 @@
     },
     "ui_components": [
       {
-        "component_type": "splash",
+        "component_type": "login",
         "data": {
           "source": "general-provider://fetch_data?url=aHR0cDovL3N0YXRpYzEudGVsZW1ldHJvLmNvbS9hcHBsaWNhc3Rlci9jYXRlZ29yeV9jb250ZW50c18xMDAwMTAyLnhtbD9jb250ZW50VHlwZT1WSUQ%3D&type=APPLICASTER_ATOM_FEED",
           "type": "APPLICASTER_ATOM_FEED"
@@ -172,7 +172,6 @@
     ],
     "navigations": []
   },
-
   {
     "id": "928fc26e-5963-4a77-a7b0-926d37769987",
     "name": "Screen1",

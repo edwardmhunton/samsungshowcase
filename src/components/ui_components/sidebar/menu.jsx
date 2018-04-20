@@ -76,8 +76,8 @@ export default class Menu extends React.Component {
       const items = this.content.getElementsByClassName('item');
       const offsetHeight = items[index].offsetHeight - 440;
       const target = this.content.getElementsByClassName("vt-list");
-      //target[0].style.top = offsetHeight*index+"px";
-          console.log('MENU'+offsetHeight*index);
+      target[0].style.top = offsetHeight*index+"px";
+      console.log('MENU'+offsetHeight*index);
     }
 
     this._lastFocus = index;

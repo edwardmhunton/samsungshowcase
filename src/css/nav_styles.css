@@ -191,7 +191,7 @@ html, body {
 #content .item-focus {
   color: green;
   background-color: white;
-  transform: scale(1.08);
+  transform: scale(1.20);
   transition: all .2s ease-in-out;
 }
 

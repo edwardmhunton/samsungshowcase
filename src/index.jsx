@@ -57,13 +57,9 @@ const render = (_App)=> {
 
 store.subscribe(() => {
     const state = store.getState();
-    //if (state.videos.length > 0) {
-    //  console.log("mounting the app");
+
           render(App);
-  //} else {
-    //  render(App);
-      //console.log("no videos");
-  //  }
+
 });
 
 /**
@@ -85,8 +81,8 @@ const fetchDataForLocation = location =>{
       //  store.dispatch({type:`REQUEST_FETCH_QUESTION`,question_id:location.pathname.split('/')[2]});
     //}
 
-      store.dispatch({type:`SET_PREVIOUS_MENU_ID`, menu_id:1});
-      store.dispatch({type:`SET_PREVIOUS_MENU_ITEM_ID`, menu_item_id:0}); 
+      store.dispatch({type:`SET_PREVIOUS_MENU_ID`, menu_id:0});
+      store.dispatch({type:`SET_PREVIOUS_MENU_ITEM_ID`, menu_item_id:10});
 };
 /**
  * Initialize data fetching procedure
