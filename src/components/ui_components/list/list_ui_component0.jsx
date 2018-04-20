@@ -7,7 +7,7 @@ import util from 'util';
 
 import ListItem from './list_item';
 
-import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+import Navigation, { VerticalList, HorizontalList } from '../../navigation';
 
 
 //import List from './List';
@@ -23,10 +23,17 @@ class List extends React.Component {
   }
 
   changeFocusTo(index) {
+    console.log("changeFocusTo"+index);
     this.setState({active: index});
   }
 
   onBlurLists() {
+      console.log("BLUR LIST");
+    this.setState({active: null});
+  }
+
+  onFocusLists() {
+      console.log("FOC LIST");
     this.setState({active: null});
   }
 
@@ -51,7 +58,8 @@ class List extends React.Component {
 
   render() {
 
-
+    console.log("MSTP called list"+util.inspect(this.state, false, null));
+    console.log("MSTP called list"+util.inspect(this.props, false, null));
 
           if(this.state.hold){
 
@@ -61,9 +69,9 @@ class List extends React.Component {
               <div className="component list">
 
 
-                <HorizontalList onBlur={() => this.onBlurLists()}>
+                <HorizontalList  navDefault={this.props.navDefault} onBlur={() => this.onBlurLists()} onFocus={() => this.onFocusLists()}>
 
-                  <ListItem title={"Blockbusters"} onFocus={() => this.changeFocusTo(i)} visible={this.state.active !== null ? i >= this.state.active : true}/>
+                  <ListItem itemDefault={this.props.itemDefault} action={this.props.action} title={"Blockbusters"} visible={this.props.active !== null ? i >= this.props.active : true}/>
 
                 </HorizontalList>
 

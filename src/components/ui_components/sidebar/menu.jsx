@@ -21,7 +21,8 @@ class ToogleItem extends React.Component {
 
   render() {
     return (
-      <Focusable active={this.props.active} onFocus={() => this.setState({active: true})}
+      <Focusable active={this.props.active}
+                 onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
@@ -60,7 +61,7 @@ export default class Menu extends React.Component {
 
   onFocus(index) {
     console.log(index, this._lastFocus);
-    console.log("MENU MADE FOCUS");
+    console.log("VERT MENU MADE FOCUS");
 
     if (this._lastFocus === index) {
       return;
@@ -83,6 +84,9 @@ export default class Menu extends React.Component {
   }
 
   render() {
+
+    console.log("menu props: "+util.inspect(this.props, false, null));
+
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
 

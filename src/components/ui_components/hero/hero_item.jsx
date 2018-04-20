@@ -15,7 +15,8 @@ class ToogleItem extends React.Component {
 
   render() {
     return (
-      <Focusable onFocus={() => this.setState({active: true})}
+      <Focusable active={this.props.active}
+                 onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item hero_item ' + (this.state.active ? 'item-focus' : '')}></div>
@@ -57,15 +58,18 @@ export default class HeroItem extends React.Component {
   }
 
   render() {
+    let i = 0;
+    let title = 'some movie';
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
 
         <div class="content" ref={(content) => { this.content = content}} >
-          <HorizontalList
+          <HorizontalList itemDefault={this.props.itemDefault} navDefault={this.props.navDefault}
 
                           onFocus={(index) => this.onFocus(index)}
-                          onBlur={() => { this._lastFocus = null }}>
-                          <ToogleItem active={this.props.active} onEnterDown={() => this.props.action("Movie", 1)}  title={"Movie"} />
+                          onBlur={() => { this._lastFocus = null }}
+                          onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
+                          <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 1, i)}  title={title} />
           </HorizontalList>
         </div>
       </div>

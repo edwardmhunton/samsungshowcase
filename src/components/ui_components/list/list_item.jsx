@@ -18,7 +18,8 @@ class ToogleItem extends React.Component {
 
   render() {
     return (
-      <Focusable onFocus={() => this.setState({active: true})}
+      <Focusable active={this.state.active}
+                 onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
         <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
@@ -29,11 +30,11 @@ class ToogleItem extends React.Component {
 
 export default class ListItem extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      active: this.props.active,
+    super();
+    //this.state = {
+    //  active: this.props.active,
 
-    }
+  //  }
     this._lastFocus = null;
     this.paddingValue = 10;
     this.titles = ["Film 1", "Film 2","Film 3","Film 4","Film 5","Film 6","Film 7","Film 8","Film 9","Film 10","Film 11","Film 12","Film 13","Film 14","Film 15"];
@@ -51,6 +52,7 @@ export default class ListItem extends React.Component {
 
   onFocus(index) {
     console.log(index, this._lastFocus);
+    console.log("HOZ MENU MADE FOCUS");
     if (this._lastFocus === index) {
       return;
     }
@@ -78,13 +80,14 @@ export default class ListItem extends React.Component {
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <div class="content" ref={(content) => { this.content = content}} >
-          <HorizontalList class="hz-list"
+          <HorizontalList itemDefault={this.props.itemDefault} navDefault={this.props.navDefault}class="hz-list"
                           style={{overflow: 'hidden', display: 'block', whiteSpace: 'nowrap'}}
                           onFocus={(index) => this.onFocus(index)}
-                          onBlur={() => { this._lastFocus = null }}>
+                          onBlur={() => { this._lastFocus = null }}
+                          onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
 
                           {this.titles.map((title, i) =>
-                            <ToogleItem  active={i === 0 ? this.props.active : false} onEnterDown={() => this.props.action(title, 2)}  title={title} />
+                            <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  title={title} />
                             )}
 
           </HorizontalList>

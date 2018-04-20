@@ -83,8 +83,8 @@ class HomeScreen extends React.Component {
 
   render(){
 
-    console.log("The State:"+util.inspect(this.state, false, null));
-    console.log("The Props:"+util.inspect(this.props, false, null));
+    console.log("The State in Home:"+util.inspect(this.state, false, null));
+    console.log("The Props in Home:"+util.inspect(this.props, false, null));
 
   //  <ListUIComponent {return this.props.menu.menu_id === 2 ? navDefault: ""} action={this.transitionToPlayer} />
 
@@ -99,15 +99,15 @@ class HomeScreen extends React.Component {
       <div id="content">
       <HorizontalList>
 
-                <SidebarUIComponent itemDefault={this.state.menu.menu_item_id} navDefault={this.props.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
+                <SidebarUIComponent itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
 
 
                 <div >
 
                   <VerticalList >
-                    <HeroUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.props.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
+                    <HeroUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.props.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
                   </VerticalList>
 
                 </div>
