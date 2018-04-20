@@ -52,6 +52,7 @@ export default class Menu extends React.Component {
 
   onEnterDown(index) {
     console.log("Enter captured: "+util.inspect(this.props, false, null));
+
     this.setState({hold: false});
 
 
@@ -72,7 +73,7 @@ export default class Menu extends React.Component {
     if (this.content) {
       console.log('MENUx')
       const items = this.content.getElementsByClassName('item');
-      const offsetHeight = items[this.props.itemDefault].offsetHeight - 440;
+      const offsetHeight = items[index].offsetHeight - 440;
       const target = this.content.getElementsByClassName("vt-list");
       //target[0].style.top = offsetHeight*index+"px";
           console.log('MENU'+offsetHeight*index);
@@ -92,8 +93,8 @@ export default class Menu extends React.Component {
 
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}
+                          onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
 
-                          >
                           {this.titles.map((title, i) =>
                               <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 0, i)}  title={title} />
                             )}

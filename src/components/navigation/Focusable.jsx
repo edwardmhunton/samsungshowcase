@@ -86,8 +86,12 @@ class Focusable extends Component {
 
   focus() {
     this.treePath.map(component => {
-      if (component.props.onFocus)
+      if (component.props.onFocus && this.isContainer()){
         component.props.onFocus(this.props.itemDefault);
+      } else if(component.props.onFocus) {
+        component.props.onFocus(this.indexInParent);
+      }
+
     });
   }
 
@@ -139,9 +143,9 @@ class Focusable extends Component {
       this.context.navigationComponent.setDefault(this);
     }
     if (this.props.active) {
-      //console.log("set focus");
-      //this.focus();
-      //this.context.navigationComponent.setDefault(this);
+      console.log("set focus");
+      this.focus();
+      this.context.navigationComponent.setDefault(this);
     }
     /*if(this.isContainer() && this.props.itemDefault){
       console.log("swap indexInParent");

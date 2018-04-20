@@ -67,6 +67,7 @@ class Navigation extends Component {
   }
 
   fireEvent(element, evt, evtProps) {
+    console.log('keystroke');
     switch(evt) {
       case 'willmove':
         if (element.props.onWillMove)
@@ -100,6 +101,7 @@ class Navigation extends Component {
 
     }
     else {
+
       next = this.getLastFromPath(focusedPath).getNextFocusFrom(direction);
     }
 
@@ -131,6 +133,7 @@ class Navigation extends Component {
   }
 
   focus(next) {
+    console.log("focnext");
     this.blur(next.treePath);
     next.focus();
 
