@@ -33,6 +33,7 @@
     "file-loader": "^1.1.11",
     "fs-extra": "^4.0.3",
     "history": "^4.7.2",
+    "image-webpack-loader": "^4.2.0",
     "isomorphic-fetch": "^2.2.1",
     "jsdom": "^11.8.0",
     "lodash": "^4.17.5",

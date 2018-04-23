@@ -74,33 +74,40 @@ export default {
               }
             },
             {
+  test: /\.(gif|png|jpe?g|svg)$/i,
+  use: [
+    'file-loader',
+    {
+      loader: 'image-webpack-loader',
+      options: {
+        mozjpeg: {
+          progressive: true,
+          quality: 65
+        },
+        // optipng.enabled: false will disable optipng
+        optipng: {
+          enabled: false,
+        },
+        pngquant: {
+          quality: '65-90',
+          speed: 4
+        },
+        gifsicle: {
+          interlaced: false,
+        },
+        // the webp option will enable WEBP
+        webp: {
+          quality: 75
+        }
+      }
+    },
+  ],
+},{
               test: /\.css$/,
               loader: "style-loader!css-loader"
-            },
-            {
-              test: /\.png$/,
-              loader: "url-loader?limit=100000"
-            },
-            {
-              test: /\.jpg$/,
-              loader: "file-loader"
-            },
-            {
-              test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-              loader: 'url?limit=10000&mimetype=application/font-woff'
-            },
-            {
-              test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-              loader: 'url?limit=10000&mimetype=application/octet-stream'
-            },
-            {
-              test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-              loader: 'file'
-            },
-            {
-              test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-              loader: 'url?limit=10000&mimetype=image/svg+xml'
             }
+
+
         ]
     }
 };

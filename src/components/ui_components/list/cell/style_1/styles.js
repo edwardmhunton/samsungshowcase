@@ -19,7 +19,7 @@ const styles = {
       width: '200px',
       clear: 'both',
       float: 'left',
-      //backgroundImage: 'url(' + require('../assets/16x9 Img@3x.png') + ')'
+      backgroundImage: 'url(' + require('../assets/16x9 Img@3x.png') + ')'
 
 
     },
@@ -30,7 +30,7 @@ const styles = {
       top: '0px',
       right: '0px',
       zIndex: '99',
-    //  backgroundImage: 'url(' + require('../assets/inapp_ribbon_image@3x.png') + ')',
+     backgroundImage: 'url(' + require('../assets/inapp_ribbon_image@3x.png') + ')',
 
 
     },
@@ -51,7 +51,7 @@ const styles = {
       height: '20px',
       width: '20px',
       float: 'right',
-    //  backgroundImage: 'url(' + require('../assets/Channel Logo@3x.png') + ')'
+     backgroundImage: 'url(' + require('../assets/Channel Logo@3x.png') + ')'
 
     },
     text:{
