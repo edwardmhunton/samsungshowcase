@@ -173,7 +173,7 @@ html, body {
 #content .hero_item {
 
   width: 100%;
-  height: 450px;
+  height: 560px;
   margin: 5px;
   background-color: #DDDD;
 
@@ -181,10 +181,10 @@ html, body {
 
 #content .list_item {
 
-  width: 75px;
+  /*width: 75px;
   height: 100px;
   margin: 5px;
-  background-color: #DDDD;
+  background-color: #DDDD;*/
 
 }
 

@@ -3,6 +3,8 @@ import ReactTV from 'react-tv';
 
 import util from 'util';
 
+import Cell from './cell';
+
 
 import { Focusable, VerticalList, HorizontalList } from '../../navigation';
 
@@ -22,7 +24,7 @@ class ToogleItem extends React.Component {
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
-        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
+        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={'style_1'} /></div>
       </Focusable>
     );
   }

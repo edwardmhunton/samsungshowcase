@@ -55,8 +55,8 @@
 .sidebar {
 
 
-  width:22%;
-  height:-webkit-fill-available;
+  width:300px;
+  height:1080px;
   margin-left:0;
   padding-left:20px;
   float:left;
@@ -66,8 +66,8 @@
 
 .hero {
   float:right;
-  width:77%;
-  height:80%;
+  width:1600px;
+  height:670px;
 
 }
 
@@ -85,8 +85,8 @@
 
 .list {
   float:right;
-  width:77%;
-  height:-webkit-fill-available;
+  width:1600px;
+  height:400px;
 
 }
 
