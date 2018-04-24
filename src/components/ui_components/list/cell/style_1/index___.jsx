@@ -13,16 +13,17 @@ const Style1 = ({styles}) => {
 
                           <div style={styles.image}></div>
                           <div style={styles.access}></div>
+                          <div style={styles.play}></div>
+                          <div style={styles.icon}></div>
 
                         </div>
                         <div style={styles.sub}>
 
-                          <div style={styles.top}>
 
-                            <div style={styles.play}></div>
-                            <div style={styles.icon}></div>
 
-                          </div>
+
+
+
                           <div style={styles.text}>
 
                             <div style={styles.primary_text}>Pri txt</div>

@@ -3,20 +3,21 @@ const styles = {
 
     cell: {
        color:'#FFFFFF',
-       width: '333px',
-       height: '250px',
+       width: '476px',
+       height: '375px',
        margin: '5px',
-       backgroundColor: '#000000'
+       backgroundColor: '#000000',
+
     },
     main: {
       position: 'relative',
-      height: '150px'
+      height: '267px'
 
     },
     image: {
       color: '#DDCCDD',
-      height: '112px',
-      width: '200px',
+      height: '267px',
+      width: '476px',
       clear: 'both',
       float: 'left',
       backgroundImage: 'url(' + require('../assets/16x9 Img@3x.png') + ')'
@@ -24,51 +25,67 @@ const styles = {
 
     },
     access: {
-      height: '20px',
-      width: '20px',
+      height: '40px',
+      width: '40px',
       position: 'absolute',
       top: '0px',
       right: '0px',
       zIndex: '99',
-     backgroundImage: 'url(' + require('../assets/inapp_ribbon_image@3x.png') + ')',
+      backgroundImage: 'url(' + require('../assets/inapp_ribbon_image@3x.png') + ')',
 
 
     },
     sub: {
-
+        height:'108px'
 
     },
     top:{
 
+
     },
     play: {
-      height: '20px',
-      width: '20px',
-      float: 'left',
-      //backgroundImage: 'url(' + require('../assets/generic_item_atom_video@3x.jpg') + ')'
+      height: '32px',
+      width: '32px',
+      position: 'absolute',
+      bottom: '0px',
+      left: '0px',
+      zIndex: '100',
+      backgroundImage: 'url(' + require('../assets/generic_item_atom_video@3x.jpg') + ')'
     },
     icon:{
-      height: '20px',
-      width: '20px',
-      float: 'right',
-     backgroundImage: 'url(' + require('../assets/Channel Logo@3x.png') + ')'
+      height: '35px',
+      width: '40px',
+      position: 'absolute',
+      bottom: '0px',
+      right: '0px',
+      zIndex: '101',
+      backgroundImage: 'url(' + require('../assets/Channel Logo@3x.png') + ')',
+      backgroundRepeat: 'no-repeat',
+      marginRight:'5px',
+      marginTop:'10px'
 
     },
     text:{
       position:'relative',
+      /*fontFamily: ''*/
+      fontSize: '16px',
+      height:'50px'
+
 
 
     },
     primary_text:{
       float: 'left',
-      width: '100%'
+      width: '100%',
+      height: '18px'
 
 
     },
     secondary_text:{
         float: 'left',
         color: '#DDDDDD',
-        width: '100%'
+        width: '100%',
+        height: '18px'
     },
     footer: {
 
@@ -76,7 +93,9 @@ const styles = {
     duration_text:{
       float: 'left',
       color: '#DDDDDD',
-      width: '100%'
+      width: '100%',
+      height: '18px',
+      fontSize: '14px'
 
     }
 
