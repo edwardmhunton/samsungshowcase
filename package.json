@@ -6,7 +6,8 @@
   "scripts": {
     "postinstall": "npm install babel-cli@6.26.0 cross-env@5.0.5 webpack@3.6.0",
     "heroku-postbuild": "npm install",
-    "start": "cross-env NODE_ENV=development babel-node server/main.js --useLiveData=true --useServerRender=true",
+    "build": "babel lib -d dist --presets es2015,stage-2",
+    "start": "cross-env NODE_ENV=development NPM_CONFIG_PRODUCTION=false babel-node server/main.js --presets env,stage-2 --useLiveData=true --useServerRender=true",
     "test": "mocha --reporter progress buildScripts/testsSetup.js \"src/**/*.test.js\"",
     "lint": "esw webpack.config.* src"
   },
@@ -75,6 +76,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.19.1",
