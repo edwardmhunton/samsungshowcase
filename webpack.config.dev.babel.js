@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
-
+//  "postinstall": "npm install babel-cli@6.26.0 cross-env@5.0.5 webpack@3.6.0",
+// NODE_ENV=development
 /**
  * Development webpack config designed to be loaded by express development server
  */
