@@ -32,22 +32,11 @@ class LoginScreen extends React.Component {
 
   handleSubmit(event){
 
-      console.log('sub');
+        this.setState({hold: false});
 
-
-
-      this.setState({hold: false});
-
-
-
-
-  }
+}
 
   render(){
-
-console.log("hold"+this.state.hold);
-
-//component login
 
       if(this.state.hold){
 
@@ -63,13 +52,12 @@ console.log("hold"+this.state.hold);
 
       } else {
 
-        console.log("made it");
 
           history.push('/login');
 
         return (
 
-          <Redirect to="/home" push />
+          <Redirect to="/featured" push />
 
         )
 

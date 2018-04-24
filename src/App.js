@@ -9,10 +9,17 @@ import history from './history.js';
 
 import ScreensFromJson from './components/helpers/screensFromJson';
 
+
+
 import SplashScreen from './components/screens/splash_screen';
 import LoginScreen from './components/screens/login_screen';
-import HomeScreen from './components/screens/home_screen';
+import FeaturedScreen from './components/screens/featured_screen';
+import BrowseScreen from './components/screens/browse_screen';
+import TvguideScreen from './components/screens/tvguide_screen';
 import PlayerScreen from './components/screens/player_screen';
+import SettingsScreen from './components/screens/settings_screen';
+
+
 
 
 
@@ -53,7 +60,10 @@ class App extends React.Component {
       <Switch>
             <Route exact path='/' render={() => <SplashScreen /> } />
             <Route exact path='/login' render={() => <LoginScreen /> } />
-            <Route exact path='/home' render={() => <HomeScreen /> } />
+            <Route exact path='/featured' render={() => <FeaturedScreen /> } />
+            <Route exact path='/browse' render={() => <BrowseScreen /> } />
+            <Route exact path='/tvguide' render={() => <TvguideScreen /> } />
+            <Route exact path='/settings' render={() => <SettingsScreen /> } />
             <Route exact path='/player' render={() => <PlayerScreen /> } />
       </Switch>
 

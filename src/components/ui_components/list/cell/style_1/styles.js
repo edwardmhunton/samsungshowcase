@@ -20,7 +20,7 @@ const styles = {
       width: '476px',
       clear: 'both',
       float: 'left',
-      backgroundImage: 'url(' + require('../assets/main.png') + ')'
+    ///  backgroundImage: 'url(' + require('../assets/main.png') + ')'
 
 
     },
@@ -31,7 +31,7 @@ const styles = {
       top: '0px',
       right: '0px',
       zIndex: '99',
-      backgroundImage: 'url(' + require('../assets/inapp_ribbon_image3x.png') + ')',
+    //  backgroundImage: 'url(' + require('../assets/inapp_ribbon_image3x.png') + ')',
 
 
     },
@@ -50,7 +50,7 @@ const styles = {
       bottom: '0px',
       left: '0px',
       zIndex: '100',
-     backgroundImage: 'url(' + require('../assets/generic_item_atom_video3x.jpg') + ')'
+  //   backgroundImage: 'url(' + require('../assets/generic_item_atom_video3x.jpg') + ')'
     },
     icon:{
       height: '35px',
@@ -59,7 +59,7 @@ const styles = {
       bottom: '0px',
       right: '0px',
       zIndex: '101',
-      backgroundImage: 'url(' + require('../assets/ChannelLogo3x.png') + ')',
+      //backgroundImage: 'url(' + require('../assets/ChannelLogo3x.png') + ')',
       backgroundRepeat: 'no-repeat',
       marginRight:'5px',
       marginTop:'10px'
