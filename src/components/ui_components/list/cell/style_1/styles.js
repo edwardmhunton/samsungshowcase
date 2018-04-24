@@ -50,7 +50,7 @@ const styles = {
       bottom: '0px',
       left: '0px',
       zIndex: '100',
-      backgroundImage: 'url(' + require('../assets/generic_item_atom_video3x.jpg') + ')'
+     backgroundImage: 'url(' + require('../assets/generic_item_atom_video3x.jpg') + ')'
     },
     icon:{
       height: '35px',

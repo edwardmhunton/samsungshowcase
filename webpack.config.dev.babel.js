@@ -84,10 +84,12 @@ export default {
         mozjpeg: {
           progressive: true,
           quality: 65
+
         },
         // optipng.enabled: false will disable optipng
         optipng: {
           enabled: false,
+          mimetype: 'image/png'
         },
         pngquant: {
           quality: '65-90',
