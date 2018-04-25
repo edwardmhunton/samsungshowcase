@@ -6,6 +6,12 @@ const styles = {
     height: '40px',
     backgroundColor: '#000000',
   },
+  item_focus: {
+      backgroundColor:'',
+      textDecoration: 'underline',
+      textDecorationColor:'#FFFFFF',
+      textDecorationStyle: 'solid'
+    },
 
 
     logo: {

@@ -18,6 +18,12 @@ import history from '../../history.js';
 import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 import ListUIComponent from '../ui_components/list/list_ui_component';
 
+// stylesheet
+
+import styles from './styles/styles.js';
+
+//import Background from './assets/16x9_small.png';
+
 
 
 
@@ -63,25 +69,39 @@ class FeaturedScreen extends React.Component {
     this.props.actions.setPreviousMenuItemId(menu_item_id);
   }
 
+  transitionToScreen(screen){
+    console.log("Tran to screen"+screen);
+    history.push('/'+screen);
+  }
+
   render(){
 
+    console.log("Styles: "+util.inspect(styles, false, null));
+  //  console.log("Background: "+util.inspect(Background, false, null));
+    /*let styles = {
+      backgroundImage: `url(${Background})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
+    }*/
 
+//style = Object.assign({}, styles, style);
 
 
     return (
 
-      <div className="screen" id={this.props.id}  >
+      <div className="screen" style={styles.featured.screen} id={this.props.id}  >
       <Navigation >
           <div id="content">
             <HorizontalList>
 
                     <VerticalList >
-                          <MainmenuUIComponent itemDefault={0} navDefault={this.state.menu.menu_id === 0 ? true :  false}/>
+                          <MainmenuUIComponent itemDefault={0} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
 
-
-                          <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'}/>
-                          <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
-                    </VerticalList>
+                        <div style={styles.featured.list_block} >
+                          <ListUIComponent  style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
+                          <ListUIComponent  style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
+                        </div>
+                  </VerticalList>
             </HorizontalList>
           </div>
       </Navigation>

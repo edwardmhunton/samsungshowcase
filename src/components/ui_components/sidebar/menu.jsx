@@ -35,7 +35,7 @@ export default class Menu extends React.Component {
   constructor(props) {
     super();
     this._lastFocus = null;
-    this.titles = ["Film 1", "Film 2","Film 3","Film 4","Film 5","Film 6","Film 7","Film 8","Film 9","Film 10","Film 11","Film 12","Film 13","Film 14","Film 15"];
+    this.titles = ["Entertainment", "Comedy","Sports","Kids"];
 
     this.state = {
       hold:true
@@ -73,11 +73,11 @@ export default class Menu extends React.Component {
 
     if (this.content) {
       console.log('MENUx')
-      const items = this.content.getElementsByClassName('item');
+    /*  const items = this.content.getElementsByClassName('item');
       const offsetHeight = items[index].offsetHeight - 440;
       const target = this.content.getElementsByClassName("vt-list");
       target[0].style.top = offsetHeight*index+"px";
-      console.log('MENU'+offsetHeight*index);
+      console.log('MENU'+offsetHeight*index);*/
     }
 
     this._lastFocus = index;

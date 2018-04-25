@@ -81,7 +81,7 @@ export default class ListItem extends React.Component {
 
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
-        <div class="content" ref={(content) => { this.content = content}} >
+        <div class="content" style={this.props.style} ref={(content) => { this.content = content}} >
           <HorizontalList itemDefault={this.props.itemDefault} navDefault={this.props.navDefault}class="hz-list"
                           style={{overflow: 'hidden', display: 'block', whiteSpace: 'nowrap'}}
                           onFocus={(index) => this.onFocus(index)}

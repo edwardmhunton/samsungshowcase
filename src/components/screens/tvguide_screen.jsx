@@ -14,11 +14,7 @@ import {Redirect} from 'react-router-dom';
 import history from '../../history.js';
 
 //ui_components
-import SidebarUIComponent from '../ui_components/sidebar/sidebar_ui_component';
-import Menu from '../ui_components/sidebar/menu';
-
-import HeroUIComponent from '../ui_components/hero/hero_ui_component';
-import ListUIComponent from '../ui_components/list/list_ui_component';
+import EpgUIComponent from '../ui_components/epg/epg_ui_component';
 
 
 
@@ -99,19 +95,7 @@ class HomeScreen extends React.Component {
       <div id="content">
       <HorizontalList>
 
-                <SidebarUIComponent itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
-
-
-                <div >
-
-                  <VerticalList >
-                    <HeroUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
-
-                    <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
-                  </VerticalList>
-
-                </div>
-
+                <EpgUIComponent />
 
       </HorizontalList>
 

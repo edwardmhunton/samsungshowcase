@@ -18,16 +18,19 @@ class ToogleItem extends React.Component {
   }
 
   render() {
-    console.log("main memu props"+util.inspect(this.props.styles, focus, null));
-    console.log("styles.mainmenu_item"+util.inspect(styles.mainmenu_item, focus, null));
-    const style = Object.assign({}, styles.mainmenu_item, this.props.styles );
+   console.log("main memu props"+util.inspect(this.props, focus, null));
+  //  console.log("styles.mainmenu_item"+util.inspect(styles.mainmenu_item, focus, null));
+    let style = Object.assign({}, styles.mainmenu_item, this.props.styles );
+
+    this.state.active ? style = Object.assign({}, styles.item_focus, style) : '';
+
       console.log("style"+util.inspect(style, focus, null));
     return (
       <Focusable active={this.state.active}
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
-                 onEnterDown={(index) => this.props.onEnterDown(index)} >
-                 <div style={style} class={'item menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
+                 onEnterDown={(index) => this.props.onEnterDown(this.props.title)} >
+                 <div style={style} class={'item menu_item ' + (this.state.active ? 'item_focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
   }
@@ -87,11 +90,11 @@ export default class MainMenu extends React.Component {
                           onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
 
 
-                            <ToogleItem  styles={styles.logo} title={'logo'} />
-                            <ToogleItem  styles={styles.featured} title={'featured'} />
-                            <ToogleItem  styles={styles.browse} title={'browse'} />
-                            <ToogleItem  styles={styles.tvguide} title={'tvguide'} />
-                            <ToogleItem  styles={styles.settings} title={'settings'} />
+                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.logo} title={'logo'} />
+                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.featured} title={'FEATURED'} />
+                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.browse} title={'BROWSE'} />
+                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.tvguide} title={'TV GUIDE'} />
+                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.settings} title={'SETTINGS'} />
 
 
           </HorizontalList>

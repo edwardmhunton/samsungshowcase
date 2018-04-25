@@ -62,7 +62,7 @@ class App extends React.Component {
             <Route exact path='/login' render={() => <LoginScreen /> } />
             <Route exact path='/featured' render={() => <FeaturedScreen /> } />
             <Route exact path='/browse' render={() => <BrowseScreen /> } />
-            <Route exact path='/tvguide' render={() => <TvguideScreen /> } />
+            <Route exact path='/tv guide' render={() => <TvguideScreen /> } />
             <Route exact path='/settings' render={() => <SettingsScreen /> } />
             <Route exact path='/player' render={() => <PlayerScreen /> } />
       </Switch>

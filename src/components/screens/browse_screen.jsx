@@ -17,9 +17,11 @@ import history from '../../history.js';
 import SidebarUIComponent from '../ui_components/sidebar/sidebar_ui_component';
 import Menu from '../ui_components/sidebar/menu';
 
-import HeroUIComponent from '../ui_components/hero/hero_ui_component';
 import ListUIComponent from '../ui_components/list/list_ui_component';
+import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 
+
+import styles from './styles/styles.js';
 
 
 
@@ -28,7 +30,7 @@ import util from 'util';
 import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
 
-class HomeScreen extends React.Component {
+class BrowseScreen extends React.Component {
 
   constructor(props) {
 
@@ -67,9 +69,6 @@ class HomeScreen extends React.Component {
 
     console.log("videoMetaData: "+videoMetaData);
 
-      //console.log('trans to P: '+util.inspect(this, false, null));
-
-            //this.setState({player: true});
             this.setState({content: videoMetaData});
             history.push('/player');
             this.props.actions.setContent(videoMetaData);
@@ -79,6 +78,10 @@ class HomeScreen extends React.Component {
 
 
 
+  }
+  transitionToScreen(screen){
+    console.log("Tran to screen"+screen);
+    history.push('/'+screen);
   }
 
   render(){
@@ -94,7 +97,7 @@ class HomeScreen extends React.Component {
 
     return (
 
-      <div className="screen" id={this.props.id}  >
+      <div className="screen" style={styles.browse.screen} id={this.props.id}  >
         <Navigation >
       <div id="content">
       <HorizontalList>
@@ -105,10 +108,17 @@ class HomeScreen extends React.Component {
                 <div >
 
                   <VerticalList >
-                    <HeroUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
-                  </VerticalList>
+                    <MainmenuUIComponent itemDefault={0} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
+
+                    <ListUIComponent  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+
+                    <ListUIComponent  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+
+                    <ListUIComponent  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+
+
+              </VerticalList>
 
                 </div>
 
@@ -165,4 +175,4 @@ const mapDispatchToProps = (dispatch)=>({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(BrowseScreen);

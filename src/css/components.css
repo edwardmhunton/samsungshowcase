@@ -1,7 +1,7 @@
 .component {
   padding:50px;
   margin:5px;
-  background-color:#1d2124;
+  /*background-color:#1d2124;*/
   color: #f44f0e;
 }
 
@@ -86,7 +86,7 @@
 .list {
   padding-top: 10px;
   float:right;
-  width:1600px;
+  width:1910px;
   height:470px;
 
 }
