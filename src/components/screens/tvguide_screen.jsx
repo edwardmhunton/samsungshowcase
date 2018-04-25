@@ -16,6 +16,9 @@ import history from '../../history.js';
 //ui_components
 import EpgUIComponent from '../ui_components/epg/epg_ui_component';
 
+import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
+
+
 
 
 
@@ -94,7 +97,7 @@ class HomeScreen extends React.Component {
         <Navigation >
       <div id="content">
       <HorizontalList>
-
+                <MainmenuUIComponent />
                 <EpgUIComponent />
 
       </HorizontalList>
