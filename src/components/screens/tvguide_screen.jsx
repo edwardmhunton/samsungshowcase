@@ -15,6 +15,8 @@ import history from '../../history.js';
 
 //ui_components
 import EpgUIComponent from '../ui_components/epg/epg_ui_component';
+import LogoUIComponent from '../ui_components/logo/logo_ui_component';
+
 
 import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 
@@ -27,7 +29,7 @@ import util from 'util';
 import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
 
-class HomeScreen extends React.Component {
+class TvGuideScreen extends React.Component {
 
   constructor(props) {
 
@@ -41,6 +43,8 @@ class HomeScreen extends React.Component {
         this.state = this.props;
 
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
+        this.transitionToScreen = this.transitionToScreen.bind(this);
+
 
 
 
@@ -80,6 +84,13 @@ class HomeScreen extends React.Component {
 
   }
 
+  transitionToScreen(screen, main_menu_id){
+    console.log("Tran to screen"+screen);
+    console.log("Tran to screen"+main_menu_id);
+    this.props.actions.setMainMenuId(main_menu_id);
+    history.push('/'+screen);
+  }
+
   render(){
 
     console.log("The State in Home:"+util.inspect(this.state, false, null));
@@ -96,12 +107,17 @@ class HomeScreen extends React.Component {
       <div className="screen" id={this.props.id}  >
         <Navigation >
       <div id="content">
+      <VerticalList >
+        <LogoUIComponent />
+      <MainmenuUIComponent itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
       <HorizontalList>
-                <MainmenuUIComponent />
+            <VerticalList>
                 <EpgUIComponent />
+            </VerticalList>
 
       </HorizontalList>
 
+      </VerticalList>
       </div>
       </Navigation>
     </div>
@@ -152,4 +168,4 @@ const mapDispatchToProps = (dispatch)=>({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(TvGuideScreen);

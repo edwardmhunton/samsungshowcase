@@ -11,10 +11,10 @@ class VerticalList extends Focusable {
     let nextFocus = null;
     if (direction === 'up') {
       nextFocus = this.previousChild(focusedIndex);
-      this.children[focusedIndex].props.onBlur();
+      if(this.children[focusedIndex].props.onBlur) this.children[focusedIndex].props.onBlur();
     } else if (direction === 'down') {
       nextFocus = this.nextChild(focusedIndex);
-      this.children[focusedIndex].props.onBlur();
+      if(this.children[focusedIndex].props.onBlur) this.children[focusedIndex].props.onBlur();
     }
 
     if (!nextFocus) {

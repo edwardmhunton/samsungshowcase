@@ -14,11 +14,7 @@ import {Redirect} from 'react-router-dom';
 import history from '../../history.js';
 
 //ui_components
-import SidebarUIComponent from '../ui_components/sidebar/sidebar_ui_component';
-import Menu from '../ui_components/sidebar/menu';
-
-import HeroUIComponent from '../ui_components/hero/hero_ui_component';
-import ListUIComponent from '../ui_components/list/list_ui_component';
+import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 
 
 
@@ -28,7 +24,7 @@ import util from 'util';
 import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
 
-class HomeScreen extends React.Component {
+class SettingsScreen extends React.Component {
 
   constructor(props) {
 
@@ -42,6 +38,7 @@ class HomeScreen extends React.Component {
         this.state = this.props;
 
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
+        this.transitionToScreen = this.transitionToScreen.bind(this);
 
 
 
@@ -81,6 +78,13 @@ class HomeScreen extends React.Component {
 
   }
 
+  transitionToScreen(screen, main_menu_id){
+    console.log("Tran to screen"+screen);
+    console.log("Tran to screen"+main_menu_id);
+    this.props.actions.setMainMenuId(main_menu_id);
+    history.push('/'+screen);
+  }
+
   render(){
 
     console.log("The State in Home:"+util.inspect(this.state, false, null));
@@ -97,23 +101,25 @@ class HomeScreen extends React.Component {
       <div className="screen" id={this.props.id}  >
         <Navigation >
       <div id="content">
+
+      <VerticalList >
+
+      <MainmenuUIComponent itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
+
+
       <HorizontalList>
 
-                <SidebarUIComponent itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
-
-
-                <div >
-
                   <VerticalList >
-                    <HeroUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent  itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+
+
                   </VerticalList>
 
-                </div>
 
 
       </HorizontalList>
+
+        </VerticalList>
 
       </div>
       </Navigation>
@@ -165,4 +171,4 @@ const mapDispatchToProps = (dispatch)=>({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsScreen);

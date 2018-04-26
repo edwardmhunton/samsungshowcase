@@ -14,6 +14,7 @@ import {Redirect} from 'react-router-dom';
 import history from '../../history.js';
 
 //ui_components
+import LogoUIComponent from '../ui_components/logo/logo_ui_component';
 
 import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 import ListUIComponent from '../ui_components/list/list_ui_component';
@@ -42,6 +43,7 @@ class FeaturedScreen extends React.Component {
         this.state = this.props;
 
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
+        this.transitionToScreen = this.transitionToScreen.bind(this);
 
 
 
@@ -69,8 +71,10 @@ class FeaturedScreen extends React.Component {
     this.props.actions.setPreviousMenuItemId(menu_item_id);
   }
 
-  transitionToScreen(screen){
+  transitionToScreen(screen, main_menu_id){
     console.log("Tran to screen"+screen);
+    console.log("Tran to screen"+main_menu_id);
+    this.props.actions.setMainMenuId(main_menu_id);
     history.push('/'+screen);
   }
 
@@ -92,17 +96,23 @@ class FeaturedScreen extends React.Component {
       <div className="screen" style={styles.featured.screen} id={this.props.id}  >
       <Navigation >
           <div id="content">
+
+          <VerticalList >
+          <LogoUIComponent />
+          <MainmenuUIComponent itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
+
+
             <HorizontalList>
 
                     <VerticalList >
-                          <MainmenuUIComponent itemDefault={0} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
 
                         <div style={styles.featured.list_block} >
-                          <ListUIComponent  style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
-                          <ListUIComponent  style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
+                          <ListUIComponent  categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
+                          <ListUIComponent  categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
                         </div>
                   </VerticalList>
             </HorizontalList>
+          </VerticalList>
           </div>
       </Navigation>
     </div>

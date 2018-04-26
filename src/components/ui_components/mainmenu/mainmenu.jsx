@@ -24,12 +24,12 @@ class ToogleItem extends React.Component {
 
     this.state.active ? style = Object.assign({}, styles.item_focus, style) : '';
 
-      console.log("style"+util.inspect(style, focus, null));
+      console.log("menustyle"+util.inspect(style, focus, null));
     return (
       <Focusable active={this.state.active}
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
-                 onEnterDown={(index) => this.props.onEnterDown(this.props.title)} >
+                 onEnterDown={(index) => this.props.onEnterDown(this.props.title, this.props.id)} >
                  <div style={style} class={'item menu_item ' + (this.state.active ? 'item_focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
@@ -77,24 +77,22 @@ export default class MainMenu extends React.Component {
 
   render() {
 
-    console.log("List item props: "+util.inspect(this.props, false, null));
+    console.log("MenuProps: "+util.inspect(this.props, false, null));
 
 
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <div class="content" ref={(content) => { this.content = content}} >
-          <HorizontalList itemDefault={this.props.itemDefault} navDefault={this.props.navDefault}class="hz-list"
-                          style={{overflow: 'hidden', display: 'block', whiteSpace: 'nowrap'}}
+          <HorizontalList itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="hz-list"
+
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}
                           onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
 
-
-                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.logo} title={'logo'} />
-                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.featured} title={'FEATURED'} />
-                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.browse} title={'BROWSE'} />
-                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.tvguide} title={'TV GUIDE'} />
-                            <ToogleItem  onEnterDown={this.props.onEnterDown} styles={styles.settings} title={'SETTINGS'} />
+                            <ToogleItem  active={this.props.itemDefault === 1 ? true : false} onEnterDown={this.props.onEnterDown} styles={styles.featured} id={1} title={'FEATURED'} />
+                            <ToogleItem  active={this.props.itemDefault === 2 ? true : false} onEnterDown={this.props.onEnterDown} styles={styles.browse} id={2} title={'BROWSE'} />
+                            <ToogleItem  active={this.props.itemDefault === 3 ? true : false} onEnterDown={this.props.onEnterDown} styles={styles.tvguide} id={3} title={'TV GUIDE'} />
+                            <ToogleItem  active={this.props.itemDefault === 4 ? true : false} onEnterDown={this.props.onEnterDown} styles={styles.settings} id={4} title={'SETTINGS'} />
 
 
           </HorizontalList>

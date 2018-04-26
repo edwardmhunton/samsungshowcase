@@ -2,15 +2,16 @@ const styles = {
 
   mainmenu_item: {
     color:'#FFFFFF',
-    width: '100px',
+    width: '120px',
     height: '40px',
     backgroundColor: '#000000',
+    fontWeight: 'bold',
+    fontSize: '24px'
   },
   item_focus: {
       backgroundColor:'',
-      textDecoration: 'underline',
-      textDecorationColor:'#FFFFFF',
-      textDecorationStyle: 'solid'
+      borderBottom: '3px solid #FFFFFF'
+
     },
 
 

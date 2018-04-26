@@ -20,6 +20,12 @@ export default function menuReducer(state = [], action) {
 
               return objectAssign({}, state, {menu_item_id: action.menu_item_id});
 
+              case 'SET_MAIN_MENU_ID':
+              console.log("SET_MAIN_MENU_ID: "+action.main_menu_id);
+
+
+              return objectAssign({}, state, {main_menu_id: action.main_menu_id});
+
 
             default:
             return state;

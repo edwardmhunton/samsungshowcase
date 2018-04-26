@@ -5,6 +5,7 @@ import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 
 import content from '../reducers/contentReducer';
+import category from '../reducers/categoryReducer';
 import menu from '../reducers/menuReducer';
 
 
@@ -22,6 +23,7 @@ import menu from '../reducers/menuReducer';
             return createStore(combineReducers({
               content,
               menu,
+              category,
               router
             }),
 

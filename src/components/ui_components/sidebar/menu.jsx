@@ -92,7 +92,7 @@ export default class Menu extends React.Component {
 
         <div class="content" ref={(content) => { this.content = content}}>
           <VerticalList  itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="vt-list"
-            style={{ display: 'block', position:'absolute', top: '0', width: '200px', marginLeft:'45px', marginTop:'50px'}}
+            style={{ display: 'block', width: '200px', marginLeft:'0px', marginTop:'5px'}}
 
 
                           onFocus={(index) => this.onFocus(index)}
@@ -100,7 +100,7 @@ export default class Menu extends React.Component {
                           onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
 
                           {this.titles.map((title, i) =>
-                              <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 0, i)}  title={title} />
+                              <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(i)}  title={title} />
                             )}
           </VerticalList>
         </div>

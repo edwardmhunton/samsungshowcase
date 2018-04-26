@@ -16,6 +16,7 @@ const styles = {
             list_block: {
               position: 'absolute',
               //top: '600px',
+
               overflowY: 'hidden',
           	  maxHeight: '1080px', /* approximate max height */
 

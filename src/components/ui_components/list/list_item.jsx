@@ -24,7 +24,7 @@ class ToogleItem extends React.Component {
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
-        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={'style_1'} /></div>
+        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={'style_1'} categoryId={this.props.categoryId}/></div>
       </Focusable>
     );
   }
@@ -89,8 +89,10 @@ export default class ListItem extends React.Component {
                           onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
 
                           {this.titles.map((title, i) =>
-                            <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  title={title} />
-                            )}
+
+                            <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  categoryId={this.props.categoryId} title={title} />
+
+                          )}
 
           </HorizontalList>
         </div>

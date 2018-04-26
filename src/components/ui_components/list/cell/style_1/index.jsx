@@ -5,9 +5,9 @@ import styles from './styles';
 
 
 
-const Style1 = () => {
+const Style1 = ({categoryId}) => {
   //styles.image.backgroundImage = 'url(' + require('../assets/16X9_small.png') + ')';
-
+console.log('CATS')
 
           return (
 
@@ -36,7 +36,7 @@ const Style1 = () => {
                         </div>
                         <div style={styles.footer}>
 
-                            <div style={styles.duration_text}>Dur</div>
+                            <div style={styles.duration_text}>{categoryId+" DUR"}</div>
 
                         </div>
 

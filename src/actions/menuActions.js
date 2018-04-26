@@ -21,3 +21,14 @@ export function setPreviousMenuItemId(menu_item_id) {
         }
 
 }
+
+export function setMainMenuId(main_menu_id) {
+
+  console.log("content: "+content);
+
+        return {
+          type: types.SET_MAIN_MENU_ID,
+          main_menu_id
+        }
+
+}

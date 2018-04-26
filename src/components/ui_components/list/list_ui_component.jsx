@@ -1,12 +1,14 @@
 import React from 'react';
 import ListItem from './list_item';
 
-const ListUIComponent = ({action, navDefault, itemDefault, title, style}) => (
+import styles from './styles.js';
 
-              <div style={style} className="component">
+const ListUIComponent = ({action, navDefault, itemDefault, title, style, categoryId}) => (
 
-               <div>{title}</div>
-               <ListItem style={style} itemDefault={itemDefault} navDefault={navDefault} action={action} />
+               <div style={style} className="component">
+
+               <div style={styles.list_title}>{title}</div>
+               <ListItem categoryId={categoryId} style={styles} itemDefault={itemDefault} navDefault={navDefault} action={action} />
 
               </div>
 

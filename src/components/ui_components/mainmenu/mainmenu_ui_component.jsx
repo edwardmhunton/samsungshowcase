@@ -2,12 +2,13 @@ import React from 'react';
 
 import MainMenu from './mainmenu.jsx';
 
-const MainmenuUIComponent = ({onEnterDown}) => (
+const MainmenuUIComponent = ({onEnterDown, itemDefault}) => (
 
 
                 <div className="component mainmenu">
 
-                    <MainMenu onEnterDown={onEnterDown} />
+
+                    <MainMenu itemDefault={itemDefault} onEnterDown={onEnterDown} />
 
 
                 </div>

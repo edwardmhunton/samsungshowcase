@@ -7,12 +7,12 @@ import Style4 from './style_4';
 
 import styles from './styles';
 
-const Cell = ({style}) => {
+const Cell = ({style, categoryId}) => {
 
 
 
 
-
+console.log("firstcat");
 
 
 
@@ -20,7 +20,7 @@ const Cell = ({style}) => {
 
 switch (style) {
   case 'style_1':
-      return   (<Style1 />)
+      return   (<Style1 categoryId={categoryId}/>)
   case 'style_2':
       return   (<Style2 />)
   case 'style_3':

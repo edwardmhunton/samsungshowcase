@@ -20,20 +20,16 @@ class ToogleItem extends React.Component {
   }
 
   render() {
-   //console.log("data: "+util.inspect(data.channels[0].channel.scedule[0].programme.duration, focus, null));
-  //  console.log("styles.mainmenu_item"+util.inspect(styles.mainmenu_item, focus, null));
-    //let style = Object.assign({}, styles.mainmenu_item, this.props.styles );
 
-  //  this.state.active ? style = Object.assign({}, styles.item_focus, style) : '';
+    let width = this.props.duration;
+    styles.programme.width = width+'px';
 
-      //console.log("style"+util.inspect(style, focus, null));
-    //  onEnterDown={(index) => this.props.onEnterDown(this.props.title)}
     return (
       <Focusable active={this.state.active}
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                   >
-                 <div class={'item menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
+                 <div style={styles.programme} class={'item menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
       </Focusable>
     );
   }
@@ -93,7 +89,7 @@ export default class Epg extends React.Component {
             {this.data.channels.map(function (subarray) {
                           return subarray.channel.schedule.map(function (subsub) {
                             return (
-                              <ToogleItem title={subsub.programme_name}>
+                              <ToogleItem title={subsub.programme_name} duration={subsub.duration}>
 
                               </ToogleItem>
                             )

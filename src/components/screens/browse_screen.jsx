@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as contentActions from '../../actions/contentActions';
 import * as menuActions from '../../actions/menuActions';
+import * as categoryActions from '../../actions/categoryActions';
 
 import { push } from 'react-router-redux';
 
@@ -19,6 +20,8 @@ import Menu from '../ui_components/sidebar/menu';
 
 import ListUIComponent from '../ui_components/list/list_ui_component';
 import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
+import LogoUIComponent from '../ui_components/logo/logo_ui_component';
+
 
 
 import styles from './styles/styles.js';
@@ -42,8 +45,11 @@ class BrowseScreen extends React.Component {
           navigation: {'timeout':'', 'back':'', 'enter':''}
         };*/
         this.state = this.props;
+      //this.state = {};
 
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
+        this.transitionToScreen = this.transitionToScreen.bind(this);
+        this.categorySwitch = this.categorySwitch.bind(this);
 
 
 
@@ -65,6 +71,12 @@ class BrowseScreen extends React.Component {
       this.loadInterval = false;
   }
 
+  componentWillReceiveProps(newProps) {
+      this.setState({
+        category: newProps.category
+      })
+    }
+
   transitionToPlayer(videoMetaData, menu_id, menu_item_id ){
 
     console.log("videoMetaData: "+videoMetaData);
@@ -79,15 +91,23 @@ class BrowseScreen extends React.Component {
 
 
   }
-  transitionToScreen(screen){
+  transitionToScreen(screen, main_menu_id){
     console.log("Tran to screen"+screen);
+    console.log("Tran to screen"+main_menu_id);
+    this.props.actions.setMainMenuId(main_menu_id);
     history.push('/'+screen);
+  }
+
+  categorySwitch(category_id){
+    console.log("switch browse category "+category_id);
+    this.props.actions.setBrowseCategoryId(category_id);
+
   }
 
   render(){
 
-    console.log("The State in Home:"+util.inspect(this.state, false, null));
-    console.log("The Props in Home:"+util.inspect(this.props, false, null));
+    console.log("The State in Browse:"+util.inspect(this.state, false, null));
+    console.log("The Props in Browse:"+util.inspect(this.props, false, null));
 
   //  <ListUIComponent {return this.props.menu.menu_id === 2 ? navDefault: ""} action={this.transitionToPlayer} />
 
@@ -100,30 +120,37 @@ class BrowseScreen extends React.Component {
       <div className="screen" style={styles.browse.screen} id={this.props.id}  >
         <Navigation >
       <div id="content">
+
+      <VerticalList>
+      <LogoUIComponent />
+      <MainmenuUIComponent itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
+
+
       <HorizontalList>
 
-                <SidebarUIComponent itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} action={this.transitionToPlayer} />
+                <SidebarUIComponent itemDefault={this.state.category.category_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} action={this.categorySwitch} />
 
 
                 <div >
 
                   <VerticalList >
 
-                    <MainmenuUIComponent itemDefault={0} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
 
-                    <ListUIComponent  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent categoryId={this.state.category.category_id}  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
 
 
               </VerticalList>
 
                 </div>
 
+        </HorizontalList>
 
-      </HorizontalList>
+
+      </VerticalList>
 
       </div>
       </Navigation>
@@ -158,10 +185,11 @@ class BrowseScreen extends React.Component {
 
 function mapStateToProps (state, ownProps){
 
-  console.log("MSTP called home"+util.inspect(state, false, null));
+  console.log("MSTP called Browse"+util.inspect(state, false, null));
 
   return {
-      menu: state.menu
+      menu: state.menu,
+      category: state.category
   }
 
 
@@ -170,7 +198,7 @@ function mapStateToProps (state, ownProps){
 
 const mapDispatchToProps = (dispatch)=>({
 
-     actions: bindActionCreators({...contentActions, ...menuActions}, dispatch)
+     actions: bindActionCreators({...contentActions, ...menuActions, ...categoryActions}, dispatch)
 
 });
 
