@@ -4,7 +4,9 @@ const styles = {
   height: '100px',
   color: '#FFFFFF',
   float:'left',
-  paddingTop: '50px'
+  paddingTop: '50px',
+  fontWeight: 'bold',
+  fontSize: '32px'
 
 
 
