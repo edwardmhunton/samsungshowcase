@@ -4,7 +4,7 @@ const styles = {
 
      paddingBottom: '20px',
      fontWeight: 'bold',
-     fontSize: '24px'
+     fontSize: '32px'
 
 
 

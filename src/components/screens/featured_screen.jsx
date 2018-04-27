@@ -42,6 +42,7 @@ class FeaturedScreen extends React.Component {
 
         this.state = this.props;
 
+
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
         this.transitionToScreen = this.transitionToScreen.bind(this);
 
@@ -51,10 +52,34 @@ class FeaturedScreen extends React.Component {
 
   }
 
+  onKeyDown(event){
+    console.log('keycaughts');
+    switch (event.code) {
+      case 'ArrowDown':
+
+        this.setState({ featuredActive: true});
+
+      case 'Enter':
+
+
+        break;
+      default:
+
+    }
+  }
+
 
 
   componentDidMount() {
 
+    this.setState({ featuredActive: true});
+    window.addEventListener('keydown', this.onKeyDown.bind(this));
+
+    /*var self = this;
+    this.loadInterval =  setTimeout(function(){
+      console.log("interval");
+    self.setState({ featuredActive: true});
+  }, 5000);*/
 
   }
 
@@ -66,6 +91,7 @@ class FeaturedScreen extends React.Component {
   transitionToPlayer(videoMetaData, menu_id, menu_item_id ){
     this.setState({content: videoMetaData});
     history.push('/player');
+
     this.props.actions.setContent(videoMetaData);
     this.props.actions.setPreviousMenuId(menu_id);
     this.props.actions.setPreviousMenuItemId(menu_item_id);
@@ -76,6 +102,10 @@ class FeaturedScreen extends React.Component {
     console.log("Tran to screen"+main_menu_id);
     this.props.actions.setMainMenuId(main_menu_id);
     history.push('/'+screen);
+  }
+
+  activateListBlock(){
+
   }
 
   render(){
@@ -106,7 +136,7 @@ class FeaturedScreen extends React.Component {
 
                     <VerticalList >
 
-                        <div style={styles.featured.list_block} >
+                        <div style={this.state.featuredActive ? styles.featured.list_block_active : styles.featured.list_block} >
                           <ListUIComponent  categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
                           <ListUIComponent  categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
                         </div>

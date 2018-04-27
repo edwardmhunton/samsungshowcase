@@ -24,7 +24,7 @@ class ToogleItem extends React.Component {
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
-        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={'style_1'} categoryId={this.props.categoryId}/></div>
+        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={'style_featured'} categoryId={this.props.categoryId}/></div>
       </Focusable>
     );
   }

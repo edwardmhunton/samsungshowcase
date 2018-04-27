@@ -4,6 +4,7 @@ import Style1 from './style_1';
 import Style2 from './style_2';
 import Style3 from './style_3';
 import Style4 from './style_4';
+import StyleFeatured from './style_featured';
 
 import styles from './styles';
 
@@ -27,6 +28,8 @@ switch (style) {
       return   (<Style3 />)
   case 'style_4':
       return   (<Style4 />)
+  case 'style_featured':
+          return   (<StyleFeatured />)
     break;
   default:
 
