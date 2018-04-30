@@ -1,6 +1,14 @@
 const styles = {
 
   channel: {
+    position:'absolute',
+
+
+
+  },
+  schedule: {
+    listStyleType: 'none',
+    position:'relative'
 
 
   },
@@ -18,8 +26,10 @@ const styles = {
     backgroundColor: '#282628',
     /*borderStyle: 'solid',
     borderColor: '#FFFFFF',*/
+    float: 'left',
     height: '150px',
-    padding:'5px'
+    padding:'5px',
+    display:'block'
 
   },
   programme_active: {

@@ -2,6 +2,8 @@ import React from 'react';
 
 import EpgTile from './epg_tile';
 
+import styles from './styles.js';
+
 /*<div style={styles.time} onEnterDown={onEnterDown}>{meta.duration}</div>
 <div style={styles.show_name} >{meta.programme_name}</div>
 */
@@ -9,18 +11,18 @@ import EpgTile from './epg_tile';
 const EpgSchedule = ({schedule}) => (
 
 
-                <div >
-                  {schedule.map(function (subarray, a) {
+                <ul style={styles.schedule}>
+                  {schedule.channel.schedule.map(function (subarray, a) {
 
                     return (
-                      <EpgTile />
+                      <EpgTile width={subarray.duration*18} meta={subarray}/>
                     )
 
 
                   })}
 
 
-                </div>
+                </ul>
 
 
 

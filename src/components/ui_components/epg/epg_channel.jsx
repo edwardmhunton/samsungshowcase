@@ -2,12 +2,15 @@ import React from 'react';
 
 import EpgSchedule from './epg_schedule';
 
+import styles from './styles';
+
+
 const EpgChannel = ({schedule}) => (
 
 
-                <div >
+                <div style={styles.channel}>
 
-                    <div class='logo'>Sced<EpgSchedule schedule={schedule}/></div>
+                    <div style={styles.channel_logo}></div><EpgSchedule schedule={schedule}/>
 
 
                 </div>
