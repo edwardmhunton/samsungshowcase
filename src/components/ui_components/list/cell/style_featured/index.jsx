@@ -7,7 +7,6 @@ import styles from './styles';
 
 const StyleFeatured = ({}) => {
   //styles.image.backgroundImage = 'url(' + require('../assets/16X9_small.png') + ')';
-console.log('CATS')
 
           return (
 

@@ -44,9 +44,52 @@ const styles = {
 
 
               },
-              list: {
-                float:'left',
-                width: '1400px'
+              list_block: {
+                position: 'absolute',
+                left: '347px',
+                top: '150px',
+                transition: '0.5s',
+                transitionProperty: 'all',
+              	transitionDuration: '.5s',
+              	transitionTimingFunction: 'cubic-bezier(0, 1, 0.5, 1)'
+
+              },
+
+
+              list_block_active: {
+                position: 'absolute',
+                left: '0px',
+                transition: '0.5s',
+                transitionProperty: 'all',
+              	transitionDuration: '.5s',
+              	transitionTimingFunction: 'cubic-bezier(0, 1, 0.5, 1)'
+
+              },
+              sidebar: {
+                position: 'absolute',
+                left: '0px',
+                marginRight: '47px',
+                marginTop: '28px',
+                width: '300px',
+                height: '1020px',
+                transition: '0.5s',
+                transitionProperty: 'all',
+              	transitionDuration: '.5s',
+              	transitionTimingFunction: 'cubic-bezier(0, 1, 0.5, 1)'
+
+
+              },
+              sidebar_blur:{
+                position: 'absolute',
+                left: '-375px',
+                marginRight: '47px',
+                marginTop: '28px',
+                width: '300px',
+                height: '1020px',
+                transition: '0.5s',
+                transitionProperty: 'all',
+              	transitionDuration: '.5s',
+              	transitionTimingFunction: 'cubic-bezier(0, 1, 0.5, 1)'
 
               }
 

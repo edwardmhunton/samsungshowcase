@@ -3,6 +3,8 @@ import ReactTV from 'react-tv';
 import VideoManager from '../player/player_manager';
 import util from 'util';
 
+import styles from './styles.js';
+
 
 
 import { Focusable, VerticalList, HorizontalList } from '../../navigation';
@@ -20,12 +22,22 @@ class ToogleItem extends React.Component {
   }
 
   render() {
+
+    let style = styles.side_menu_item;
+//        <div style={style} class={'item side_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
+
+console.log("State: "+this.state.active)
+
+    this.state.active ? style = Object.assign({}, style, styles.side_menu_item_focus) : '';
+
+//console.log("STYLE:  "+ util.inspect(style, false, null));
+
     return (
       <Focusable active={this.props.active}
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
-        <div class={'item main_menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
+        <div style={style} class={'item '}>{this.props.title}</div>
       </Focusable>
     );
   }
@@ -92,7 +104,7 @@ export default class Menu extends React.Component {
 
         <div class="content" ref={(content) => { this.content = content}}>
           <VerticalList  itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="vt-list"
-            style={{ display: 'block', width: '200px', marginLeft:'0px', marginTop:'5px'}}
+            style={{ display: 'block', width: '200px', marginLeft:'0px', marginRight:'47px', marginTop:'5px'}}
 
 
                           onFocus={(index) => this.onFocus(index)}

@@ -3,7 +3,7 @@ import Focusable from './Focusable.jsx';
 class VerticalList extends Focusable {
 
   getNextFocus(direction, focusedIndex) {
-    console.log("VERTLIST");
+    //console.log("VERTLIST: "+this.props.onBlur());
     if (direction !== 'up' && direction !== 'down') {
       return super.getNextFocus(direction, this.indexInParent);
     }

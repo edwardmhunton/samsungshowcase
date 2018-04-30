@@ -13,7 +13,6 @@ const Cell = ({style, categoryId}) => {
 
 
 
-console.log("firstcat");
 
 
 

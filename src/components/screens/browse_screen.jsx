@@ -50,6 +50,10 @@ class BrowseScreen extends React.Component {
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
         this.transitionToScreen = this.transitionToScreen.bind(this);
         this.categorySwitch = this.categorySwitch.bind(this);
+        this.setBrowseActiveFalse = this.setBrowseActiveFalse.bind(this);
+        this.setBrowseActiveTrue = this.setBrowseActiveTrue.bind(this);
+
+
 
 
 
@@ -62,6 +66,8 @@ class BrowseScreen extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({ browseActive: false});
+    window.addEventListener('keydown', this.onKeyDown.bind(this));
 
 
   }
@@ -69,6 +75,7 @@ class BrowseScreen extends React.Component {
   componentWillUnmount () {
 
       this.loadInterval = false;
+
   }
 
   componentWillReceiveProps(newProps) {
@@ -103,6 +110,31 @@ class BrowseScreen extends React.Component {
     this.props.actions.setBrowseCategoryId(category_id);
 
   }
+  setBrowseActiveFalse(){
+    console.log('setBrowseActive False');
+    this.setState({ browseActive: false});
+
+  }
+  setBrowseActiveTrue(){
+    console.log('setBrowseActive True');
+    this.setState({ browseActive: true});
+
+  }
+  onKeyDown(event){
+    console.log('keycaughts'+event.code);
+    switch (event.code) {
+      case 'ArrowRight':
+
+        //this.setState({ browseActive: true});
+
+      case 'Enter':
+
+
+        break;
+      default:
+
+    }
+  }
 
   render(){
 
@@ -121,31 +153,33 @@ class BrowseScreen extends React.Component {
         <Navigation >
       <div id="content">
 
-      <VerticalList>
+      <VerticalList >
       <LogoUIComponent />
       <MainmenuUIComponent itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
 
 
-      <HorizontalList>
+      <HorizontalList >
 
-                <SidebarUIComponent itemDefault={this.state.category.category_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} action={this.categorySwitch} />
+              <div style={this.state.browseActive ? styles.browse.sidebar_blur : styles.browse.sidebar}>
 
+                <SidebarUIComponent  onBlur={this.setBrowseActiveFalse} onFocus={this.setBrowseActiveTrue} itemDefault={this.state.category.category_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} action={this.categorySwitch} />
 
-                <div >
+              </div>
 
-                  <VerticalList >
+                  <VerticalList onBlur={this.setBrowseActiveFalse} onFocus={this.setBrowseActiveTrue}>
 
+                    <div style={this.state.browseActive ? styles.browse.list_block_active : styles.browse.list_block} >
 
                     <ListUIComponent categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
 
                     <ListUIComponent categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
 
                     <ListUIComponent categoryId={this.state.category.category_id}  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
-
+                  </div>
 
               </VerticalList>
 
-                </div>
+
 
         </HorizontalList>
 

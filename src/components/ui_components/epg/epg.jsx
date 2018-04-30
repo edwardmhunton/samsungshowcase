@@ -9,6 +9,10 @@ import styles from './styles.js';
 
 import data from './data.js';
 
+import EpgTile from './epg_tile';
+
+import EpgChannel from './epg_channel';
+
 class ToogleItem extends React.Component {
   constructor(props) {
     super(props);
@@ -21,15 +25,21 @@ class ToogleItem extends React.Component {
 
   render() {
 
-    let width = this.props.duration;
+    let width = this.props.meta.duration*18;
     styles.programme.width = width+'px';
+    styles.programme_active.width = width+'px';
 
+
+    //this.state.active ? style = Object.assign({}, styles.programme_active, styles) : '';
+//        <div class={'item menu_item ' + (this.state.active ? 'item-focus' : '')}><EpgTile meta={this.props.meta}/></div>
+
+//console.log("TILE"+util.inspect(style, false, null));
     return (
       <Focusable active={this.state.active}
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                   >
-                 <div style={styles.programme} class={'item menu_item ' + (this.state.active ? 'item-focus' : '')}>{this.props.title}</div>
+        <div style={this.state.active ? styles.programme_active : styles.programme} class={'item ' + (this.state.active ? 'item-focus' : '')}><EpgTile styles={styles} meta={this.props.meta}/></div>
       </Focusable>
     );
   }
@@ -75,9 +85,28 @@ export default class Epg extends React.Component {
     this._lastFocus = index;
   }
 
+  /*  {this.data.channels.map(function (subarray, a) {
+
+                  return subarray.channel.schedule.map(function (subsub, b) {
+                    //console.log('b '+b);
+                    return ( b === 0 ? <ToogleItem meta={subsub} ></ToogleItem> : <ToogleItem meta={subsub} ></ToogleItem>)
+
+                  });
+                })} */
+
   render() {
 
     console.log("List item props: "+util.inspect(this.props, false, null));
+
+
+
+/*return subarray.channel.schedule.map(function (subsub, b) {
+  //console.log('b '+b);
+  return ( b === 0 ? <ToogleItem meta={subsub} ></ToogleItem> : <ToogleItem meta={subsub} ></ToogleItem>)
+
+});*/
+
+
 
 
     return (
@@ -86,15 +115,18 @@ export default class Epg extends React.Component {
 
           <Grid rows={this.data.channels.length} columns={this.data.channels[0].channel.schedule.length}>
 
-            {this.data.channels.map(function (subarray) {
-                          return subarray.channel.schedule.map(function (subsub) {
-                            return (
-                              <ToogleItem title={subsub.programme_name} duration={subsub.duration}>
 
-                              </ToogleItem>
-                            )
-                          });
-                        })}
+            {this.data.channels.map(function (subarray, a) {
+
+              return (
+                <EpgChannel schedule={subarray} />
+              )
+
+
+                          })}
+
+
+
         </Grid>
         </div>
       </div>

@@ -72,7 +72,7 @@ class FeaturedScreen extends React.Component {
 
   componentDidMount() {
 
-    this.setState({ featuredActive: true});
+    this.setState({ featuredActive: false});
     window.addEventListener('keydown', this.onKeyDown.bind(this));
 
     /*var self = this;
@@ -104,9 +104,6 @@ class FeaturedScreen extends React.Component {
     history.push('/'+screen);
   }
 
-  activateListBlock(){
-
-  }
 
   render(){
 

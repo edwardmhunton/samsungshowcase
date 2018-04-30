@@ -5,8 +5,7 @@ import Epg from './epg.jsx';
 const EpgUIComponent = ({onEnterDown}) => (
 
 
-                <div className="component epg">
-
+                <div className="component">
                     <Epg onEnterDown={onEnterDown} />
 
 

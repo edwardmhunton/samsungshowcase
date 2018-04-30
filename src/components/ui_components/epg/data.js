@@ -8,28 +8,28 @@ const data = {
             schedule: [
 
               {programme_name: 'programme 1',
-                duration: '10'
+                duration: '30'
               },
               {programme_name: 'programme 2',
-                duration: '200'
+                duration: '30'
               },
               {programme_name: 'programme 3',
-                duration: '100'
+                duration: '30'
               },
               {programme_name: 'programme 4',
-                duration: '100'
+                duration: '60'
               },
               {programme_name: 'programme 5',
-                duration: '67'
+                duration: '90'
               },
               {programme_name: 'programme 6',
-                duration: '78'
+                duration: '30'
               },
               {programme_name: 'programme 7',
-                duration: '340'
+                duration: '90'
               },
               {programme_name: 'programme 8',
-                duration: '100'
+                duration: '60'
               }
 
 
@@ -43,23 +43,30 @@ const data = {
             channel_name: 'channel 2',
             schedule: [
 
-              {programme_name: 'programme_1',
-                duration: '200'
+              {programme_name: 'programme 1',
+                duration: '30'
               },
-              {programme_name: 'programme_2',
-                duration: '80'
+              {programme_name: 'programme 2',
+                duration: '30'
               },
-              {programme_name: 'programme_3',
-                duration: '200'
-              },{programme_name: 'programme_4',
-                duration: '34'
+              {programme_name: 'programme 3',
+                duration: '30'
+              },
+              {programme_name: 'programme 4',
+                duration: '60'
               },
               {programme_name: 'programme 5',
-                duration: '100'
+                duration: '90'
               },
-              {programme_name: 'programme 63',
-                duration: '200'
+              {programme_name: 'programme 6',
+                duration: '30'
               },
+              {programme_name: 'programme 7',
+                duration: '90'
+              },
+              {programme_name: 'programme 8',
+                duration: '60'
+              }
 
 
             ]
@@ -71,28 +78,28 @@ const data = {
             schedule: [
 
               {programme_name: 'programme 1',
-                duration: '10'
+                duration: '30'
               },
               {programme_name: 'programme 2',
-                duration: '200'
+                duration: '30'
               },
               {programme_name: 'programme 3',
-                duration: '100'
+                duration: '30'
               },
               {programme_name: 'programme 4',
-                duration: '100'
+                duration: '60'
               },
               {programme_name: 'programme 5',
-                duration: '67'
+                duration: '90'
               },
               {programme_name: 'programme 6',
-                duration: '78'
+                duration: '30'
               },
               {programme_name: 'programme 7',
-                duration: '340'
+                duration: '90'
               },
               {programme_name: 'programme 8',
-                duration: '100'
+                duration: '60'
               }
 
 
@@ -105,28 +112,28 @@ const data = {
             schedule: [
 
               {programme_name: 'programme 1',
-                duration: '10'
+                duration: '30'
               },
               {programme_name: 'programme 2',
-                duration: '200'
+                duration: '30'
               },
               {programme_name: 'programme 3',
-                duration: '100'
+                duration: '30'
               },
               {programme_name: 'programme 4',
-                duration: '100'
+                duration: '60'
               },
               {programme_name: 'programme 5',
-                duration: '67'
+                duration: '90'
               },
               {programme_name: 'programme 6',
-                duration: '78'
+                duration: '30'
               },
               {programme_name: 'programme 7',
-                duration: '340'
+                duration: '90'
               },
               {programme_name: 'programme 8',
-                duration: '100'
+                duration: '60'
               }
 
 
@@ -139,28 +146,28 @@ const data = {
             schedule: [
 
               {programme_name: 'programme 1',
-                duration: '10'
+                duration: '30'
               },
               {programme_name: 'programme 2',
-                duration: '200'
+                duration: '30'
               },
               {programme_name: 'programme 3',
-                duration: '100'
+                duration: '30'
               },
               {programme_name: 'programme 4',
-                duration: '100'
+                duration: '60'
               },
               {programme_name: 'programme 5',
-                duration: '67'
+                duration: '90'
               },
               {programme_name: 'programme 6',
-                duration: '78'
+                duration: '30'
               },
               {programme_name: 'programme 7',
-                duration: '340'
+                duration: '90'
               },
               {programme_name: 'programme 8',
-                duration: '100'
+                duration: '60'
               }
 
 
@@ -173,28 +180,28 @@ const data = {
             schedule: [
 
               {programme_name: 'programme 1',
-                duration: '10'
+                duration: '30'
               },
               {programme_name: 'programme 2',
-                duration: '200'
+                duration: '30'
               },
               {programme_name: 'programme 3',
-                duration: '100'
+                duration: '30'
               },
               {programme_name: 'programme 4',
-                duration: '100'
+                duration: '60'
               },
               {programme_name: 'programme 5',
-                duration: '67'
+                duration: '90'
               },
               {programme_name: 'programme 6',
-                duration: '78'
+                duration: '30'
               },
               {programme_name: 'programme 7',
-                duration: '340'
+                duration: '90'
               },
               {programme_name: 'programme 8',
-                duration: '100'
+                duration: '60'
               }
 
 
@@ -207,28 +214,28 @@ const data = {
             schedule: [
 
               {programme_name: 'programme 1',
-                duration: '10'
+                duration: '30'
               },
               {programme_name: 'programme 2',
-                duration: '200'
+                duration: '30'
               },
               {programme_name: 'programme 3',
-                duration: '100'
+                duration: '30'
               },
               {programme_name: 'programme 4',
-                duration: '100'
+                duration: '60'
               },
               {programme_name: 'programme 5',
-                duration: '67'
+                duration: '90'
               },
               {programme_name: 'programme 6',
-                duration: '78'
+                duration: '30'
               },
               {programme_name: 'programme 7',
-                duration: '340'
+                duration: '90'
               },
               {programme_name: 'programme 8',
-                duration: '100'
+                duration: '60'
               }
 
 
