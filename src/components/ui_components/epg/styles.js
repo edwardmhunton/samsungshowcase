@@ -4,7 +4,10 @@ const styles = {
 
     marginTop: '100px',
     whiteSpace: 'nowrap',
-    overflowX: 'scroll'
+    overflowX: 'scroll',
+    display: 'flex',
+    scrollLeft: '50px'
+
 
   },
 
@@ -29,17 +32,21 @@ const styles = {
 
     whiteSpace: 'nowrap',
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
+    fontSize: '30px',
+    fontWeight: '900'
 
 
+  },
+  duration_text: {
+    fontSize: '20px',
+    fontWeight: '500'
   },
   programme: {
     borderRadius: '6px',
     backgroundColor: '#282628',
     color: '#FFFFFF',
-    /*borderStyle: 'solid',
-    borderColor: '#FFFFFF',*/
-    /*display: 'inlineBlock',*/
+
     float: 'left',
     height: '150px',
     padding:'5px',
@@ -59,7 +66,8 @@ const styles = {
   channel_logo: {
     height: '150px',
     width: '150px',
-    backgroundColor:'#DDDDDD'
+    backgroundColor:'#DDDDDD',
+    position:'fix'
   }
 
 

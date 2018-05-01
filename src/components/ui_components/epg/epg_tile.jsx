@@ -17,14 +17,16 @@ class EpgTile extends React.Component {
     this.paddingValue = 30;
   }
 
+
+
   render() {
 
-    console.log("State: "+this.state.active);
 
     styles.programme.width = this.props.meta.duration*8;
 
     let style = styles.programme;
 
+    console.log("State Tile: "+this.state.active);
 
 
     this.state.active ? style = Object.assign({}, style, styles.programme_focus) : '';
@@ -38,8 +40,8 @@ class EpgTile extends React.Component {
 
                      <div  style={style} >
 
-                         <div>{this.props.meta.duration}</div>
-                         <div>{this.props.meta.programme_name}</div>
+                         <div style={styles.duration_text}>{this.props.meta.duration}</div>
+                         <div style={styles.programme_text}>{this.props.meta.programme_name}</div>
 
 
                      </div>

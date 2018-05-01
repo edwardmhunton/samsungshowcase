@@ -112,7 +112,8 @@ export default class Epg extends React.Component {
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <div class="content" ref={(content) => { this.content = content}} >
-
+          <div>Times </div>
+          <div style={styles.epg_container} >
           <Grid rows={this.data.channels.length} columns={1}>
 
 
@@ -130,6 +131,7 @@ export default class Epg extends React.Component {
 
 
         </Grid>
+        </div>
         </div>
       </div>
     );
