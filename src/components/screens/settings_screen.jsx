@@ -16,6 +16,7 @@ import history from '../../history.js';
 //ui_components
 import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 
+import LogoUIComponent from '../ui_components/logo/logo_ui_component';
 
 
 
@@ -103,6 +104,8 @@ class SettingsScreen extends React.Component {
       <div id="content">
 
       <VerticalList >
+
+      <LogoUIComponent />
 
       <MainmenuUIComponent itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
 
