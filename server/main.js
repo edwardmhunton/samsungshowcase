@@ -14,9 +14,11 @@ import { ConnectedRouter } from 'react-router-redux';
 import getStore from '../src/getStore'
 import { Provider } from 'react-redux';
 import createHistory from 'history/createMemoryHistory';
+import serveStatic from 'serve-static';
 
 const port = process.env.PORT || 3000;
 const app = express();
+
 
 const useServerRender = argv.useServerRender === 'true';
 const useLiveData = argv.useLiveData === 'true';
@@ -42,7 +44,10 @@ if(process.env.NODE_ENV === 'development') {
 
 
 } else {
-    app.use('/static', express.static(path.join(__dirname, 'public')))
+    app.use('/static', express.static(path.join(__dirname, '/../public')))
+    console.log('serve static');
+    //app.use(express.static(path.join(__dirname,'public')));
+
 }
 
 function * getStructure (){

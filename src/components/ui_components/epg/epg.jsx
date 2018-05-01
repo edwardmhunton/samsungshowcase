@@ -113,17 +113,19 @@ export default class Epg extends React.Component {
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <div class="content" ref={(content) => { this.content = content}} >
 
-          <Grid rows={this.data.channels.length} columns={this.data.channels[0].channel.schedule.length}>
+          <Grid rows={this.data.channels.length} columns={1}>
 
 
             {this.data.channels.map(function (subarray, a) {
 
               return (
+                <div style={styles.channel_block} >
                 <EpgChannel schedule={subarray} />
+                </div>
               )
 
 
-                          })}
+            })}
 
 
 

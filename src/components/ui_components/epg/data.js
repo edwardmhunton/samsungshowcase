@@ -73,7 +73,7 @@ const data = {
 
 
           }}, {channel: {
-            id: 1,
+            id: 3,
             channel_name: 'channel 1',
             schedule: [
 
@@ -107,7 +107,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 4,
             channel_name: 'channel 1',
             schedule: [
 
@@ -141,7 +141,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 5,
             channel_name: 'channel 1',
             schedule: [
 
@@ -175,7 +175,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 6,
             channel_name: 'channel 1',
             schedule: [
 
@@ -209,7 +209,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 7,
             channel_name: 'channel 1',
             schedule: [
 
@@ -243,7 +243,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 8,
             channel_name: 'channel 1',
             schedule: [
 
@@ -277,7 +277,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 9,
             channel_name: 'channel 1',
             schedule: [
 
@@ -311,7 +311,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 10,
             channel_name: 'channel 1',
             schedule: [
 
@@ -345,7 +345,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 11,
             channel_name: 'channel 1',
             schedule: [
 
@@ -379,7 +379,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 12,
             channel_name: 'channel 1',
             schedule: [
 
@@ -413,7 +413,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 13,
             channel_name: 'channel 1',
             schedule: [
 
@@ -447,7 +447,7 @@ const data = {
 
 
           }},{channel: {
-            id: 1,
+            id: 14,
             channel_name: 'channel 1',
             schedule: [
 

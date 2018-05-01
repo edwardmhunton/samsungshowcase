@@ -2,10 +2,12 @@ import React from 'react';
 
 import Epg from './epg.jsx';
 
+import styles from './styles.js';
+
 const EpgUIComponent = ({onEnterDown}) => (
 
 
-                <div className="component">
+                <div style={styles.epg_container} >
                     <Epg onEnterDown={onEnterDown} />
 
 

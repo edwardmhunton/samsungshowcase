@@ -11,18 +11,18 @@ import styles from './styles.js';
 const EpgSchedule = ({schedule}) => (
 
 
-                <ul style={styles.schedule}>
+                <div style={styles.schedule}>
                   {schedule.channel.schedule.map(function (subarray, a) {
 
                     return (
-                      <EpgTile width={subarray.duration*18} meta={subarray}/>
+                      <EpgTile width={subarray.duration*10} meta={subarray}/>
                     )
 
 
                   })}
 
 
-                </ul>
+                </div>
 
 
 
