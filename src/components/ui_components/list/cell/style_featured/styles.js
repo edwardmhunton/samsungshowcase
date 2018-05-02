@@ -16,7 +16,7 @@ const styles = {
     },
     image: {
       color: '#DDCCDD',
-      width: '417px',
+      width: '512px',
       height: '234px',
       backgroundColor: '#282628',
       float: 'left',
