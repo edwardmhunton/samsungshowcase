@@ -15,7 +15,12 @@ const styles = {
             },
             list_block: {
               position: 'absolute',
-              top: '900px'
+              top: '900px',
+              transition: '0.5s',
+              transitionProperty: 'all',
+            	transitionDuration: '.5s',
+            	transitionTimingFunction: 'cubic-bezier(0, 1, 0.5, 1)'
+
 
             },
 
