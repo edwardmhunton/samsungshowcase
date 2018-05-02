@@ -16,7 +16,10 @@ const styles = {
     },
     image: {
       color: '#DDCCDD',
-      width: '512px',
+      width: '417px',
+      height: '234px',
+      backgroundColor: '#282628',
+      float: 'left',
     ///  backgroundImage: 'url(' + require('../assets/main.png') + ')'
 
 
