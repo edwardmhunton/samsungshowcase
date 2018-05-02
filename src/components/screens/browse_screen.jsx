@@ -170,11 +170,11 @@ class BrowseScreen extends React.Component {
 
                     <div style={this.state.browseActive ? styles.browse.list_block_active : styles.browse.list_block} >
 
-                    <ListUIComponent categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent cell_style={'style_browse'} categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent cell_style={'style_browse'} categoryId={this.state.category.category_id} style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
 
-                    <ListUIComponent categoryId={this.state.category.category_id}  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
+                    <ListUIComponent cell_style={'style_browse'} categoryId={this.state.category.category_id}  style={styles.browse.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} />
                   </div>
 
               </VerticalList>
@@ -230,7 +230,7 @@ function mapStateToProps (state, ownProps){
 
 };
 
-const mapDispatchToProps = (dispatch)=>({
+const mapDispatchToProps = (dispatch) =>({
 
      actions: bindActionCreators({...contentActions, ...menuActions, ...categoryActions}, dispatch)
 

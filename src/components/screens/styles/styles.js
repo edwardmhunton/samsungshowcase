@@ -15,7 +15,7 @@ const styles = {
             },
             list_block: {
               position: 'absolute',
-              top: '700px'
+              top: '900px'
 
             },
 
@@ -46,8 +46,8 @@ const styles = {
               },
               list_block: {
                 position: 'absolute',
-                left: '347px',
-                top: '150px',
+                left: '450px',
+                top: '300px',
                 transition: '0.5s',
                 transitionProperty: 'all',
               	transitionDuration: '.5s',
@@ -59,6 +59,7 @@ const styles = {
               list_block_active: {
                 position: 'absolute',
                 left: '0px',
+                top: '300px',
                 transition: '0.5s',
                 transitionProperty: 'all',
               	transitionDuration: '.5s',
@@ -69,7 +70,7 @@ const styles = {
                 position: 'absolute',
                 left: '0px',
                 marginRight: '47px',
-                marginTop: '28px',
+                marginTop: '175px',
                 width: '300px',
                 height: '1020px',
                 transition: '0.5s',
@@ -81,9 +82,9 @@ const styles = {
               },
               sidebar_blur:{
                 position: 'absolute',
-                left: '-375px',
+                left: '-500px',
                 marginRight: '47px',
-                marginTop: '28px',
+                marginTop: '175px',
                 width: '300px',
                 height: '1020px',
                 transition: '0.5s',

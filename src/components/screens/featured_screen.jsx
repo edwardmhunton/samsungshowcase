@@ -19,6 +19,8 @@ import LogoUIComponent from '../ui_components/logo/logo_ui_component';
 import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 import ListUIComponent from '../ui_components/list/list_ui_component';
 
+import ShowUIComponent from '../ui_components/show/show_ui_component';
+
 // stylesheet
 
 import styles from './styles/styles.js';
@@ -46,9 +48,21 @@ class FeaturedScreen extends React.Component {
         this.transitionToPlayer = this.transitionToPlayer.bind(this);
         this.transitionToScreen = this.transitionToScreen.bind(this);
 
+        this.setFeaturedActiveFalse = this.setFeaturedActiveFalse.bind(this);
+        this.setFeaturedActiveTrue = this.setFeaturedActiveTrue.bind(this);
 
 
 
+  }
+
+  setFeaturedActiveFalse(){
+    console.log('setFeaturedActive False');
+    this.setState({ featuredActive: false});
+
+  }
+  setFeaturedActiveTrue(){
+    console.log('setFeaturedActive True');
+    this.setState({ featuredActive: true});
 
   }
 
@@ -108,7 +122,8 @@ class FeaturedScreen extends React.Component {
   render(){
 
     console.log("Styles: "+util.inspect(styles, false, null));
-  //  console.log("Background: "+util.inspect(Background, false, null));
+
+    console.log("The State in Featured "+util.inspect(this.state, false, null));
     /*let styles = {
       backgroundImage: `url(${Background})`,
       backgroundRepeat: 'no-repeat',
@@ -126,16 +141,17 @@ class FeaturedScreen extends React.Component {
 
           <VerticalList >
           <LogoUIComponent />
-          <MainmenuUIComponent itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
+          <MainmenuUIComponent onBlur={this.setFeaturedActiveTrue} itemDefault={this.state.menu.main_menu_id} navDefault={this.state.menu.menu_id === 0 ? true :  false} onEnterDown={this.transitionToScreen} />
 
 
             <HorizontalList>
 
-                    <VerticalList >
+                    <VerticalList onBlur={this.setFeaturedActiveFalse} >
 
                         <div style={this.state.featuredActive ? styles.featured.list_block_active : styles.featured.list_block} >
-                          <ListUIComponent  categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
-                          <ListUIComponent  categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
+                          <ShowUIComponent />
+                          <ListUIComponent  cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
+                          <ListUIComponent  cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
                         </div>
                   </VerticalList>
             </HorizontalList>

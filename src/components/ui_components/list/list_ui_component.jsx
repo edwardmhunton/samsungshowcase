@@ -3,12 +3,12 @@ import ListItem from './list_item';
 
 import styles from './styles.js';
 
-const ListUIComponent = ({action, navDefault, itemDefault, title, style, categoryId}) => (
+const ListUIComponent = ({action, navDefault, itemDefault, title, style, categoryId, cell_style}) => (
 
                <div style={style} className="component">
 
                <div style={styles.list_title}>{title}</div>
-               <ListItem categoryId={categoryId} style={styles} itemDefault={itemDefault} navDefault={navDefault} action={action} />
+               <ListItem cell_style={cell_style} categoryId={categoryId} style={styles} itemDefault={itemDefault} navDefault={navDefault} action={action} />
 
               </div>
 

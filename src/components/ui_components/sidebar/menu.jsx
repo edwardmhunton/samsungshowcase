@@ -104,7 +104,7 @@ export default class Menu extends React.Component {
 
         <div class="content" ref={(content) => { this.content = content}}>
           <VerticalList  itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="vt-list"
-            style={{ display: 'block', width: '200px', marginLeft:'0px', marginRight:'47px', marginTop:'5px'}}
+            
 
 
                           onFocus={(index) => this.onFocus(index)}

@@ -1,5 +1,13 @@
 const styles = {
 
+  side_menu: {
+     display: 'block',
+     width: '400px',
+     marginLeft:'0px',
+     marginRight:'47px',
+     marginTop:'5px'
+  },
+
         side_menu_item: {
 
         color: '#FFFFFF',
@@ -10,7 +18,8 @@ const styles = {
         textAlign: 'left',
         backgroundColor: '#000000',
         padding: '20px',
-        marginBottom: '24px'
+        marginBottom: '24px',
+        borderRadius: '6px',
 
       },
       side_menu_item_focus: {

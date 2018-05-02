@@ -24,7 +24,7 @@ class ToogleItem extends React.Component {
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
-        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={'style_featured'} categoryId={this.props.categoryId}/></div>
+        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={this.props.cell_style} categoryId={this.props.categoryId}/></div>
       </Focusable>
     );
   }
@@ -82,7 +82,7 @@ export default class ListItem extends React.Component {
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <div class="content" style={this.props.style} ref={(content) => { this.content = content}} >
-          <HorizontalList itemDefault={this.props.itemDefault} navDefault={this.props.navDefault}class="hz-list"
+          <HorizontalList cell_style={this.props.cell_style} itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="hz-list"
                           style={{overflow: 'hidden', display: 'block', whiteSpace: 'nowrap'}}
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}
@@ -90,7 +90,7 @@ export default class ListItem extends React.Component {
 
                           {this.titles.map((title, i) =>
 
-                            <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  categoryId={this.props.categoryId} title={title} />
+                            <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  cell_style={this.props.cell_style} categoryId={this.props.categoryId} title={title} />
 
                           )}
 
