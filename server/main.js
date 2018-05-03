@@ -27,7 +27,7 @@ if(process.env.NODE_ENV === 'development') {
 
   const config = require('../webpack.config.dev.babel.js').default;
   const compiler = webpack(config);
-  app.use(require('webpack-dev-middleware')(compiler,{
+  /*app.use(require('webpack-dev-middleware')(compiler,{
       noInfo: true,
       stats: {
           assets: false,
@@ -38,7 +38,7 @@ if(process.env.NODE_ENV === 'development') {
           chunks: false,
           chunkModules: false
       }
-  }));
+  }));*/
   app.use(require('webpack-hot-middleware')(compiler));
 
 
