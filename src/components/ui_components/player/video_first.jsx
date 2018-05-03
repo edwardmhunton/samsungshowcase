@@ -14,7 +14,7 @@ import styles from './styles.js';
 //import Background from './images/video_image.png';
 
 
-import Video from './video/small.mp4';
+//import Video from './video/small.mp4';
 
 
 
