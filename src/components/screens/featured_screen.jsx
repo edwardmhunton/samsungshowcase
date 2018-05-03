@@ -22,6 +22,9 @@ import ListUIComponent from '../ui_components/list/list_ui_component';
 import ShowUIComponent from '../ui_components/show/show_ui_component';
 import ModalUIComponent from '../ui_components/modal';
 
+import VideoFirst from '../ui_components/player/video_first';
+
+
 
 // stylesheet
 
@@ -90,6 +93,7 @@ class FeaturedScreen extends React.Component {
 
       <div className="screen" style={styles.featured.screen} id={this.props.id}  >
       <ModalUIComponent style={this.state.modalActive ? styles.modal_active : styles.modal_blur} />
+      <VideoFirst />
       <Navigation >
           <div id="content">
 

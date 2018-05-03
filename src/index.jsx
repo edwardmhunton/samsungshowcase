@@ -28,11 +28,6 @@ import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation'
 
 import util from 'util';
 
-
-
-
-//const history = createHistory();
-//const store = configureStore(history);
 const store = configureStore(initialState);
 
 

@@ -108,6 +108,13 @@ export default {
 },{
               test: /\.css$/,
               loader: "style-loader!css-loader"
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader?attrs[]=video:src'
+              }, {
+                test: /\.mp4$/,
+                loader: 'url-loader?limit=10000&mimetype=video/mp4'
             }
 
 
