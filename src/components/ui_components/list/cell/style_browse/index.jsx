@@ -2,11 +2,16 @@ import React from 'react';
 
 import styles from './styles';
 
+import util from 'util';
 
 
 
-const StyleBrowse = ({}) => {
+
+
+const StyleBrowse = ({active, categoryId}) => {
   //styles.image.backgroundImage = 'url(' + require('../assets/16X9_small.png') + ')';
+
+  let style = styles;
 
           return (
 
@@ -14,7 +19,7 @@ const StyleBrowse = ({}) => {
 
                       <div style={styles.main}>
 
-                        <div style={styles.image}></div>
+                        <div style={active ? styles.image_active : styles.image }></div>
 
                       </div>
                       <div style={styles.sub} >
@@ -26,7 +31,7 @@ const StyleBrowse = ({}) => {
 
                         <div style={styles.text}>
 
-                          <div style={styles.primary_text}>Its Always Sunny In Hackney</div>
+                          <div style={styles.primary_text}>{'Its Always Sunny In Hackney: '+categoryId}</div>
 
 
                         </div>

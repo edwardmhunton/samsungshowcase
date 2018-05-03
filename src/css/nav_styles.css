@@ -189,12 +189,12 @@ html, body {
 
 }
 
-#content .item-focus {
-  color: green;
+/*#content .item-focus {
   background-color: white;
   /*  transform: scale(1.20);
-  transition: all .2s ease-in-out;*/
-}
+  transition: all .2s ease-in-out;
+}*/
+
 
 #content .animate {
   width: 25%;

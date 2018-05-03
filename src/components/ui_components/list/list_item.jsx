@@ -19,12 +19,13 @@ class ToogleItem extends React.Component {
   }
 
   render() {
+
     return (
       <Focusable active={this.state.active}
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
                  onEnterDown={(index) => this.props.onEnterDown(index)} >
-        <div class={'item list_item ' + (this.state.active ? 'item-focus' : '')}><Cell style={this.props.cell_style} categoryId={this.props.categoryId}/></div>
+        <div class='item'><Cell active={this.state.active} style={this.props.cell_style} categoryId={this.props.categoryId}/></div>
       </Focusable>
     );
   }

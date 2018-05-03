@@ -20,7 +20,13 @@ import LogoUIComponent from '../ui_components/logo/logo_ui_component';
 
 import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
 
+import ModalUIComponent from '../ui_components/modal';
 
+
+import genericKeys from './genericKeys.js';
+import CommonMethods from './../utils/utils.js';
+
+import styles from './styles/styles.js';
 
 
 
@@ -35,15 +41,11 @@ class TvGuideScreen extends React.Component {
 
     super(props);
 
-        /*this.state = {
-          hold: true,
-          player:false,
-          navigation: {'timeout':'', 'back':'', 'enter':''}
-        };*/
+
         this.state = this.props;
 
-        this.transitionToPlayer = this.transitionToPlayer.bind(this);
-        this.transitionToScreen = this.transitionToScreen.bind(this);
+        this.transitionToPlayer = CommonMethods.transitionToPlayer.bind(this);
+        this.transitionToScreen = CommonMethods.transitionToScreen.bind(this);
 
 
 
@@ -58,54 +60,24 @@ class TvGuideScreen extends React.Component {
 
   componentDidMount() {
 
+    window.addEventListener('keydown', genericKeys.onKeyDown.bind(this));
 
   }
 
   componentWillUnmount () {
 
-      this.loadInterval = false;
+    window.removeEventListener('keydown', genericKeys.onKeyDown.bind(this));
   }
 
-  transitionToPlayer(videoMetaData, menu_id, menu_item_id ){
-
-    console.log("videoMetaData: "+videoMetaData);
-
-      //console.log('trans to P: '+util.inspect(this, false, null));
-
-            //this.setState({player: true});
-            this.setState({content: videoMetaData});
-            history.push('/player');
-            this.props.actions.setContent(videoMetaData);
-            this.props.actions.setPreviousMenuId(menu_id);
-            this.props.actions.setPreviousMenuItemId(menu_item_id);
-
-
-
-
-  }
-
-  transitionToScreen(screen, main_menu_id){
-    console.log("Tran to screen"+screen);
-    console.log("Tran to screen"+main_menu_id);
-    this.props.actions.setMainMenuId(main_menu_id);
-    history.push('/'+screen);
-  }
 
   render(){
-
-    console.log("The State in Home:"+util.inspect(this.state, false, null));
-    console.log("The Props in Home:"+util.inspect(this.props, false, null));
-
-  //  <ListUIComponent {return this.props.menu.menu_id === 2 ? navDefault: ""} action={this.transitionToPlayer} />
-
-//if(this.state.player === false) {
-//<HeroUIComponent navDefault = {this.state.menu_id === 1 ? navDefault: ""} action={this.transitionToPlayer} />
 
 
     return (
 
       <div className="screen" id={this.props.id}  >
-        <Navigation >
+      <ModalUIComponent style={this.state.modalActive ? styles.modal_active : styles.modal_blur} />
+      <Navigation >
       <div id="content">
       <VerticalList >
         <LogoUIComponent />

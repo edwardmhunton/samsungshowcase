@@ -5,7 +5,18 @@ const styles = {
        color:'#FFFFFF',
        width: '417px',
        height: '360px',
-       margin: '5px',
+       marginRight: '20px',
+       borderStyle: 'none',
+       borderColor: '#000000'
+
+    },
+    cell_active: {
+       color:'#DDDDDD',
+       width: '417px',
+       height: '360px',
+       marginRight: '20px',
+
+
        /*backgroundColor: '#000000',*/
 
     },
@@ -20,8 +31,18 @@ const styles = {
       height: '234px',
       backgroundColor: '#282628',
       float: 'left',
-    ///  backgroundImage: 'url(' + require('../assets/main.png') + ')'
+      borderStyle: 'none',
+      borderColor: '#DDDDDD'
 
+    },
+    image_active: {
+      color: '#DDCCDD',
+      width: '417px',
+      height: '234px',
+      backgroundColor: '#282628',
+      float: 'left',
+      borderStyle: 'solid',
+      borderColor: '#FFFFFF'
 
     },
 

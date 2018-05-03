@@ -11,7 +11,7 @@ import { argv } from 'optimist';
 //import { videos, video } from '../data/api-real-url';
 import { get } from 'request-promise';
 import { ConnectedRouter } from 'react-router-redux';
-import getStore from '../src/getStore'
+//import getStore from '../src/getStore'
 import { Provider } from 'react-redux';
 import createHistory from 'history/createMemoryHistory';
 import serveStatic from 'serve-static';

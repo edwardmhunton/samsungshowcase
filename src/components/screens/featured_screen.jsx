@@ -20,18 +20,20 @@ import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component
 import ListUIComponent from '../ui_components/list/list_ui_component';
 
 import ShowUIComponent from '../ui_components/show/show_ui_component';
+import ModalUIComponent from '../ui_components/modal';
+
 
 // stylesheet
 
 import styles from './styles/styles.js';
 
-//import Background from './assets/16x9_small.png';
-
+import genericKeys from './genericKeys.js';
+import CommonMethods from './../utils/utils.js';
 
 
 
 import util from 'util';
-//import Navigation, { VerticalList, HorizontalList } from 'react-key-navigation';
+
 import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
 
@@ -45,13 +47,11 @@ class FeaturedScreen extends React.Component {
         this.state = this.props;
 
 
-        this.transitionToPlayer = this.transitionToPlayer.bind(this);
-        this.transitionToScreen = this.transitionToScreen.bind(this);
+        this.transitionToPlayer = CommonMethods.transitionToPlayer.bind(this);
+        this.transitionToScreen = CommonMethods.transitionToScreen.bind(this);
 
         this.setFeaturedActiveFalse = this.setFeaturedActiveFalse.bind(this);
         this.setFeaturedActiveTrue = this.setFeaturedActiveTrue.bind(this);
-
-
 
   }
 
@@ -66,76 +66,30 @@ class FeaturedScreen extends React.Component {
 
   }
 
-  onKeyDown(event){
-    console.log('keycaughts');
-    switch (event.code) {
-      case 'ArrowDown':
-
-        this.setState({ featuredActive: true});
-
-      case 'Enter':
-
-
-        break;
-      default:
-
-    }
-  }
-
-
 
   componentDidMount() {
 
     this.setState({ featuredActive: false});
-    window.addEventListener('keydown', this.onKeyDown.bind(this));
-
-    /*var self = this;
-    this.loadInterval =  setTimeout(function(){
-      console.log("interval");
-    self.setState({ featuredActive: true});
-  }, 5000);*/
+    window.addEventListener('keydown', genericKeys.onKeyDown.bind(this));
 
   }
 
   componentWillUnmount () {
 
-      this.loadInterval = false;
+    window.removeEventListener('keydown', genericKeys.onKeyDown.bind(this));
+
   }
 
-  transitionToPlayer(videoMetaData, menu_id, menu_item_id ){
-    this.setState({content: videoMetaData});
-    history.push('/player');
-
-    this.props.actions.setContent(videoMetaData);
-    this.props.actions.setPreviousMenuId(menu_id);
-    this.props.actions.setPreviousMenuItemId(menu_item_id);
-  }
-
-  transitionToScreen(screen, main_menu_id){
-    console.log("Tran to screen"+screen);
-    console.log("Tran to screen"+main_menu_id);
-    this.props.actions.setMainMenuId(main_menu_id);
-    history.push('/'+screen);
-  }
 
 
   render(){
 
-    console.log("Styles: "+util.inspect(styles, false, null));
-
-    console.log("The State in Featured "+util.inspect(this.state, false, null));
-    /*let styles = {
-      backgroundImage: `url(${Background})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover'
-    }*/
-
-//style = Object.assign({}, styles, style);
 
 
     return (
 
       <div className="screen" style={styles.featured.screen} id={this.props.id}  >
+      <ModalUIComponent style={this.state.modalActive ? styles.modal_active : styles.modal_blur} />
       <Navigation >
           <div id="content">
 

@@ -80,5 +80,3 @@ class App extends React.Component {
 };
 
 export default App;
-
-//<Screen id={screens.Splash.id} ui_components={screens.Splash.components} styles={screens.Splash.styles} />
