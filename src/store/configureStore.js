@@ -8,6 +8,8 @@ import content from '../reducers/contentReducer';
 import category from '../reducers/categoryReducer';
 import menu from '../reducers/menuReducer';
 
+import fetchContentSaga from '../sagas/fetch-content.saga.js';
+
 
 //export default function configureStore(history, initialState = {}) {
   export default function configureStore(initialState) {
@@ -20,7 +22,7 @@ import menu from '../reducers/menuReducer';
             const imutableState = reduxImutableStateInvariant();
             const middlewareChain = [imutableState, sagaMiddleware]; //middleware,
 
-            return createStore(combineReducers({
+            const store = createStore(combineReducers({
               content,
               menu,
               category,
@@ -30,5 +32,7 @@ import menu from '../reducers/menuReducer';
               initialState,
               applyMiddleware(...middlewareChain)
             );
+            sagaMiddleware.run(fetchContentSaga);
+            return store;
 
 }

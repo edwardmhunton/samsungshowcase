@@ -32,7 +32,6 @@ class SplashScreen extends React.Component {
   }
 
   advance(){
-      console.log("advance");
       this.setState({hold: false});
   }
 
@@ -51,8 +50,6 @@ class SplashScreen extends React.Component {
   }
 
   render(){
-
-    console.log('render'+this.state.hold);
 
 if(this.state.hold === true) {
 
@@ -85,8 +82,6 @@ if(this.state.hold === true) {
 }
 
 function mapStateToProps (state, ownProps) {
-
-  console.log("The State in splash called in MSTP:"+util.inspect(state, false, null));
 
   return {
 

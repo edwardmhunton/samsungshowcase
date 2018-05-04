@@ -8,7 +8,7 @@ import { delay } from 'redux-saga';
 import { renderToString } from 'react-dom/server'
 import React from 'react'
 import { argv } from 'optimist';
-//import { videos, video } from '../data/api-real-url';
+import { content } from '../data/api-real-url';
 import { get } from 'request-promise';
 import { ConnectedRouter } from 'react-router-redux';
 //import getStore from '../src/getStore'
@@ -50,19 +50,27 @@ if(process.env.NODE_ENV === 'development') {
 
 }
 
-function * getStructure (){
+function * getContent (){
+  console.log("useLiveData", useLiveData);
     let data;
     if (useLiveData) {
-        data = yield get(questions,{gzip:true});
+        data = yield get(content,{gzip:true});
     } else {
-        data = yield fs.readFile('./data/app-layout.json',"utf-8");
+        data = yield fs.readFile('./data/mock.json',"utf-8");
     }
-    console.log(data);
+    //console.log(data);
     return JSON.parse(data);
 }
 
 app.get(['/home'], function * (req,res){
 
+});
+
+app.get('/api/content', function * (req, res) {
+  console.log('call api');
+  const data = yield getContent();
+  yield delay(200);
+  res.json(data);
 });
 
 app.get(['/'], function * (req,res){

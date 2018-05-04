@@ -7,8 +7,27 @@ const styles = {
        height: '534px',
        margin: '5px',
        backgroundColor: '#000000',
-       paddingRight: '10px'
-       /*display: 'inlineBlock'*/
+       paddingRight: '10px',
+       whiteSpace: 'nowrap',
+       overflow: 'hidden',
+       textOverflow: 'ellipsis',
+       borderStyle:'solid',
+       borderColor: '#000000'
+
+
+    },
+    cell_active: {
+       color:'#FFFFFF',
+       width: '512px',
+       height: '534px',
+       margin: '5px',
+       backgroundColor: '#000000',
+       paddingRight: '10px',
+       whiteSpace: 'nowrap',
+       overflow: 'hidden',
+       textOverflow: 'ellipsis',
+       borderStyle:'solid',
+       borderColor: '#FFFFFF'
 
     },
     main: {
@@ -41,7 +60,10 @@ const styles = {
       position:'relative',
       /*fontFamily: ''*/
       fontSize: '16px',
-      height:'100%'
+      height:'100%',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
 
 
 
@@ -52,7 +74,10 @@ const styles = {
       fontWeight:'900',
       width: '100%',
       height: '44px',
-      marginBottom:'20px'
+      marginBottom:'20px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+
 
 
     },
@@ -62,7 +87,9 @@ const styles = {
         fontWeight:'500',
         color: '#DDDDDD',
         width: '100%',
-        height: '30px'
+        height: '30px',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
     },
     footer: {
 

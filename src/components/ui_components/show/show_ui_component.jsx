@@ -4,13 +4,13 @@ import styles from './styles.js';
 
 
 
-const ShowUIComponent = ({}) => (
+const ShowUIComponent = ({content}) => (
 
 
             <div style={styles.show} >
                <div style={styles.show_logo}></div>
-               <div style={styles.show_title}>Show Name</div>
-               <div style={styles.show_description}>Show description over a couple of lines here</div>
+               <div style={styles.show_title}>{content.title}</div>
+               <div style={styles.show_description}>{content.summary}</div>
             </div>
 
 

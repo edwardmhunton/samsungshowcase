@@ -9,7 +9,7 @@ import StyleBrowse from './style_browse';
 
 import styles from './styles';
 
-const Cell = ({style, categoryId, active}) => {
+const Cell = ({style, categoryId, active, meta}) => {
 
 
 
@@ -29,7 +29,7 @@ switch (style) {
   case 'style_4':
       return   (<Style4 />)
   case 'style_featured':
-        return (<StyleFeatured active={active} />)
+        return (<StyleFeatured meta={meta} active={active} />)
  case 'style_browse':
         return (<StyleBrowse categoryId={categoryId} active={active} />)
     break;

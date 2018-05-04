@@ -36,11 +36,18 @@ class VideoFirst extends React.Component {
 
   }
 
+
+
+
+
   // <img src={ require('./images/video_image.png') } />
 
 //  <video src={vid} type="video/mp4" autoplay width='1960px' loop></video>
 
   render(){
+
+      console.log("Video first"+this.props.content.content.src);
+      //const vid = require(this.props.content.content.src);
 
   //  styles.video_first.backgroundImage = `url(${Background})`;
 
@@ -51,7 +58,7 @@ class VideoFirst extends React.Component {
 
       <div style={styles.video_first}  >
 
-
+<video src={this.props.content.content.src} type="video/mp4" autoplay width='1960px' loop></video>
       </div>
 
 

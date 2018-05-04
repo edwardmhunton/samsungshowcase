@@ -5,7 +5,7 @@ import styles from './styles';
 
 
 
-const StyleFeatured = ({active}) => {
+const StyleFeatured = ({active, meta}) => {
 
   active ? styles.cell = styles.cell_active : styles.cell
 
@@ -15,7 +15,7 @@ const StyleFeatured = ({active}) => {
 
                       <div style={styles.main}>
 
-                        <div style={styles.image}></div>
+                        <img src={meta.media_group[0].media_item[0].src} style={styles.image}></img>
                         <div style={styles.duration_text}>26.32</div>
 
                       </div>
@@ -28,8 +28,8 @@ const StyleFeatured = ({active}) => {
 
                         <div style={styles.text}>
 
-                          <div style={styles.primary_text}>F Pri txt</div>
-                          <div style={styles.secondary_text}>F Sec txt</div>
+                          <div style={styles.primary_text}>{meta.title}</div>
+                          <div style={styles.secondary_text}>{meta.summary}</div>
 
                         </div>
 

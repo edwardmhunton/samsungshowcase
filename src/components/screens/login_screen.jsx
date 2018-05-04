@@ -68,9 +68,6 @@ class LoginScreen extends React.Component {
   }
 
   function mapStateToProps (state, ownProps) {
-
-    console.log("The State in login called in MSTP:"+util.inspect(state, false, null));
-
     return {
 
           content: state.content

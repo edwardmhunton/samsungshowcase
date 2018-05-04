@@ -75,7 +75,7 @@ const fetchDataForLocation = location =>{
   // if (location.pathname.includes(`questions`)) {
       //  store.dispatch({type:`REQUEST_FETCH_QUESTION`,question_id:location.pathname.split('/')[2]});
     //}
-
+      store.dispatch({type:`REQUEST_FETCH_CONTENT`});
       store.dispatch({type:`SET_PREVIOUS_MENU_ID`, menu_id:0});
       store.dispatch({type:`SET_PREVIOUS_MENU_ITEM_ID`, menu_item_id:10});
 };

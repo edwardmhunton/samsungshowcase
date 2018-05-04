@@ -87,13 +87,15 @@ class FeaturedScreen extends React.Component {
 
   render(){
 
+    console.log("test in featured");
+
 
 
     return (
 
       <div className="screen" style={styles.featured.screen} id={this.props.id}  >
       <ModalUIComponent style={this.state.modalActive ? styles.modal_active : styles.modal_blur} />
-      <VideoFirst />
+      <VideoFirst content={this.state.content.content[0]} />
       <Navigation >
           <div id="content">
 
@@ -107,9 +109,9 @@ class FeaturedScreen extends React.Component {
                     <VerticalList onBlur={this.setFeaturedActiveFalse} >
 
                         <div style={this.state.featuredActive ? styles.featured.list_block_active : styles.featured.list_block} >
-                          <ShowUIComponent />
-                          <ListUIComponent  cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
-                          <ListUIComponent  cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
+                          <ShowUIComponent content={this.state.content.content[0]} />
+                          <ListUIComponent  content={this.state.content} cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
+                          <ListUIComponent  content={this.state.content} cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
                         </div>
                   </VerticalList>
             </HorizontalList>
@@ -132,7 +134,8 @@ function mapStateToProps (state, ownProps){
   console.log("MSTP called home"+util.inspect(state, false, null));
 
   return {
-      menu: state.menu
+      menu: state.menu,
+      content: state.content
   }
 
 

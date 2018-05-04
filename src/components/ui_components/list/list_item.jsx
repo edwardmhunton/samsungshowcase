@@ -16,6 +16,7 @@ class ToogleItem extends React.Component {
       active: this.props.active
     }
 
+
   }
 
   render() {
@@ -24,8 +25,9 @@ class ToogleItem extends React.Component {
       <Focusable active={this.state.active}
                  onFocus={() => this.setState({active: true})}
                  onBlur={() => this.setState({active: false})}
-                 onEnterDown={(index) => this.props.onEnterDown(index)} >
-        <div class='item'><Cell active={this.state.active} style={this.props.cell_style} categoryId={this.props.categoryId}/></div>
+                 onEnterDown={(index) => this.props.onEnterDown(index)}
+                 meta={this.props.meta} >
+        <div class='item'><Cell meta={this.props.meta} active={this.state.active} style={this.props.cell_style} categoryId={this.props.categoryId}/></div>
       </Focusable>
     );
   }
@@ -34,10 +36,7 @@ class ToogleItem extends React.Component {
 export default class ListItem extends React.Component {
   constructor(props) {
     super();
-    //this.state = {
-    //  active: this.props.active,
 
-  //  }
     this._lastFocus = null;
     this.paddingValue = 10;
     this.titles = ["Film 1", "Film 2","Film 3","Film 4","Film 5","Film 6","Film 7","Film 8","Film 9","Film 10","Film 11","Film 12","Film 13","Film 14","Film 15"];
@@ -75,6 +74,12 @@ export default class ListItem extends React.Component {
     this._lastFocus = index;
   }
 
+  /*{this.titles.map((title, i) =>
+
+    <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  cell_style={this.props.cell_style} categoryId={this.props.categoryId} title={title} />
+
+  )}*/
+
   render() {
 
     console.log("List item props: "+util.inspect(this.props, false, null));
@@ -83,17 +88,19 @@ export default class ListItem extends React.Component {
     return (
       <div class={"contentgroup " + (this.props.visible ? '' : 'fading-out')}>
         <div class="content" style={this.props.style} ref={(content) => { this.content = content}} >
-          <HorizontalList cell_style={this.props.cell_style} itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="hz-list"
+          <HorizontalList content={this.props.content} cell_style={this.props.cell_style} itemDefault={this.props.itemDefault} navDefault={this.props.navDefault} class="hz-list"
                           style={{overflow: 'hidden', display: 'block', whiteSpace: 'nowrap'}}
                           onFocus={(index) => this.onFocus(index)}
                           onBlur={() => { this._lastFocus = null }}
                           onEnterDown={(index) => this.onEnterDown(this.props.itemDefault)} >
 
-                          {this.titles.map((title, i) =>
+                         {this.props.content.content.map((content_item, i)  => {
+                           return (
 
-                            <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  cell_style={this.props.cell_style} categoryId={this.props.categoryId} title={title} />
+                           <ToogleItem active={i === this.props.itemDefault && this.props.navDefault ? this.props.navDefault : false} onEnterDown={() => this.props.action(title, 2, i)}  cell_style={this.props.cell_style} categoryId={this.props.categoryId} meta={content_item} />
 
-                          )}
+                         )
+                       })}
 
           </HorizontalList>
         </div>

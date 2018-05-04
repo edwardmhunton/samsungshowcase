@@ -1,0 +1,1400 @@
+{
+  "type": {
+    "value": "feed"
+  },
+  "title": "",
+  "id": "",
+  "summary": "",
+  "published": "",
+  "updated": "",
+  "author": {
+    "name": ""
+  },
+  "media_group": [],
+  "link": {},
+  "extensions": {},
+  "content": {},
+  "entry": [
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Kocian: \"Jetzt ist der Funke bei uns entfacht!\"",
+      "id": "8232813030de0136c2737054d2ab776f",
+      "summary": "GESTERN / 07:55 Uhr",
+      "published": "2018-05-03T07:55:54+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6885/9748/6215/5c0b727030d5013638a8543d7edaf0a0/2018-05-02-friedrichshafen-vs-berlin-interview-friedrichshafen_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/kocian-funke-entfacht",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/53f3644030d5013638a4543d7edaf0a0/5c0b727030d5013638a8543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Highlights: Häfler kämpfen sich in die Finalserie zurück!",
+      "id": "1b52e790307e0136b18f7054d2ab776f",
+      "summary": "LETZTEN MITTWOCH / 21:23 Uhr",
+      "published": "2018-05-02T21:23:15+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7053/2092/6215/3ec347a030750136ab1c543d7edaf0a0/haefler-sieg-zsf_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/5430/7931/6215/8bc3f55030740136ff97543d7edaf0a0/2018-05-02-friedrichshafen-vs-berlin-zsf_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/8606/6085/6215/3ec43c8030750136ab1d543d7edaf0a0/haefler-sieg-zsf-opener_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/highlights-haefler-kaempfen-finalserie",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/f300e590307c0136ac28543d7edaf0a0/8bc3f55030740136ff97543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Highlights: Marshall mit unfassbarer Rettung! ",
+      "id": "b74df38030d40136c2497054d2ab776f",
+      "summary": "LETZTEN MITTWOCH / 19:53 Uhr",
+      "published": "2018-05-02T19:53:56+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/4189/4480/6215/31962b40307101367bff543d7edaf0a0/marshall-rettung_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1743/5687/6215/13f9c3a0307001367bdd543d7edaf0a0/2018-05-02-friedrichshafen-vs-berlin-highlights-unfassbare-rettung_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/highlights-marshall-unfassbarer-rettung",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/781a8740307001367be7543d7edaf0a0/13f9c3a0307001367bdd543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Highlights: Wilde Phase! Berlin schnappt sich die verrückten Punkte",
+      "id": "8978b45030710136b16d7054d2ab776f",
+      "summary": "LETZTEN MITTWOCH / 19:45 Uhr",
+      "published": "2018-05-02T19:45:54+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/2763/4007/6215/1fa7dc30306e01367b8f543d7edaf0a0/berlin-monsterballwechsel_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7114/8952/6215/3d3a2660306f01367bbd543d7edaf0a0/2018-05-02-friedrichshafen-vs-berlin-highlights-verrueckte-ballwechsel_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/highlights-wilde-phase-berlin-schnappt-verrueckten-punkte",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/5935ee40306f01367bbf543d7edaf0a0/3d3a2660306f01367bbd543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Highlights: Friedrichshafen spielt sich in einen Rausch",
+      "id": "bdfdbe40306e0136b1637054d2ab776f",
+      "summary": "LETZTEN MITTWOCH / 19:23 Uhr",
+      "published": "2018-05-02T19:23:24+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/5152/9438/6215/d7dcb4f0306d01367b7c543d7edaf0a0/haefler-rausch_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1444/2881/6215/abbbbdb0306801368fbc543d7edaf0a0/2018-05-02-friedrichshafen-vs-berlin-highlights-lauf-friedrichshafen_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/highlights-friedrichshafen-spielt-rausch",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/34339ab0306c01367b27543d7edaf0a0/abbbbdb0306801368fbc543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Highlights: Häfler mit Monsterblock gegen Hammer-Carroll! ",
+      "id": "f1c42650306b0136b1357054d2ab776f",
+      "summary": "LETZTEN MITTWOCH / 19:13 Uhr",
+      "published": "2018-05-02T19:13:34+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7078/5866/6215/c49c2da0306a01367ae7543d7edaf0a0/starker-block_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3549/1763/6215/1826a6c0306901368fd5543d7edaf0a0/2018-05-02-friedrichshafen-vs-berlin-highlights-starker-block_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1936/7527/6215/c49e1780306a01367ae8543d7edaf0a0/starker-block-block_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/highlights-haefler-monsterblock-hammer-carroll",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/d4ad4980306a01367aec543d7edaf0a0/1826a6c0306901368fd5543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Re-live: VBL-Finale: VfB Friedrichshafen vs. Berlin Recycling Volleys - Spiel 3",
+      "id": "863475d026ce013639dc7054d2ab776f",
+      "summary": "LETZTEN MITTWOCH / 18:00 Uhr",
+      "published": "2018-05-02T18:00:00+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/5152/9438/6215/d7dcb4f0306d01367b7c543d7edaf0a0/haefler-rausch_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1636/6466/6215/f7371d1030740136ab13543d7edaf0a0/2018-05-02-friedrichshafen-vs-berlin-relive_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6318/8251/6215/a5e7ab1013240136f23f543d7edaf0a0/livestream-friedrichshafen_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/re-live-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-3",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/bae9771026cc0136826d543d7edaf0a0/f7371d1030740136ab13543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "VBL-Finale: Berlin gewinnt 5-Satz-Krimi gegen den VfB",
+      "id": "122b67a02e08013600197054d2ab776f",
+      "summary": "LETZTEN SONNTAG / 21:10 Uhr",
+      "published": "2018-04-29T21:10:00+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6004/8266/6215/4f3707c02e070136112a543d7edaf0a0/brvolleys-jubel_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/2789/1364/6215/0d87d4302e06013610fa543d7edaf0a0/zsfg-vbl-transcoded_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/0205/9043/6215/4f34f6102e0701361128543d7edaf0a0/volelys-opener_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/vbl-finale-berlin-gewinnt-5-satz-krimi-vfb",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/923e9c202e060136110f543d7edaf0a0/0d87d4302e06013610fa543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "VBL-Finale: Erst im dritten Anlauf: Berlin holt den dritten Satz",
+      "id": "7702ef602e17013600747054d2ab776f",
+      "summary": "LETZTEN SONNTAG / 20:06 Uhr",
+      "published": "2018-04-29T20:06:08+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/9135/3160/6215/d9dbb5802e1501364c11543d7edaf0a0/kyle-russel_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6618/9860/6215/7c24c0802e12013657a8543d7edaf0a0/2018-04-29-vbl-finale-berlin-recycling-volleys-vs-vfb-friedrichshafen-spiel-2-dritter-anlauf_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/dritten-vbl-finale-anlauf-berlin-holt-satz",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/ad520bf02e1601364c37543d7edaf0a0/7c24c0802e12013657a8543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "VBL-Finale: Berlin entscheidet kurioses Satzende für sich",
+      "id": "77f152402e17013600757054d2ab776f",
+      "summary": "LETZTEN SONNTAG / 19:59 Uhr",
+      "published": "2018-04-29T19:59:43+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/4757/4706/6215/fc073f402e1501364c1e543d7edaf0a0/brvolleys_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/5296/4416/6215/3487ddd02e120136579d543d7edaf0a0/2018-04-29-vbl-finale-berlin-recycling-volleys-vs-vfb-friedrichshafen-spiel-2-kurioses-satzende_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/vbl-finale-berlin-entscheidet-kurioses-satzende",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/c7d02fc02e1501364c0c543d7edaf0a0/3487ddd02e120136579d543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Re-live: VBL-Finale: Berlin Recycling Volleys vs. VfB Friedrichshafen - Spiel 2",
+      "id": "1ec7354026cd013639cf7054d2ab776f",
+      "summary": "LETZTEN SONNTAG / 18:00 Uhr",
+      "published": "2018-04-29T18:00:00+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6900/8101/6215/0e5d2b902e130136cd50543d7edaf0a0/2018-04-29-vbl-finale-berlin-recycling-volleys-vs-vfb-friedrichshafen-spiel-2-relive_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7392/5582/6215/a5e615e013240136f23e543d7edaf0a0/livestream-berlin-volleys_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/re-live-vbl-finale-berlin-recycling-volleys-vs-vfb-friedrichshafen-spiel",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/1471b87026cc01368255543d7edaf0a0/0e5d2b902e130136cd50543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Trainer Koslowski: Titelverteidigung? \"Viel schwerer als letztes Jahr\"",
+      "id": "dfb0dec02d530136e5557054d2ab776f",
+      "summary": "LETZTEN SAMSTAG / 20:42 Uhr",
+      "published": "2018-04-28T20:42:32+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7565/3109/6215/aed2eb002d5201364877543d7edaf0a0/felix-koslowski_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/5765/5705/6215/67828f902d520136486b543d7edaf0a0/2018-04-28-vbl-finale-allianz-mtv-stuttgart-vs-ssc-palmberg-schwerin-spiel-3-interview-koslowski_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/trainer-koslowski-titelverteidigung-schwerer-jahr",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/987865202d5201364872543d7edaf0a0/67828f902d520136486b543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "VBL-Finale: Schwerin und Stuttgart kämpfen um jeden Punkt",
+      "id": "7b36ea302d520136e54c7054d2ab776f",
+      "summary": "LETZTEN SAMSTAG / 20:30 Uhr",
+      "published": "2018-04-28T20:30:32+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/4790/9903/6215/49b322002d510136483e543d7edaf0a0/schwerin_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/9025/8855/6215/fc3f93102d2b0136428f543d7edaf0a0/2018-04-28-vbl-finale-allianz-mtv-stuttgart-vs-ssc-palmberg-schwerin-spiel-3-highlights-langer-wechsel_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/vbl-finale-schwerin-stuttgart-kaempfen-punkt",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/eb86f9b02d5001364830543d7edaf0a0/fc3f93102d2b0136428f543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "VBL-Finale: Stuttgart mit Wahnsinns-Save",
+      "id": "b84707602d4f0136e5357054d2ab776f",
+      "summary": "LETZTEN SAMSTAG / 20:09 Uhr",
+      "published": "2018-04-28T20:09:04+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3145/3801/6215/389040a02d4e01369533543d7edaf0a0/stuttgart-save_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/9696/8055/6215/d1ace1902d2c013642cc543d7edaf0a0/2018-04-28-vbl-finale-allianz-mtv-stuttgart-vs-ssc-palmberg-schwerin-spiel-3-highlights-mega-save_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/vbl-finale-stuttgart-wahnsinns-save",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/ebc1f2d02d4d0136951f543d7edaf0a0/d1ace1902d2c013642cc543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Starkes Finale: Schwerin verteidigt Meistertitel gegen Stuttgart",
+      "id": "e5b538b02d450136e48b7054d2ab776f",
+      "summary": "LETZTEN SAMSTAG / 19:00 Uhr",
+      "published": "2018-04-28T19:00:20+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1815/9353/6215/4f98f6e02d4401363cc0543d7edaf0a0/schwerin-jubel_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/4363/2600/6215/df60e9f02d4301363ca7543d7edaf0a0/zfsg-volleyball-1-transcoded_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6899/4216/6215/4f965a802d4401363cbf543d7edaf0a0/sscopener-jubeljpg_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/starkes-finale-schwerin-verteidigt-meistertitel-stuttgart",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/5166c8302d4401363cc2543d7edaf0a0/df60e9f02d4301363ca7543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Re-live: VBL-Finale: Allianz MTV Stuttgart vs. SSC Palmberg Schwerin - Spiel 3",
+      "id": "c949f5502148013690af7054d2ab776f",
+      "summary": "LETZTEN SAMSTAG / 13:30 Uhr",
+      "published": "2018-04-28T13:30:00+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3573/1189/6215/2ad123802d2b0136eb3c543d7edaf0a0/2018-04-28-vbl-finale-allianz-mtv-stuttgart-vs-ssc-palmberg-schwerin-spiel-3-relive_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/8528/1197/6215/17fd3770ad1701354f50543d7edaf0a0/mtv-stuttgart-bild_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/re-live-vbl-finale-allianz-mtv-stuttgart-vs-ssc-palmberg-schwerin-spiel-3",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/eb68ff90214701361fc4543d7edaf0a0/2ad123802d2b0136eb3c543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Re-live: VBL-Finale: VfB Friedrichshafen vs. Berlin Recycling Volleys - Spiel 1 - Teil 3",
+      "id": "b0315a702bd30136b7907054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T22:56:35+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/0230/2833/6215/720b38202bc20136f8c9543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-teil3_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/re-live-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-teil-3",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/fe68bbf02bd201360b5e543d7edaf0a0/720b38202bc20136f8c9543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Re-live: VBL-Finale: VfB Friedrichshafen vs. Berlin Recycling Volleys - Spiel 1 - Teil 2",
+      "id": "b42665b02bd30136b7917054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T22:55:28+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6604/3283/6215/51a921902bbb0136a5ae543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-teil2_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/re-live-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/d64f53a02bd201360b59543d7edaf0a0/51a921902bbb0136a5ae543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Vigrass beendet Ballwechsel gnadenlos",
+      "id": "1a2c2e502bce0136b7887054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T22:12:11+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1576/0597/6215/00a9b0502bc30136f8e6543d7edaf0a0/vigrass-gnadenlos_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/2968/9690/6215/720db4902bc20136f8ca543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-highlights-einfach-gelegt_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/vigrass-beendet-ballwechsel-gnadenlos",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/ca5a80402bcc0136bbca543d7edaf0a0/720db4902bc20136f8ca543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Trainer Moculescu stolz auf Leistung seiner Mannschaft",
+      "id": "e141c8402bd00136b78b7054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T21:29:00+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6681/0419/6215/12d991b02bc00136f87b543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-interview-trainer-berlin_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/trainer-moculescu-stolz-leistung-mannschaft",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/455656c02bcf01360822543d7edaf0a0/12d991b02bc00136f87b543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Manager Niroomand: \"Der Druck liegt immer noch bei uns!\"",
+      "id": "205f21202bc70136b7757054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T21:19:54+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1540/8727/6215/f04ee7a02bbf0136f876543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-interview-manager-berlin_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/manager-niroomand-druck",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/7c713bb02bc50136f93e543d7edaf0a0/f04ee7a02bbf0136f876543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Highlights VBL-Finale: Berlin erkämpft sich ersten Sieg!",
+      "id": "bae4fc302bc50136b76a7054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T21:10:04+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7799/4954/6215/d20f74c02bc40136f927543d7edaf0a0/berlin-zusammenfassung-sieg_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/1962/2645/6215/c4d679f02bc00136f890543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-zusammenfassung_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7003/6676/6215/d20ddde02bc40136f926543d7edaf0a0/berlin-zusammenfassung-sieg-opener_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/highlights-vbl-finale-berlin-erkaempft-sieg",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/1cb4d9102bc40136f908543d7edaf0a0/c4d679f02bc00136f890543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Umkämpfter Ballwechsel: Häfler machen Druck",
+      "id": "1fc917902bc70136b7747054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T20:11:25+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3724/0177/6215/06d437602bc20136f8ba543d7edaf0a0/haefler-punkt-langer-ballwechsel_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3131/5847/6215/444dd3b02bb70136a522543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-highlights-kommunikationsfehler-berlin_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/umkaempfter-ballwechsel-haefler-druck",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/eaea73102bbb0136a5c4543d7edaf0a0/444dd3b02bb70136a522543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Russell überragend: Erst der Save, dann der Block!",
+      "id": "8a71aac02bba0136b74a7054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T19:46:51+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3586/9091/6215/86449bf02bb80136a54f543d7edaf0a0/russell-rettung-block_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/0460/6034/6215/b00874302bb70136a534543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-highlights-starke-rettung-neu_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/5107/1573/6215/864313502bb80136a54e543d7edaf0a0/russell-rettung-block-opener_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/russell-ueberragend-save-block",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/7c5aaa102bb80136a54a543d7edaf0a0/b00874302bb70136a534543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Kampfgeist! Berlins Libero mit starkem Save-Versuch",
+      "id": "5a5ce5e02bb60136b73e7054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T19:17:56+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3532/2535/6215/78aab2b02bb40136e831543d7edaf0a0/perry-jump_1024x576.png",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3228/1584/6215/92e0c3302bb0013627ca543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-highlights-satzball-perry-jump_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/kampfgeist-berlins-libero-starkem-save-versuch",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/726cd9802bb40136e82d543d7edaf0a0/92e0c3302bb0013627ca543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Re-live: VBL-Finale: VfB Friedrichshafen vs. Berlin Recycling Volleys - Spiel 1 - Teil 1",
+      "id": "1fe1eb7026cd013639d07054d2ab776f",
+      "summary": "26.04.2018",
+      "published": "2018-04-26T18:00:00+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/7587/1441/6215/dfccbbc02bb50136e85e543d7edaf0a0/2018-04-26-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys-spiel-1-teil1_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6318/8251/6215/a5e7ab1013240136f23f543d7edaf0a0/livestream-friedrichshafen_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/1-re-live-vbl-finale-vfb-friedrichshafen-vs-berlin-recycling-volleys",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/1d83068026cb01368230543d7edaf0a0/dfccbbc02bb50136e85e543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Highlights: Nächster Final-Sieg! Schwerin gewinnt auch Spiel zwei",
+      "id": "f51bc4302aef01369fa57054d2ab776f",
+      "summary": "25.04.2018",
+      "published": "2018-04-25T19:40:21+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/5363/3152/6215/6307e8f02aee01363b0e543d7edaf0a0/palmbergschwerin-jubel_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/0860/9692/6215/630622202aee01363b0d543d7edaf0a0/volleyball-zfsg-1-transcoded_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/2051/3395/6215/dfa5a43019a401360bcc543d7edaf0a0/schwerin-jubel-opener_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/highlights-naechster-final-sieg-schwerin-gewinnt-spiel",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/6983a4602aee01363b10543d7edaf0a0/630622202aee01363b0d543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "MVP Lippmann nach zweiten Final-Sieg: \"Unglaublicher Teamgeist\"",
+      "id": "604e67e02aea01369f897054d2ab776f",
+      "summary": "25.04.2018",
+      "published": "2018-04-25T19:00:56+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3608/0328/6215/ce8a5b402ae801363a3d543d7edaf0a0/louisa-lippmann_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/2496/6419/6215/35db9e102b4e0136990f543d7edaf0a0/2018-04-25-vbl-finale-ssc-palmberg-schwerin-vs-allianz-mtv-stuttgart-spiel-2-interview-louisa-lippmann-neu_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/mvp-lippmann-zweiten-final-sieg-unglaublicher-teamgeist",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/e7c8dce02ae801363a3f543d7edaf0a0/35db9e102b4e0136990f543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "SSC-Trainer Koslowski: \"Riesen Kompliment an die Mannschaft\"",
+      "id": "015ae6802ae901369f847054d2ab776f",
+      "summary": "25.04.2018",
+      "published": "2018-04-25T18:49:15+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/3310/6573/6215/66d2d7802ae701363a0b543d7edaf0a0/felix-koslowski_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6065/0405/6215/4d030fe02ae5013639bf543d7edaf0a0/2018-04-25-vbl-finale-ssc-palmberg-schwerin-vs-allianz-mtv-stuttgart-spiel-2-highlights-interview-felix-koslowski_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/ssc-trainer-koslowski-riesen-kompliment-mannschaft",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/4636e0902ae701363a03543d7edaf0a0/4d030fe02ae5013639bf543d7edaf0a0.mp4"
+      }
+    },
+    {
+      "type": {
+        "value": "video"
+      },
+      "title": "Stuttgart rettet verloren geglaubten Ball - doch ohne Erfolg",
+      "id": "cce09d202ae401369f777054d2ab776f",
+      "summary": "25.04.2018",
+      "published": "2018-04-25T18:25:16+00:00",
+      "updated": "",
+      "author": {
+        "name": ""
+      },
+      "media_group": [
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/6589/3073/6215/2ea3c1c02ae401363994543d7edaf0a0/stuttgart-ssc_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "media_item": [
+            {
+              "src": "https://manager.vidibuscloud.net/mediafiles/8442/9088/6215/3f5d20c02ae101363922543d7edaf0a0/2018-04-25-vbl-finale-ssc-palmberg-schwerin-vs-allianz-mtv-stuttgart-spiel-2-highlights-verloren-geglaubter-ball_1024x576.jpg",
+              "key": "image_base",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "link": {
+        "rel": "alternate",
+        "href": "https://sicher.sportdeutschland.tv/vbl/stuttgart-rettet-verloren-geglaubten-ball-erfolg",
+        "type": "text/html"
+      },
+      "extensions": {},
+      "content": {
+        "type": "video/hls",
+        "src": "http://manager.vidibus.net/6e8cba30a0da0130491a6c626d58b44c/assets/ecc05f602ae30136398b543d7edaf0a0/3f5d20c02ae101363922543d7edaf0a0.mp4"
+      }
+    }
+  ],
+  "screen_type": ""
+}
