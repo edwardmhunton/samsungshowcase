@@ -4,9 +4,9 @@ import styles from './styles.js';
 
 
 
-const LogoUIComponent = ({}) => (
+const LogoUIComponent = ({visible}) => (
 
-               <div style={styles} className="component">
+               <div style={styles} className={"component "+visible}>
                LOGO
                </div>
 

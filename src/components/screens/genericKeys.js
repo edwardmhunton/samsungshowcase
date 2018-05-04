@@ -1,4 +1,4 @@
-
+import history from '../../history.js';
 
 const genericKeys = {
 
@@ -13,7 +13,15 @@ const genericKeys = {
 
             case 'Enter':
 
-             this.setState({ modalActive: false});
+            console.log('inEnter');
+
+              if(this.state.modalActive === true){
+                 this.setState({ modalActive: false});
+              } else if(this.state.featuredActive === false) {
+                 this.setState({ hudVisible: 'hideThis'});
+              }
+
+
 
 
             break;
@@ -21,8 +29,15 @@ const genericKeys = {
             case 'Backspace':
 
 
-             this.setState({ modalActive: true});
-             //genericActions.toggleModal(true);
+            if(this.state.modalActive === true){
+               this.setState({ modalActive: false});
+            } else if(this.state.featuredActive === false) {
+               this.setState({ hudVisible: ''});
+            }
+
+
+
+
 
 
             break;

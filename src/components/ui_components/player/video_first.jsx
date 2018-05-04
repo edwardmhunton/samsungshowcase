@@ -58,7 +58,8 @@ class VideoFirst extends React.Component {
 
       <div style={styles.video_first}  >
 
-<video src={this.props.content.content.src} type="video/mp4" autoplay width='1960px' loop></video>
+          <video src={this.props.content.content.src} type="video/mp4"  width='1960px' loop></video>
+
       </div>
 
 

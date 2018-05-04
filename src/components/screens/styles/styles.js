@@ -3,6 +3,13 @@
 
 const styles = {
 
+  player_blur: {
+    display: 'block'
+  },
+  player_active: {
+    display: 'none'
+  },
+
     modal_blur: {
 
       width: '-webkit-fill-available',

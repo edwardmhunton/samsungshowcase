@@ -97,7 +97,7 @@ class FeaturedScreen extends React.Component {
       <ModalUIComponent style={this.state.modalActive ? styles.modal_active : styles.modal_blur} />
       <VideoFirst content={this.state.content.content[0]} />
       <Navigation >
-          <div id="content">
+          <div id="content" className={this.state.hudVisible} >
 
           <VerticalList >
           <LogoUIComponent />
@@ -109,7 +109,7 @@ class FeaturedScreen extends React.Component {
                     <VerticalList onBlur={this.setFeaturedActiveFalse} >
 
                         <div style={this.state.featuredActive ? styles.featured.list_block_active : styles.featured.list_block} >
-                          <ShowUIComponent content={this.state.content.content[0]} />
+                          <ShowUIComponent  content={this.state.content.content[0]} />
                           <ListUIComponent  content={this.state.content} cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 1 ? true :  false} action={this.transitionToPlayer} title={'NEW EPISODES'} />
                           <ListUIComponent  content={this.state.content} cell_style={'style_featured'} categoryId={0} style={styles.featured.list} itemDefault={this.state.menu.menu_item_id} navDefault={this.state.menu.menu_id === 2 ? true :  false} action={this.transitionToPlayer} title={'MOST POPULAR SHOWS'} />
                         </div>

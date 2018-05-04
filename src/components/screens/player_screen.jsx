@@ -1,113 +1,118 @@
-import React from 'react';
+import React, { Component} from 'react';
+
+//redux
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as contentActions from '../../actions/contentActions';
 import * as menuActions from '../../actions/menuActions';
 
-import { Redirect } from 'react-router-dom';
 import { push } from 'react-router-redux';
+
+//routing
+import {Redirect} from 'react-router-dom';
+
 import history from '../../history.js';
+
+//ui_components
+import LogoUIComponent from '../ui_components/logo/logo_ui_component';
+
+import MainmenuUIComponent from '../ui_components/mainmenu/mainmenu_ui_component';
+import ListUIComponent from '../ui_components/list/list_ui_component';
+
+import ShowUIComponent from '../ui_components/show/show_ui_component';
+import ModalUIComponent from '../ui_components/modal';
+
+import VideoFirst from '../ui_components/player/video_first';
+
+
+
+// stylesheet
+
+import styles from './styles/styles.js';
+
+import genericKeys from './genericKeys.js';
+import CommonMethods from './../utils/utils.js';
+
+
+
 import util from 'util';
 
 import Navigation, { VerticalList, HorizontalList } from '../navigation';
 
-import PlayerWrapper from '../ui_components/player/player_wrapper';
-
-
-
-//import List from './List';
 
 class PlayerScreen extends React.Component {
 
   constructor(props) {
+
     super(props);
-    this._lastFocus = null;
-    this.actions = {};
 
 
-    this.previous = this.previous.bind(this);
+        this.state = this.props;
 
+
+        this.transitionToPlayer = CommonMethods.transitionToPlayer.bind(this);
+        this.transitionToScreen = CommonMethods.transitionToScreen.bind(this);
+
+        this.setFeaturedActiveFalse = this.setFeaturedActiveFalse.bind(this);
+        this.setFeaturedActiveTrue = this.setFeaturedActiveTrue.bind(this);
+
+  }
+
+  setFeaturedActiveFalse(){
+    console.log('setFeaturedActive False');
+    this.setState({ featuredActive: false});
+
+  }
+  setFeaturedActiveTrue(){
+    console.log('setFeaturedActive True');
+    this.setState({ featuredActive: true});
+
+  }
+
+
+  componentDidMount() {
+
+    this.setState({ featuredActive: false});
+    window.addEventListener('keydown', genericKeys.onKeyDown.bind(this));
+
+  }
+
+  componentWillUnmount () {
+
+    window.removeEventListener('keydown', genericKeys.onKeyDown.bind(this));
 
   }
 
 
 
+  render(){
 
-
-  changeFocusTo(index) {
-    this.setState({active: index});
-  }
-
-  onBlurLists() {
-    this.setState({active: null});
-  }
+    console.log("test in featured");
 
 
 
-  advance(){
-      this.setState({hold: false});
-  }
+    return (
 
-  previous(){
-    console.log("previous called");
-      //this.setState({hold: false});
-        history.push('/home');
-      //  history.goBack();
-  }
+      <div className="screen" style={styles.featured.screen} id={this.props.id}  >
+          <ModalUIComponent style={this.state.modalActive ? styles.modal_active : styles.modal_blur} />
+          <VideoFirst content={this.state.content.content[0]} />
+      </div>
 
 
 
-
-  render() {
-
-    console.log("The State:"+util.inspect(this.state, false, null));
-    console.log("The Props:"+util.inspect(this.props, false, null));
-
-    this.actions.previous = this.previous;
-
-
-
-
-
-        //  if(this.state.hold){
-
-
-
-            return (
-              <Navigation >
-                  <div id="content">
-
-                <HorizontalList>
-
-
-                      <PlayerWrapper content={this.props.content.content} actions={this.actions}/>
-
-
-
-                </HorizontalList>
-              </div>
-            </Navigation>
-
-
-            )
-
-        //  }
-
-
-
-
-  }
-
+    )
 
 }
 
 
+}
 
 function mapStateToProps (state, ownProps){
 
-  console.log("MSTP called wrapperx"+util.inspect(state, false, null));
+  console.log("MSTP called home"+util.inspect(state, false, null));
 
   return {
+      menu: state.menu,
       content: state.content
   }
 
@@ -121,7 +126,5 @@ const mapDispatchToProps = (dispatch)=>({
 
 });
 
-/**
-* Create and export a connected component
-*/
+
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerScreen);
